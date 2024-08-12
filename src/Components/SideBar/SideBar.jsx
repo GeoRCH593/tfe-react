@@ -1,11 +1,15 @@
 
 
-
 const SideBar = () => {
   return (
-    <div>
-      
-    </div>
+    <aside>
+      <nav>
+        <div>
+          <img />
+          <button>Pulsar 1</button>
+        </div>
+      </nav>
+    </aside>
   );
 };
 
