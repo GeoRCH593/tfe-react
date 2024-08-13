@@ -1,0 +1,24 @@
+import { Icon, NavLinks } from "../../styles/sideBar";
+import {PropTypes} from 'prop-types'
+
+const SideBarBtns = ({ to, icon, title }) => {
+  return (
+    <li>
+      <NavLinks
+      strict="true"
+      to= {to}      
+      >
+      <Icon>{icon}</Icon>
+      {title}
+      </NavLinks>
+    </li>
+  );
+};
+
+SideBarBtns.propTypes = { 
+  to: PropTypes.string,
+  icon: PropTypes.string,
+  label: PropTypes.string,
+}
+
+export default SideBarBtns;
