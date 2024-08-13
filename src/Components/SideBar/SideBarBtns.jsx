@@ -6,7 +6,7 @@ const SideBarBtns = ({ to, icon, title }) => {
     <li>
       <NavLinks
       strict="true"
-      to= {to}      
+      to={to}      
       >
       <Icon>{icon}</Icon>
       {title}
@@ -18,7 +18,7 @@ const SideBarBtns = ({ to, icon, title }) => {
 SideBarBtns.propTypes = { 
   to: PropTypes.string,
   icon: PropTypes.string,
-  label: PropTypes.string,
+  title: PropTypes.string,
 }
 
 export default SideBarBtns;
