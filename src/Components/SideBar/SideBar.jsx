@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import { OrderList, SideBarBody, SideBarWrapper } from "../../styles/sideBar";
 import SideBarBtns from "./SideBarBtns";
 import Logo from "./Logo";
+import SideBarFooter from "./SideBarFooter";
+import { PropTypes } from "prop-types";
 
 const makeButtons = [
   {
-    to: <Link to="/home"></Link>,
+    to: "/empresa",
     icon: <i className="bi bi-buildings"></i>,
     title: "Empresa",
     subBtn: [
@@ -20,7 +22,7 @@ const makeButtons = [
     ],
   },
   {
-    to: <Link to="/home"></Link>,
+    to: "/puntos-de-venta",
     icon: <i className="bi bi-shop"></i>,
     title: "Puntos de venta",
     subBtn: [
@@ -32,7 +34,7 @@ const makeButtons = [
     ],
   },
   {
-    to: <Link to="/home"></Link>,
+    to: "/clientes",
     icon: <i className="bi bi-person-lines-fill"></i>,
     title: "Clientes",
     subBtn: [
@@ -43,7 +45,7 @@ const makeButtons = [
     ],
   },
   {
-    to: <Link to="/home"></Link>,
+    to: "/proveedores",
     icon: <i className="bi bi-person-rolodex"></i>,
     title: "Proveedores",
     subBtn: [
@@ -54,7 +56,7 @@ const makeButtons = [
     ],
   },
   {
-    to: <Link to="/home"></Link>,
+    to: "/configuracion",
     icon: <i className="bi bi-gear-fill"></i>,
     title: "Configuración",
     subBtn: [
@@ -63,7 +65,7 @@ const makeButtons = [
     ],
   },
   {
-    to: <Link to="/home"></Link>,
+    to: "/facturacion",
     icon: <i className="bi bi-receipt"></i>,
     title: "Facturación",
     subBtn: [
@@ -77,8 +79,9 @@ const makeButtons = [
   },
 ];
 
-const SideBar = () => {
+const SideBar = ({ children }) => {
   return (
+    <div>
     <SideBarWrapper>
       <SideBarBody>
         <Logo />
@@ -89,12 +92,21 @@ const SideBar = () => {
               to={btn.to}
               icon={btn.icon}
               title={btn.title}
+              span={btn.span}
+              subBtn={btn.subBtn}
+              // handleClick={handleClick}
             />
           ))}
         </OrderList>
+        <SideBarFooter />
       </SideBarBody>
     </SideBarWrapper>
+    {children}
+    </div>
   );
 };
 
+SideBarBtns.propTypes = {
+  children: PropTypes.string,
+};
 export default SideBar;

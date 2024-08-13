@@ -29,6 +29,7 @@ export const OrderList = styled.ul`
 
 export const NavLinks = styled(NavLink)`
   font-family: Open Sans;
+  font-size: 14px;
   font-weight: 600;
   position: relative;
   color: #909090;
@@ -53,7 +54,7 @@ export const NavLinks = styled(NavLink)`
 
 export const Icon = styled.div`
   margin-right: 30px;
-  font-size: 25px;
+  font-size: 20px;
 `;
 
 export const LogoWrapper = styled.div`
@@ -83,4 +84,41 @@ export const LogoWrapper = styled.div`
       }
     }
   }
+`;
+
+export const FooterWrapper = styled.div`
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 80px;
+box-shadow: 0px -10px 14px -10px rgba(0,0,0,0.22);
+`;
+
+export const Footer = styled.ul`
+list-style: none;
+margin: 0;
+padding: 10px 0 0;
+display: flex;
+align-items: center;
+justify-content: center;
+font-weight: bold;
+> img {
+  width: 60px;
+  height: 60px;
+  padding-bottom: 1em;
+  opacity: .5;
+}
+`;
+
+export const Subfooter = styled.div`
+position: absolute;
+bottom: 10px;
+width: 100%;
+display: flex;
+justify-content: center;
+color: #ffffff45;
+font-size: 12px;
+user-select: none;
+cursor: default;
+
 `;
