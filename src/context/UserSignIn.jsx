@@ -4,9 +4,12 @@ import {
   IconLogo,
   TitleContainer,
   TitleForm,
+  ForgotPass,
 } from "../styles/ContextStyles/userSignIn";
 import { GlobalStyle } from "../styles/globalStyles";
 import BillieIcon from "../assets/billie-icon-white-green.svg";
+import InputContext from "../Components/Context/InputContext";
+import ButtonContext from "../Components/Context/ButtonContext";
 
 const UserSignIn = () => {
   return (
@@ -18,32 +21,24 @@ const UserSignIn = () => {
           <TitleForm>Ingrese sus datos:</TitleForm>
         </TitleContainer>
         <form>
-          <div className="form-control">
-            <label>
-              Usuario:
-              <input
-                name="user"
-                type="text"
-                placeholder="Ingrese su email o nombre de usuario"
-              />
-              <i className="bi bi-person"></i>
-            </label>
-          </div>
-          <div className="form-control">
-            <label>
-              Contraseña:
-              <input
-                name="password"
-                type="password"
-                placeholder="Ingrese contraseña"
-              />
-              <i className="bi bi-lock"></i>
-            </label>
-          </div>
-          <button>Acceder </button>
+          <InputContext
+            user={"Usuario"}
+            name="user"
+            type={"text"}
+            placeholder={"Ingrese usuario o correo"}
+          />
+          <InputContext
+            user={"Contraseña"}
+            name="pass"
+            type={"password"}
+            placeholder={"Ingrese contraseña"}
+          />
+          <ForgotPass>¿Olvidaste tu contraseña?</ForgotPass>
+          <ButtonContext title={"ACCEDER"}></ButtonContext>
         </form>
-        <p>¿Olvidaste tu contraseña?</p>
-        <button>Registrar usuario nuevo</button>
+        <div className="">
+          <ButtonContext title={"CREAR NUEVO USUARIO"}></ButtonContext>
+        </div>
       </FormContainer>
     </SignInBody>
   );
