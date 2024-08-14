@@ -3,6 +3,7 @@ import SideBarBtns from "./SideBarBtns";
 import Logo from "./Logo";
 import SideBarFooter from "./SideBarFooter";
 import { PropTypes } from "prop-types";
+import UserData from "./UserData";
 
 const makeButtons = [
   {
@@ -81,26 +82,27 @@ const makeButtons = [
 const SideBar = ({ children }) => {
   return (
     <div>
-    <SideBarWrapper>
-      <SideBarBody>
-        <Logo />
-        <OrderList>
-          {makeButtons.map((btn, i) => (
-            <SideBarBtns
-              key={i}
-              to={btn.to}
-              icon={btn.icon}
-              title={btn.title}
-              span={btn.span}
-              subBtn={btn.subBtn}
-              // handleClick={handleClick}
-            />
-          ))}
-        </OrderList>
-        <SideBarFooter />
-      </SideBarBody>
-    </SideBarWrapper>
-    {children}
+      <SideBarWrapper>
+        <SideBarBody>
+          <Logo />
+          <UserData/>
+          <OrderList>
+            {makeButtons.map((btn, i) => (
+              <SideBarBtns
+                key={i}
+                to={btn.to}
+                icon={btn.icon}
+                title={btn.title}
+                span={btn.span}
+                subBtn={btn.subBtn}
+                // handleClick={handleClick}
+              />
+            ))}
+          </OrderList>
+          <SideBarFooter />
+        </SideBarBody>
+      </SideBarWrapper>
+      {children}
     </div>
   );
 };

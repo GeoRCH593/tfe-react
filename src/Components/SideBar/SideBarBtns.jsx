@@ -1,5 +1,13 @@
 import { useState } from "react";
-import { Arrow, Icon, NavBtn, NavLinks, Newest, SubLinks, SubMenu } from "../../styles/sideBar";
+import {
+  Arrow,
+  Icon,
+  NavBtn,
+  NavLinks,
+  Newest,
+  SubLinks,
+  SubMenu,
+} from "../../styles/sideBar";
 import { PropTypes } from "prop-types";
 
 const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
@@ -36,21 +44,21 @@ const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
         </NavBtn>
       )}
       <SubMenu
-      tall={`${subBtn !== undefined }`}
-      opened={openSubMenu ? "true" : "false"}
+        tall={`${subBtn !== undefined}`}
+        opened={openSubMenu ? "true" : "false"}
       >
-        {subBtn !== undefined && 
-          subBtn.map((btn, i) =>
+        {subBtn !== undefined &&
+          subBtn.map((btn, i) => (
             <div key={i}>
               <SubLinks
-              key={i}
-              to={to + "/" + btn.toLowerCase()}
-              onClick={handleclick}
+                key={i}
+                to={to + "/" + btn.toLowerCase()}
+                onClick={handleclick}
               >
-              {btn}
+                {btn}
               </SubLinks>
             </div>
-          )}
+          ))}
       </SubMenu>
     </li>
   );
