@@ -42,7 +42,7 @@ export const NavLinks = styled(NavLink)`
   border-radius: 10px;
   &:hover {
     background: #39b54a1a;
-    color: #39b54a;
+    color: #39B54A;
     transition: all 0.5s ease-in-out;
   }
   &:active {
@@ -120,5 +120,90 @@ color: #ffffff45;
 font-size: 12px;
 user-select: none;
 cursor: default;
+`;
 
+export const NavBtn = styled.div`
+position: relative;
+color: #909090;
+padding: 15px 20px;
+text-decoration: none;
+display: flex;
+align-items: center;
+justify-content: left;
+margin: 4px 10px;
+border-radius: 10px;
+cursor: pointer;
+background:${(props) => props.open && "#fff"};
+&:hover {
+  background: #39b54a1a;
+  color: #39b54a;
+  transition: all 0.5s ease-in-out;
+}
+`;
+
+export const Newest = styled.div`
+position: absolute;
+right: 1.2em;
+border-radius: 20px ;
+font-size: .6em ;
+font-weight: bold;
+text-shadow: 2px 2px 5px rgb(0 0 0 / 91%);
+`;
+
+export const Arrow = styled.div`
+position: absolute;
+color: #909090;
+top: 50%;
+right: 20px;
+transform: translate(0, -50%);
+  > span {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 0 5px 6px;
+    border-color: transparent transparent transparent #ffffff;
+    pointer-events: none;
+    transform: ${(props) => (props.open ? "rotate(0deg)" : "rotate(90deg)")};
+    border-left: ${(props) => !props.open && "6px solid #39B54A"};
+    transition: all 0.3s ease-in-out;
+  }
+`;
+
+export const SubMenu = styled.div`
+display: flex;
+flex-direction: column;
+width: 100%;
+background: #00000029;
+overflow: hidden;
+height: ${(props) => (props.opened === "true" ? props.tall * 30 * 20 : 0)}px;
+transition: all .4s ease;
+padding: ${(props) => (props.opened === "true" ? "5px 0px": "0px")};
+margin: 2px 0 2px;
+`;
+
+export const SubLinks = styled(NavLink)`
+color: #909090;
+font-size: 14px;
+height: 55px !important;
+padding: 0px 50px;
+text-decoration: none;
+display: flex;
+align-items: center;
+
+margin: 2px 10px;
+border-radius: 10px;
+>span {
+  margin-left: 14px;
+}
+&:hover{
+  background: #39b54a1a ;
+  color: #39b54a;
+  transition: all .4s ease-in-out;
+}
+&:active {
+  background: #fff;
+  color: #39b54a;
+  transition: all .4s ease;
+}
 `;

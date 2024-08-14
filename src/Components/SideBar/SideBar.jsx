@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { OrderList, SideBarBody, SideBarWrapper } from "../../styles/sideBar";
 import SideBarBtns from "./SideBarBtns";
 import Logo from "./Logo";
@@ -7,7 +6,7 @@ import { PropTypes } from "prop-types";
 
 const makeButtons = [
   {
-    to: "/empresa",
+    to: "empresa",
     icon: <i className="bi bi-buildings"></i>,
     title: "Empresa",
     subBtn: [
@@ -16,13 +15,13 @@ const makeButtons = [
       "Eliminar datos",
       "Busqueda de empresas",
       "Crear Sucursal",
-      "Actualziar datos Sucursal",
+      "Actualizar datos Sucursal",
       "Eliminar datos Sucursal",
       "Buscar Sucursal",
     ],
   },
   {
-    to: "/puntos-de-venta",
+    to: "puntos-de-venta",
     icon: <i className="bi bi-shop"></i>,
     title: "Puntos de venta",
     subBtn: [
@@ -34,7 +33,7 @@ const makeButtons = [
     ],
   },
   {
-    to: "/clientes",
+    to: "clientes",
     icon: <i className="bi bi-person-lines-fill"></i>,
     title: "Clientes",
     subBtn: [
@@ -45,7 +44,7 @@ const makeButtons = [
     ],
   },
   {
-    to: "/proveedores",
+    to: "proveedores",
     icon: <i className="bi bi-person-rolodex"></i>,
     title: "Proveedores",
     subBtn: [
@@ -56,7 +55,7 @@ const makeButtons = [
     ],
   },
   {
-    to: "/configuracion",
+    to: "configuracion",
     icon: <i className="bi bi-gear-fill"></i>,
     title: "Configuración",
     subBtn: [
@@ -65,7 +64,7 @@ const makeButtons = [
     ],
   },
   {
-    to: "/facturacion",
+    to: "facturacion",
     icon: <i className="bi bi-receipt"></i>,
     title: "Facturación",
     subBtn: [
@@ -106,7 +105,7 @@ const SideBar = ({ children }) => {
   );
 };
 
-SideBarBtns.propTypes = {
+SideBar.propTypes = {
   children: PropTypes.string,
 };
 export default SideBar;
