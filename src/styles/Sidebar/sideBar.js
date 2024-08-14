@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-
+/*Contenedor general sidebar */
 export const SideBarWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -8,7 +8,6 @@ export const SideBarWrapper = styled.div`
   width: 300px;
   height: 100vh;
   display: block;
-  z-index: 5;
   transition: transform 0.3s ease-in-out;
 `;
 /* Contenedor de la botonera*/
@@ -17,6 +16,7 @@ export const SideBarBody = styled.div`
   height: 100vh;
   overflow-y: scroll;
   padding-bottom: 60px;
+  z-index: 5;
 `;
 
 /* Estilos de la botonera*/
@@ -44,7 +44,7 @@ export const NavLinks = styled(NavLink)`
   border-radius: 10px;
   &:hover {
     background: #39b54a1a;
-    color: #39b54a;
+    color: #ffffff;
     transition: all 0.5s ease-in-out;
   }
   &:active {
@@ -60,45 +60,16 @@ export const Icon = styled.div`
   font-size: 20px;
 `;
 
-
-export const LogoWrapper = styled.div`
-  width: 100%;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  > a {
-    width: 100%;
-    text-decoration: none;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    > div {
-      position: relative;
-      width: 100px;
-      height: 100px;
-      overflow: hidden;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      > img {
-        font-size: 60px;
-        margin-left: 5px;
-      }
-    }
-  }
-`;
-
-/*Estilo contenedor del footer */
+/*Estilo FOOTER 1 contenedor */
 export const FooterWrapper = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 80px;
   box-shadow: 0px -10px 14px -10px rgba(0, 0, 0, 0.22);
-`;
-
+  z-index: 6;
+  `;
+/*Estilo FOOTER 2 contenedor */
 export const Footer = styled.ul`
   list-style: none;
   margin: 0;
@@ -114,14 +85,14 @@ export const Footer = styled.ul`
     opacity: 0.5;
   }
 `;
-
+/*Estilos FOOTER 3 contenedor*/
 export const Subfooter = styled.div`
   position: absolute;
   bottom: 10px;
   width: 100%;
   display: flex;
   justify-content: center;
-  color: #ffffff45;
+  color: #909090;
   font-size: 12px;
   user-select: none;
   cursor: default;
@@ -141,7 +112,7 @@ export const NavBtn = styled.div`
   background: ${(props) => props.open && "#fff"};
   &:hover {
     background: #39b54a1a;
-    color: #39b54a;
+    color: #fff;
     transition: all 0.5s ease-in-out;
   }
 `;
@@ -154,7 +125,7 @@ export const Newest = styled.div`
   font-weight: bold;
   text-shadow: 2px 2px 5px rgb(0 0 0 / 91%);
 `;
-
+/*Estilos de flecha para los menus */
 export const Arrow = styled.div`
   position: absolute;
   color: #909090;
@@ -174,7 +145,7 @@ export const Arrow = styled.div`
     transition: all 0.3s ease-in-out;
   }
 `;
-
+/*Estilos de submenu listas */
 export const SubMenu = styled.div`
   display: flex;
   flex-direction: column;
@@ -182,11 +153,11 @@ export const SubMenu = styled.div`
   background: #00000029;
   overflow: hidden;
   height: ${(props) => (props.opened === "true" ? props.tall * 30 * 20 : 0)}px;
-  transition: all 0.4s ease;
-  padding: ${(props) => (props.opened === "true" ? "5px 0px" : "0px")};
+  transition: all 0.6s ease-in-out;
+  padding: ${(props) => (props.opened === "true" ? "4px 0px" : "0px")};
   margin: 2px 0 2px;
 `;
-
+/*Estilos de la lista de elementos del submenu  */
 export const SubLinks = styled(NavLink)`
   color: #909090;
   font-size: 14px;
@@ -210,21 +181,3 @@ export const SubLinks = styled(NavLink)`
   }
 `;
 
-export const UserDataStyle = styled.div`
-font-family: Roboto;
-font-size: 13px;
-font-weight: 300;
-display: flex;
-  background: #39b84a1a;
-  color: #fff;
-
-  > img {
-    width: 100px;
-    height: 100px;
-    padding-right: 1rem;
-  }
-    > p {
-      color: #909090;
-    }
- 
-`;

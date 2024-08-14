@@ -7,7 +7,7 @@ import {
   Newest,
   SubLinks,
   SubMenu,
-} from "../../styles/sideBar";
+} from "../../styles/Sidebar/sideBar";
 import { PropTypes } from "prop-types";
 
 const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {

@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes} from 'react-router-dom';
-import Home from './Components/Pages/Home/Home';
-import Clientes from './Components/Pages/Clientes/Clientes';
-import Configuracion from './Components/Pages/Configuracion/Configuracion';
-import Empresa from './Components/Pages/Empresa/Empresa';
-import Facturacion from './Components/Pages/Facturacion/Facturacion';
-import Proveedores from './Components/Pages/Proveedores/Proveedores';
-import Pos from './Components/Pages/Puntos de venta/Pos';
-import SideBar from './Components/SideBar/SideBar';
+import Home from '../Components/Pages/Home/Home';
+import Clientes from '../Components/Pages/Clientes/Clientes';
+import Configuracion from '../Components/Pages/Configuracion/Configuracion';
+import Empresa from '../Components/Pages/Empresa/Empresa';
+import Facturacion from '../Components/Pages/Facturacion/Facturacion';
+import Proveedores from '../Components/Pages/Proveedores/Proveedores';
+import Pos from '../Components/Pages/Puntos de venta/Pos';
+import SideBar from '../Components/SideBar/SideBar';
 
 const Router = () => (
   <BrowserRouter>

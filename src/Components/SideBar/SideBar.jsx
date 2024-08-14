@@ -1,4 +1,4 @@
-import { OrderList, SideBarBody, SideBarWrapper } from "../../styles/sideBar";
+import { OrderList, SideBarBody, SideBarWrapper } from "../../styles/Sidebar/sideBar";
 import SideBarBtns from "./SideBarBtns";
 import Logo from "./Logo";
 import SideBarFooter from "./SideBarFooter";
@@ -26,11 +26,11 @@ const makeButtons = [
     icon: <i className="bi bi-shop"></i>,
     title: "Puntos de venta",
     subBtn: [
-      "Crear puntos de venta",
-      "Generar Secuencial",
-      "Actualizar puntos de venta",
-      "Eliminar puntos de venta",
-      "Buscar Puntos de venta",
+      "Crear POS",
+      "Generar secuencial",
+      "Actualizar POS",
+      "Eliminar POS",
+      "Buscar POS",
     ],
   },
   {
@@ -38,10 +38,10 @@ const makeButtons = [
     icon: <i className="bi bi-person-lines-fill"></i>,
     title: "Clientes",
     subBtn: [
-      "Crear Clientes",
-      "Actualizar Clientes",
-      "Eliminar Clientes",
-      "Buscar Cliente",
+      "Crear clientes",
+      "Actualizar clientes",
+      "Eliminar clientes",
+      "Buscar cliente",
     ],
   },
   {
@@ -49,10 +49,10 @@ const makeButtons = [
     icon: <i className="bi bi-person-rolodex"></i>,
     title: "Proveedores",
     subBtn: [
-      "Crear Proveedor",
-      "Actualizar Proveedor",
-      "Eliminar Proveedor",
-      "Buscar Proveedor",
+      "Crear proveedor",
+      "Actualizar proveedor",
+      "Eliminar proveedor",
+      "Buscar proveedor",
     ],
   },
   {
@@ -69,11 +69,11 @@ const makeButtons = [
     icon: <i className="bi bi-receipt"></i>,
     title: "Facturación",
     subBtn: [
-      "Crear nueva Factura",
+      "Crear nueva factura",
       "Modificar en borrador",
-      "Finalizar Factura en borrador",
+      "Finalizar factura en borrador",
       "Eliminar factura de Borrador",
-      "Buscar Factura",
+      "Buscar factura",
       "Enviar factura por email",
     ],
   },
@@ -99,8 +99,8 @@ const SideBar = ({ children }) => {
               />
             ))}
           </OrderList>
-          <SideBarFooter />
         </SideBarBody>
+        <SideBarFooter />
       </SideBarWrapper>
       {children}
     </div>

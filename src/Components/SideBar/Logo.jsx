@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LogoWrapper } from "../../styles/sideBar";
+import { LogoWrapper } from "../../styles/Sidebar/logo.js";
 import Billie from "../../assets/billie-logo-sidebar.svg";
 
 const Logo = () => {

@@ -1,20 +1,20 @@
-import { UserDataStyle } from "../../styles/sideBar";
-import Billielogo from "../../assets/billie-icon.svg"
+import { UserDataStyle } from "../../styles/Sidebar/userData.js";
+import UserImg from "../../assets/images/user-img.jpg";
 
-const User= "Nombre y Apellido"
-const Admin = "Administrador"
-const Pass = "Cambiar Contraseña"
-const UpdateData = "Actualizar Datos"
+const User = "Geovanny Rodríguez";
+const Admin = "Administrador";
+const UpdateData = "Actualizar Datos";
+const CLoseSession = "Cerrar Sesión";
 
 const UserData = () => {
   return (
     <UserDataStyle>
-      <img src={Billielogo}></img>
+      <img src={UserImg}></img>
       <div>
-      <p>{User}</p>
-      <p>{Admin}</p>
-      <p>{Pass}</p>
-      <p>{UpdateData}</p>
+        <h6>{User}</h6>
+        <p>{Admin}</p>
+        <p>{UpdateData}</p>
+        <p>{CLoseSession}</p>
       </div>
     </UserDataStyle>
   );
