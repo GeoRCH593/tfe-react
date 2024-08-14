@@ -90,6 +90,7 @@ export const LogoWrapper = styled.div`
   }
 `;
 
+/*Estilo contenedor del footer */
 export const FooterWrapper = styled.div`
   position: absolute;
   bottom: 0;
@@ -210,7 +211,10 @@ export const SubLinks = styled(NavLink)`
 `;
 
 export const UserDataStyle = styled.div`
-  display: flex;
+font-family: Roboto;
+font-size: 13px;
+font-weight: 300;
+display: flex;
   background: #39b84a1a;
   color: #fff;
 
