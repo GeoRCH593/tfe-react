@@ -24,7 +24,7 @@ const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
       {subBtn === undefined ? (
         <NavLinks
           strict="true"
-          to={{ to, state: { flag: title } }}
+          to={{pathname:to, state: { flag: title } }}
           onClick={handleclick}
         >
           <Icon>{icon}</Icon>
@@ -32,7 +32,8 @@ const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
           {span !== undefined && <Newest>{span}</Newest>}
         </NavLinks>
       ) : (
-        <NavBtn onClick={() => handleSubMenu()}>
+        <NavBtn 
+        onClick={() => handleSubMenu()}>
           <Icon>{icon}</Icon>
           {title}
           {span !== undefined && <Newest>{span}</Newest>}
@@ -52,7 +53,7 @@ const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
             <div key={i}>
               <SubLinks
                 key={i}
-                to={to + "/" + btn.toLowerCase()}
+                to={to + "/" + btn.toLowerCase().replace(/\s+/g, "")}
                 onClick={handleclick}
               >
                 {btn}
