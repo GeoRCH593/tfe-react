@@ -32,7 +32,7 @@ const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
           {span !== undefined && <Newest>{span}</Newest>}
         </NavLinks>
       ) : (
-        <NavBtn 
+        <NavBtn
         onClick={() => handleSubMenu()}>
           <Icon>{icon}</Icon>
           {title}

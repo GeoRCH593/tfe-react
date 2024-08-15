@@ -79,9 +79,6 @@ const makeButtons = [
   },
 ];
 
-const handleClick = () => {
-  history.pushState("/home")
-}
 
 const SideBar = ({ children }) => {
   return (
@@ -99,7 +96,6 @@ const SideBar = ({ children }) => {
                 title={btn.title}
                 span={btn.span}
                 subBtn={btn.subBtn}
-                handleClick={handleClick}
               />
             ))}
           </OrderList>

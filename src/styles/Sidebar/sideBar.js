@@ -35,7 +35,7 @@ export const NavLinks = styled(NavLink)`
   font-weight: 600;
   position: relative;
   color: #909090;
-  padding: 15px 20px;
+  padding: 10px 20px;
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -98,6 +98,7 @@ export const Subfooter = styled.div`
   cursor: default;
 `;
 
+/* Contenedor de link menu sidebar */
 export const NavBtn = styled.div`
   position: relative;
   color: #909090;
