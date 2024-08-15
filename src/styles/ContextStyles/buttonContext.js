@@ -11,9 +11,10 @@ font-family: Open Sans;
 font-size: 1rem;
 font-weight: bold;
 border-radius: 15px;
+transition: all .4s ease-in-out;
 &:hover{
   color: #39B54A;
   background: #fff;
-  transition: all .4s ease-out;
+  
 }
 `;

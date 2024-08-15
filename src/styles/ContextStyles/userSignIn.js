@@ -57,5 +57,4 @@ cursor: pointer;
 /*Contenedor boton nuevo usuario */
 export const NewUser = styled.div`
 padding-top: 2rem;
-
 `;
