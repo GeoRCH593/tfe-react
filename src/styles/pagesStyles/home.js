@@ -29,7 +29,7 @@ export const TitlePage = styled.div`
   }
 `;
 
-export const MenuCardsContain = styled.div`
+export const Menu3CardsContain = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6em;

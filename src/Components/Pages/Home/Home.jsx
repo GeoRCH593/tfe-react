@@ -1,10 +1,49 @@
 import BillieLogo from "../../../assets/billie-logo-black-green.svg";
 import {
   HomeBody,
-  MenuCardsContain,
+  Menu3CardsContain,
   TitlePage,
 } from "../../../styles/pagesStyles/home";
 import MenuCard from "../../MenuCard/MenuCard";
+
+const makeCards = [
+  {
+    classDiv: "bi bi-buildings",
+    title: "Empresa",
+    to: "empresa" 
+  },
+  {
+    classDiv: "bi bi-shop",
+    title: "Puntos de venta",
+    to: "puntos-de-venta"
+  },
+  {
+    classDiv: "bi bi-person-lines-fill",
+    title: "Clientes",
+    to:"clientes"
+  },
+  {
+    classDiv: "bi bi-person-rolodex",
+    title: "Proveedores",
+    to: "proveedores"
+  },
+  {
+    classDiv: "bi bi-gear-fill",
+    title: "Configuración",
+    to: "configuracion"
+  },
+  {
+    classDiv: "bi bi-receipt",
+    title: "Facturación",
+    to:'facturacion'
+  },
+  {
+    classDiv: "bi bi-person-x",
+    title: "Cerrar Sesión",
+    to: "cerrar-sesion"
+  },
+  
+]
 
 const Home = () => {
   return (
@@ -13,23 +52,15 @@ const Home = () => {
         <img src={BillieLogo} />
         <h2>Bienvenido:</h2>
       </TitlePage>
-      <MenuCardsContain>
-        <MenuCard classDiv={"bi bi-buildings"} class title={"Empresa"} />
-        <MenuCard classDiv={"bi bi-shop"} class title={"Puntos de venta"} />
-        <MenuCard
-          classDiv={"bi bi-person-lines-fill"}
-          class
-          title={"Clientes"}
-        />
-        <MenuCard
-          classDiv={"bi bi-person-rolodex"}
-          class
-          title={"Proveedores"}
-        />
-        <MenuCard classDiv={"bi bi-gear-fill"} class title={"Configuración"} />
-        <MenuCard classDiv={"bi bi-receipt"} class title={"Facturación"} />
-        <MenuCard classDiv={"bi bi-person-x"} class title={"Cerrar Sesión"} />
-      </MenuCardsContain>
+      <Menu3CardsContain>
+        {makeCards.map((card, i)=>(
+          <MenuCard key={i}
+            to={card.to}
+            classDiv={card.classDiv}
+            title={card.title}
+          />
+        ))}
+      </Menu3CardsContain>
     </HomeBody>
   );
 };

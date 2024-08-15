@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardContain = styled.div`
+export const CardContain = styled.a`
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -9,6 +9,7 @@ width: 140px;
 height: 140px;
 border-radius: 15px;
 background: #0C302E;
+text-decoration: none;
 box-shadow: 0px 7px 20px 0px gray;
 cursor: pointer;
 transition: all .5s ease-in-out;

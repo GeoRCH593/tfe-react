@@ -15,6 +15,7 @@ const Router = () => (
   <SideBar>
     <Routes>
       <Route path="/" element={<Home/>} />
+      <Route path="/home" element={<Home/>} />
       <Route path="/clientes" element={<Clientes/>} />
       <Route path="/configuracion" element={<Configuracion/>} />
       <Route path="/empresa" element={<Empresa/>} />
