@@ -42,15 +42,14 @@ export const NavLinks = styled(NavLink)`
   justify-content: left;
   margin: 2px 10px;
   border-radius: 10px;
+  transition: all 0.5s ease-in-out;
   &:hover {
     background: #39b54a1a;
     color: #ffffff;
-    transition: all 0.5s ease-in-out;
   }
   &:active {
     background: #ffffff;
     color: #39b54a;
-    transition: all 0.5s ease;
   }
 `;
 
@@ -111,10 +110,11 @@ export const NavBtn = styled.div`
   border-radius: 10px;
   cursor: pointer;
   background: ${(props) => props.open && "#fff"};
+  transition: all 0.5s ease-in-out;
   &:hover {
     background: #39b54a1a;
     color: #fff;
-    transition: all 0.5s ease-in-out;
+    
   }
 `;
 
@@ -132,6 +132,7 @@ export const Arrow = styled.div`
   color: #909090;
   top: 50%;
   right: 20px;
+  transition: all 0.3s ease-in-out;
   transform: translate(0, -50%);
   > span {
     display: inline-block;
@@ -143,7 +144,7 @@ export const Arrow = styled.div`
     pointer-events: none;
     transform: ${(props) => (props.open ? "rotate(0deg)" : "rotate(90deg)")};
     border-left: ${(props) => !props.open && "6px solid #39B54A"};
-    transition: all 0.3s ease-in-out;
+    
   }
 `;
 /*Estilos de submenu listas */
@@ -167,13 +168,14 @@ export const SubLinks = styled(NavLink)`
   text-decoration: none;
   display: flex;
   align-items: center;
+  transition: all 0.4s ease-in-out;
   > span {
     margin-left: 14px;
   }
   &:hover {
     background: #39b54a1a;
     color: #39b54a;
-    transition: all 0.4s ease-in-out;
+    
   }
   &:active {
     background: #fff;

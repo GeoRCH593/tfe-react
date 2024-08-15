@@ -7,6 +7,8 @@ import Facturacion from '../Components/Pages/Facturacion/Facturacion';
 import Proveedores from '../Components/Pages/Proveedores/Proveedores';
 import Pos from '../Components/Pages/Puntos de venta/Pos';
 import SideBar from '../Components/SideBar/SideBar';
+import UserSignIn from '../context/UserSignIn';
+import UserRegister from '../context/UserRegister'
 
 const Router = () => (
   <BrowserRouter>
@@ -19,6 +21,8 @@ const Router = () => (
       <Route path="/facturacion" element={<Facturacion/>} />
       <Route path="/proveedores" element={<Proveedores/>} />
       <Route path="/puntos-de-venta" element={<Pos/>} />
+      <Route path="/usuario-acceso" element={<UserSignIn/>} />
+      <Route path="/usuario-registro" element={<UserRegister/>} />
       <Route path="*" element={<div>404</div>} />
     </Routes>
     </SideBar>

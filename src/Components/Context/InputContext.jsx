@@ -1,4 +1,4 @@
-import { FormInput, FormContain } from "../../styles/ContextStyles/inputContext.js";
+import { FormInput, FormContain } from "./inputStyle";
 import {PropTypes} from 'prop-types';
 
 const InputContext = ({ nameLabel, name, type, placeholder }) => {

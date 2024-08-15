@@ -23,12 +23,14 @@ const UserSignIn = () => {
         </TitleContainer>
         <form>
           <InputContext
+            nameLabel={"Usuario"}
             user={"Usuario"}
             name="user"
             type={"text"}
             placeholder={"Ingrese usuario o correo"}
           />
           <InputContext
+            nameLabel={"Contraseña"}
             user={"Contraseña"}
             name="pass"
             type={"password"}

@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const FormContain = styled.div`
   background-color: #0c302e;
   font-family: Open Sans;
-
   > label {
     color: #fff;
     width: 100%;

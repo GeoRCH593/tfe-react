@@ -23,10 +23,11 @@ justify-content: center;
      
       > p {
         margin: 0;
+        transition: all .4s ease-in;
         &:hover {
           color: #39B54A;
           cursor: pointer;
-          transition: all .4s ease-in;
+          
         }
       }
     }
