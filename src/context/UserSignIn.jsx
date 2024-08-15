@@ -5,6 +5,7 @@ import {
   TitleContainer,
   TitleForm,
   ForgotPass,
+  NewUser,
 } from "../styles/ContextStyles/userSignIn";
 import { GlobalStyle } from "../styles/globalStyles";
 import BillieIcon from "../assets/billie-icon-white-green.svg";
@@ -36,9 +37,9 @@ const UserSignIn = () => {
           <ForgotPass>¿Olvidaste tu contraseña?</ForgotPass>
           <ButtonContext title={"ACCEDER"}></ButtonContext>
         </form>
-        <div className="">
+        <NewUser>
           <ButtonContext title={"CREAR NUEVO USUARIO"}></ButtonContext>
-        </div>
+        </NewUser>
       </FormContainer>
     </SignInBody>
   );

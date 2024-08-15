@@ -18,6 +18,8 @@ height: 450px;
 padding: 1rem 4rem;
 box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.5);
 border-radius: 5px;
+align-items: center;
+justify-content: center;
 `;
 
 /*Contenedor del titulo h2*/
@@ -51,4 +53,9 @@ font-family: Open Sans;
 font-size: 0.8rem;
 font-weight: 100;
 cursor: pointer;
+`;
+/*Contenedor boton nuevo usuario */
+export const NewUser = styled.div`
+padding-top: 2rem;
+
 `;

@@ -1,11 +1,11 @@
 import { FormInput, FormContain } from "../../styles/ContextStyles/inputContext.js";
 import {PropTypes} from 'prop-types';
 
-const InputContext = ({ user, name, type, placeholder }) => {
+const InputContext = ({ nameLabel, name, type, placeholder }) => {
   return (
     <FormContain>
       <label>
-        {user}
+        {nameLabel}
         <FormInput
           name={name}
           type={type}
@@ -17,7 +17,7 @@ const InputContext = ({ user, name, type, placeholder }) => {
 };
 
 InputContext.propTypes = {
-  user: PropTypes.string,
+  nameLabel: PropTypes.string,
   name: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
