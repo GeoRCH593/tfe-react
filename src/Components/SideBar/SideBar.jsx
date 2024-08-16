@@ -79,7 +79,6 @@ const makeButtons = [
   },
 ];
 
-
 const SideBar = ({ children }) => {
   return (
     <div>
