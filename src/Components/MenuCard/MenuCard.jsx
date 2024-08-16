@@ -17,7 +17,6 @@ MenuCard.propTypes = {
   title: PropTypes.string,
   classDiv: PropTypes.string,
   to: PropTypes.string,
-
 };
 
 export default MenuCard;

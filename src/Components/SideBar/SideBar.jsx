@@ -8,7 +8,7 @@ import UserData from "./UserData";
 const makeButtons = [
   {
     to: "empresa",
-    icon: <i className="bi bi-buildings"></i>,
+    icon: <i className="bi bi-building"></i>,
     title: "Empresa",
     subBtn: [
       "Crear Empresa",

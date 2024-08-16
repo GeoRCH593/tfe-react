@@ -1,58 +1,58 @@
 import BillieLogo from "../../../assets/billie-logo-black-green.svg";
 import {
-  HomeBody,
-  Menu3CardsContain,
+  Menu4CardsContain,
+  MenusBody,
   TitlePage,
-} from "../../../styles/pagesStyles/home";
+} from "../../../styles/menuStyles/menu";
 import MenuCard from "../../MenuCard/MenuCard";
 
 const makeCards = [
   {
     classDiv: "bi bi-buildings",
     title: "Empresa",
-    to: "empresa" 
+    to: "/empresa" 
   },
   {
     classDiv: "bi bi-shop",
     title: "Puntos de venta",
-    to: "puntos-de-venta"
+    to: "/puntos-de-venta"
   },
   {
     classDiv: "bi bi-person-lines-fill",
     title: "Clientes",
-    to:"clientes"
+    to:"/clientes"
   },
   {
     classDiv: "bi bi-person-rolodex",
     title: "Proveedores",
-    to: "proveedores"
+    to: "/proveedores"
   },
   {
     classDiv: "bi bi-gear-fill",
     title: "Configuración",
-    to: "configuracion"
+    to: "/configuracion"
   },
   {
     classDiv: "bi bi-receipt",
     title: "Facturación",
-    to:'facturacion'
+    to:'/facturacion'
   },
   {
     classDiv: "bi bi-person-x",
     title: "Cerrar Sesión",
-    to: "cerrar-sesion"
+    to: "/cerrar-sesion"
   },
   
 ]
 
 const Home = () => {
   return (
-    <HomeBody>
+    <MenusBody>
       <TitlePage>
         <img src={BillieLogo} />
         <h2>Bienvenido:</h2>
       </TitlePage>
-      <Menu3CardsContain>
+      <Menu4CardsContain>
         {makeCards.map((card, i)=>(
           <MenuCard key={i}
             to={card.to}
@@ -60,8 +60,8 @@ const Home = () => {
             title={card.title}
           />
         ))}
-      </Menu3CardsContain>
-    </HomeBody>
+      </Menu4CardsContain>
+    </MenusBody>
   );
 };
 

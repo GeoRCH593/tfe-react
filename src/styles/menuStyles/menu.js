@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 /*Estilo Contendedor de titulo e img  */
 
-export const HomeBody = styled.div`
+export const MenusBody = styled.div`
 position: absolute;
 left: 280px;
 width: 80%;
@@ -29,9 +29,37 @@ export const TitlePage = styled.div`
   }
 `;
 
+export const TitlePage2 = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  > h2 {
+    font-family: Open Sans;
+    padding-top: 20px;
+    font-weight: bold;
+  }
+  > i {
+    font-size: 2rem;
+    width: 50px;
+    height: 100%;
+    color: #0C302E;
+    font-weight: bold;
+  }
+`;
+
+
 export const Menu3CardsContain = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 6em;
-  padding: 2em 2em;
+  padding: 3em 2em;
+`;
+
+export const Menu4CardsContain = styled.div`
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5em;
+  padding: 3em 2em;
 `;
