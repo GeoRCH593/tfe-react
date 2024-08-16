@@ -33,6 +33,7 @@ const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
         </NavLinks>
       ) : (
         <NavBtn
+        to={{pathname:to, state: { flag: title } }}
         onClick={() => handleSubMenu()}>
           <Icon>{icon}</Icon>
           {title}

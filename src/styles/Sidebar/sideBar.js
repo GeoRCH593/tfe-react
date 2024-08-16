@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 /*Contenedor general sidebar */
 export const SideBarWrapper = styled.div`
@@ -98,7 +98,7 @@ export const Subfooter = styled.div`
 `;
 
 /* Contenedor de link menu sidebar */
-export const NavBtn = styled.div`
+export const NavBtn = styled(Link)`
   position: relative;
   color: #909090;
   padding: 15px 20px;
