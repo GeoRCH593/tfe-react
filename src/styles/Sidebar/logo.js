@@ -22,7 +22,7 @@ export const LogoWrapper = styled.div`
       align-items: center;
       justify-content: center;
       > img {
-        font-size: 60px;
+        width: 80px;
         margin-left: 5px;
       }
     }

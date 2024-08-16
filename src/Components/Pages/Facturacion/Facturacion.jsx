@@ -21,17 +21,17 @@ const makeCards = [
     to: "facturacion/eliminar"
   },
   {
-    classDiv: "bi bi-search",
+    classDiv: "bi bi-file-earmark-x",
     title: "Eliminar factura en borrador",
     to: "facturacion/busqueda"
   }, 
   {
-    classDiv: "bi bi-person-dash",
+    classDiv: "bi bi-search",
     title: "Buscar factura",
     to: "facturacion/eliminar"
   },
   {
-    classDiv: "bi bi-search",
+    classDiv: "bi bi-envelope-at",
     title: "Enviar factura por email",
     to: "facturacion/busqueda"
   }, 

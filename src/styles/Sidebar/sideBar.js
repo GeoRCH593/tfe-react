@@ -84,7 +84,7 @@ export const Footer = styled.ul`
     opacity: 0.5;
   }
 `;
-/*Estilos FOOTER 3 contenedor*/
+/*FOOTER 3 contenedor todos los derechos reservado*/
 export const Subfooter = styled.div`
   position: absolute;
   bottom: 10px;
@@ -97,10 +97,11 @@ export const Subfooter = styled.div`
   cursor: default;
 `;
 
-/* Contenedor de link menu sidebar */
+/* Contenedor de links textos del menu sidebar */
 export const NavBtn = styled(Link)`
   position: relative;
   color: #909090;
+  font-weight: 600;
   padding: 15px 20px;
   text-decoration: none;
   display: flex;
@@ -113,7 +114,7 @@ export const NavBtn = styled(Link)`
   transition: all 0.5s ease-in-out;
   &:hover {
     background: #39b54a1a;
-    color: #fff;
+    color: #39B54A;
     
   }
 `;

@@ -25,7 +25,7 @@ const makeCards = [
     to: "clientes",
   },
   {
-    classDiv: "bi bi-search",
+    classDiv: "bi bi-binoculars",
     title: "Busqueda de empresas",
     to: "proveedores",
   },
