@@ -14,7 +14,7 @@ font-family: Open Sans;
 export const FormContainer = styled.div`
 background-color: #0C302E;
 width: 400px;
-height: 580px;
+height: 590px;
 padding: 1rem 4rem;
 box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.5);
 border-radius: 5px;
@@ -70,10 +70,12 @@ export const InputPolitics = styled.input`
 color: #fff;
 `;
 
+/*Contenedor de aceptar terminos y condiciones */
 export const LabelInputPolitics = styled.label`
 display: flex;
 color: #fff;
 font-weight: 100;
 font-size: 0.7rem;
 gap: 1rem;
+padding-top: 1em;
 `;

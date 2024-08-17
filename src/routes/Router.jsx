@@ -9,6 +9,7 @@ import Pos from '../Components/Pages/Puntos de venta/Pos';
 import SideBar from '../Components/SideBar/SideBar';
 import UserSignIn from '../context/UserSignIn';
 import UserRegister from '../context/UserRegister'
+import CrearEmpresa from '../Components/SubPages/Clientes/CrearEmpresa';
 
 const Router = () => (
   <BrowserRouter>
@@ -25,6 +26,7 @@ const Router = () => (
       <Route path="/usuario-acceso" element={<UserSignIn/>} />
       <Route path="/usuario-registro" element={<UserRegister/>} />
       <Route path="*" element={<div>404</div>} />
+      <Route path="/empresa/crearempresa" element={<CrearEmpresa/>} />
     </Routes>
     </SideBar>
 </BrowserRouter>

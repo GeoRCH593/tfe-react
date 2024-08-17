@@ -12,7 +12,7 @@ const makeCards = [
   {
     classDiv: "bi bi-building-add",
     title: "Crear empresa",
-    to: "empresa",
+    to: "crearempresa",
   },
   {
     classDiv: "bi bi-arrow-left-right",
