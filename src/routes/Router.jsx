@@ -10,6 +10,7 @@ import SideBar from '../Components/SideBar/SideBar';
 import UserSignIn from '../context/UserSignIn';
 import UserRegister from '../context/UserRegister'
 import CrearEmpresa from '../Components/SubPages/Clientes/CrearEmpresa';
+import ActualizarDatos from '../Components/SubPages/Clientes/ActualizarDatos';
 
 const Router = () => (
   <BrowserRouter>
@@ -27,6 +28,7 @@ const Router = () => (
       <Route path="/usuario-registro" element={<UserRegister/>} />
       <Route path="*" element={<div>404</div>} />
       <Route path="/empresa/crearempresa" element={<CrearEmpresa/>} />
+      <Route path="/empresa/actualizardatos" element={<ActualizarDatos/>} />
     </Routes>
     </SideBar>
 </BrowserRouter>

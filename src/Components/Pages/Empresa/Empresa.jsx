@@ -17,7 +17,7 @@ const makeCards = [
   {
     classDiv: "bi bi-arrow-left-right",
     title: "Actualizar datos",
-    to: "puntos-de-venta",
+    to: "actualizardatos",
   },
   {
     classDiv: "bi bi-file-earmark-x",

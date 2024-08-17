@@ -7,10 +7,11 @@ import {
   FormTitle,
   PageBody,
   TitlePage,
-} from "./crearEmpresaStyle";
+} from "../../../styles/Subpages/subpagesStyles";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-person-lines-fill";
+const SubPageTitle = 'Crear una empresa'
 
 const CrearEmpresa = () => {
   return (
@@ -22,7 +23,7 @@ const CrearEmpresa = () => {
       </TitlePage>
       <div>
         <FormTitle>
-          <h5>Crear una empresa</h5>
+          <h5>{SubPageTitle}</h5>
         </FormTitle>
         <FormComplete>
           <FormDiv>
@@ -71,8 +72,8 @@ const CrearEmpresa = () => {
           </FormDiv>
           <FormDiv>
             <label>
-            <input type="checkbox"></input>
-            Obligado a llevar contabilidad:
+              <input type="checkbox"></input>
+              Obligado a llevar contabilidad:
             </label>
           </FormDiv>
           <FormDiv>
