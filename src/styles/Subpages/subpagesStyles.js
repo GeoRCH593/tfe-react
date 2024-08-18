@@ -9,7 +9,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-padding: 30px;
+padding: 10px 0;
 z-index: -1;
 `;
 
@@ -56,7 +56,7 @@ padding: 5px;
 
 /*Contendedor de cada input y label 1 columna*/
 export const FormDiv = styled.div`
-  padding: 5px 5px;
+  padding: 2px 5px;
   width: 100%;
   > label {
     color: #0C302E;
@@ -66,9 +66,13 @@ export const FormDiv = styled.div`
   }
   > input {
   width: 75%;
+  background-color: #E8EAED;
+  border: none;
+  font-family: Open Sans;
   }
   > select {
-  width: 80%
+  width: 80%;
+  background-color: #E8EAED;
   }
 `;
 
