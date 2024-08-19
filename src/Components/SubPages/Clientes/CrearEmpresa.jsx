@@ -85,7 +85,7 @@ const CrearEmpresa = () => {
             <input type="email"></input>
           </FormDiv>
           <BtnContain>
-            <BtnSubmit type="submit">Crear Empresa</BtnSubmit>
+            <BtnSubmit type="submit"><i className="bi bi-building-add"></i>Crear Empresa</BtnSubmit>
           </BtnContain>
         </FormComplete>
       </div>

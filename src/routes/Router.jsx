@@ -11,6 +11,8 @@ import UserSignIn from '../context/UserSignIn';
 import UserRegister from '../context/UserRegister'
 import CrearEmpresa from '../Components/SubPages/Clientes/CrearEmpresa';
 import ActualizarDatos from '../Components/SubPages/Clientes/ActualizarDatos';
+import EliminarDatos from '../Components/SubPages/Clientes/EliminarDatos';
+import BusquedaEmpresa from '../Components/SubPages/Clientes/BusquedaEmpresa';
 
 const Router = () => (
   <BrowserRouter>
@@ -29,6 +31,8 @@ const Router = () => (
       <Route path="*" element={<div>404</div>} />
       <Route path="/empresa/crearempresa" element={<CrearEmpresa/>} />
       <Route path="/empresa/actualizardatos" element={<ActualizarDatos/>} />
+      <Route path="/empresa/eliminardatos" element={<EliminarDatos/>} />
+      <Route path="/empresa/busquedadeempresas" element={<BusquedaEmpresa/>} />
     </Routes>
     </SideBar>
 </BrowserRouter>

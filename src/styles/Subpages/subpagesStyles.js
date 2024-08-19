@@ -56,8 +56,9 @@ padding: 5px;
 
 /*Contendedor de cada input y label 1 columna*/
 export const FormDiv = styled.div`
-  padding: 2px 5px;
+  padding: .3em 2em;
   width: 100%;
+  gap: 2em;
   > label {
     color: #0C302E;
     width: 100%;
@@ -69,11 +70,15 @@ export const FormDiv = styled.div`
   background-color: #E8EAED;
   border: none;
   font-family: Open Sans;
+  transition: all .3s ease-in-out;
+
   }
   > select {
   width: 80%;
   background-color: #E8EAED;
+  border: none;
   }
+  
 `;
 
 /* Checkbox */
@@ -104,10 +109,13 @@ padding-top: 3em;
 
 /*BOTON ENVIAR */
 export const BtnSubmit = styled.button`
-width: 150px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 0.5em;
+padding: 0.2em 1.5em;
 background: #0C302E;
 color: #fff;
-outline: none;
 border: none;
 font-family: Open Sans;
 font-size: 1rem;

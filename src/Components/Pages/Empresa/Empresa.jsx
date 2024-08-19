@@ -22,12 +22,12 @@ const makeCards = [
   {
     classDiv: "bi bi-file-earmark-x",
     title: "Eliminar datos",
-    to: "clientes",
+    to: "eliminardatos",
   },
   {
     classDiv: "bi bi-binoculars",
     title: "Busqueda de empresas",
-    to: "proveedores",
+    to: "busquedadeempresas",
   },
   {
     classDiv: "bi bi-shop-window",
