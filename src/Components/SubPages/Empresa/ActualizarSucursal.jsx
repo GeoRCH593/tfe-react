@@ -17,7 +17,7 @@ const ActualizarSucursal = () => {
       </TitlePage>
       <div>
         <FormTitle>
-          <h5>{SubPageTitle}</h5>
+          <h5>{SubPageTitle}</h5>z
         </FormTitle>
         <FormComplete>
           <FormDiv>
