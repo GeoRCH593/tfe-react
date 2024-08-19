@@ -13,6 +13,7 @@ import CrearEmpresa from '../Components/SubPages/Clientes/CrearEmpresa';
 import ActualizarDatos from '../Components/SubPages/Clientes/ActualizarDatos';
 import EliminarDatos from '../Components/SubPages/Clientes/EliminarDatos';
 import BusquedaEmpresa from '../Components/SubPages/Clientes/BusquedaEmpresa';
+import CrearSucursal from '../Components/SubPages/Clientes/CrearSucursal';
 
 const Router = () => (
   <BrowserRouter>
@@ -33,6 +34,7 @@ const Router = () => (
       <Route path="/empresa/actualizardatos" element={<ActualizarDatos/>} />
       <Route path="/empresa/eliminardatos" element={<EliminarDatos/>} />
       <Route path="/empresa/busquedadeempresas" element={<BusquedaEmpresa/>} />
+      <Route path='/empresa/crearsucursal' element={<CrearSucursal />} />
     </Routes>
     </SideBar>
 </BrowserRouter>

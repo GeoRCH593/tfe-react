@@ -1,7 +1,9 @@
 import styled from "styled-components";
 
 export const TableDeleteCompany =styled.table`
-width: 80%;
+width: 100%;
+align-items: center;
+justify-content: center;
  > thead {
   background: #DDDDDD;
   padding: 2em 3em;

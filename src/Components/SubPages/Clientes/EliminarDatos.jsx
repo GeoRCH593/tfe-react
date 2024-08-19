@@ -50,11 +50,13 @@ const EliminarDatos = () => {
                 <tr>
                   <th>Identificador</th>
                   <th>Empresa</th>
+                  <th>Selección</th>
                 </tr>
               </thead>
               <tr>
                 <td>RUC: 0123456789</td>
                 <td>Empresa Cia Ltda 1</td>
+                <td><input type="checkbox"></input></td>
               </tr>
             </TableDeleteCompany>
             <BtnContain>

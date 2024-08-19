@@ -2,7 +2,6 @@ import {GlobalStyle} from '../../../styles/globalStyles';
 import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, FormDiv} from '../../../styles/Subpages/subpagesStyles';
 import {TableDeleteCompany} from './eliminarDatosStyle';
 
-
 const Modul = "Empresa";
 const IconClass = "bi bi-person-lines-fill";
 const SubPageTitle = "Busqueda de empresa";
@@ -34,6 +33,14 @@ const BusquedaEmpresa = () => {
             <label>Número de Indentificación:</label>
             <input type="number" />
           </FormDiv>
+          <FormDiv>
+            <label>Razón Social:</label>
+            <input type="text"></input>
+          </FormDiv>
+          <FormDiv>
+            <label>Nombre comercial de la empresa:</label>
+            <input type="text"></input>
+          </FormDiv>
           <BtnContain>
             <BtnSubmit type="submit"><i className="bi bi-search"></i>Buscar</BtnSubmit>
           </BtnContain>
@@ -49,18 +56,11 @@ const BusquedaEmpresa = () => {
                 <td>RUC: 0123456789</td>
                 <td>Empresa Cia Ltda 1</td>
               </tr>
-            </TableDeleteCompany>
-            <BtnContain>
-            <BtnSubmit type="submit"><i className="bi bi-trash3"></i>Eliminar</BtnSubmit>
-          </BtnContain>
-          
+            </TableDeleteCompany>          
         </FormComplete>
       </div>
     </PageBody>
   );
 };
-
-
-
 
 export default BusquedaEmpresa;
