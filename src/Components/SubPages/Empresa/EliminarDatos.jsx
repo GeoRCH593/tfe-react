@@ -1,12 +1,20 @@
-import {GlobalStyle} from '../../../styles/globalStyles';
-import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, FormDiv} from '../../../styles/Subpages/subpagesStyles';
-import {TableDeleteCompany} from './eliminarDatosStyle';
+import { GlobalStyle } from "../../../styles/globalStyles";
+import {
+  PageBody,
+  BtnContain,
+  BtnSubmit,
+  TitlePage,
+  FormTitle,
+  FormComplete,
+  FormDiv,
+} from "../../../styles/Subpages/subpagesStyles";
+import { TableDeleteCompany } from "./eliminarDatosStyle";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-person-lines-fill";
-const SubPageTitle = "Busqueda de empresa";
+const IconClass = "bi bi-building-fill";
+const SubPageTitle = "Eliminar Datos";
 
-const BusquedaEmpresa = () => {
+const EliminarDatos = () => {
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -33,14 +41,6 @@ const BusquedaEmpresa = () => {
             <label>Número de Indentificación:</label>
             <input type="number" />
           </FormDiv>
-          <FormDiv>
-            <label>Razón Social:</label>
-            <input type="text"></input>
-          </FormDiv>
-          <FormDiv>
-            <label>Nombre comercial de la empresa:</label>
-            <input type="text"></input>
-          </FormDiv>
           <BtnContain>
             <BtnSubmit type="submit"><i className="bi bi-search"></i>Buscar</BtnSubmit>
           </BtnContain>
@@ -50,17 +50,23 @@ const BusquedaEmpresa = () => {
                 <tr>
                   <th>Identificador</th>
                   <th>Empresa</th>
+                  <th>Selección</th>
                 </tr>
               </thead>
               <tr>
                 <td>RUC: 0123456789</td>
                 <td>Empresa Cia Ltda 1</td>
+                <td><input type="checkbox"></input></td>
               </tr>
-            </TableDeleteCompany>          
+            </TableDeleteCompany>
+            <BtnContain>
+            <BtnSubmit type="submit"><i className="bi bi-trash3"></i>Eliminar</BtnSubmit>
+          </BtnContain>
+          
         </FormComplete>
       </div>
     </PageBody>
   );
 };
 
-export default BusquedaEmpresa;
+export default EliminarDatos;

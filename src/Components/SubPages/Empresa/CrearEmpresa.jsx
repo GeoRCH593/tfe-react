@@ -10,7 +10,7 @@ import {
 } from "../../../styles/Subpages/subpagesStyles";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-person-lines-fill";
+const IconClass = "bi bi-building";
 const SubPageTitle = 'Crear una empresa'
 
 const CrearEmpresa = () => {

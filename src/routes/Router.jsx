@@ -9,11 +9,12 @@ import Pos from '../Components/Pages/Puntos de venta/Pos';
 import SideBar from '../Components/SideBar/SideBar';
 import UserSignIn from '../context/UserSignIn';
 import UserRegister from '../context/UserRegister'
-import CrearEmpresa from '../Components/SubPages/Clientes/CrearEmpresa';
-import ActualizarDatos from '../Components/SubPages/Clientes/ActualizarDatos';
-import EliminarDatos from '../Components/SubPages/Clientes/EliminarDatos';
-import BusquedaEmpresa from '../Components/SubPages/Clientes/BusquedaEmpresa';
-import CrearSucursal from '../Components/SubPages/Clientes/CrearSucursal';
+import CrearEmpresa from '../Components/SubPages/Empresa/CrearEmpresa';
+import ActualizarDatos from '../Components/SubPages/Empresa/ActualizarDatos';
+import EliminarDatos from '../Components/SubPages/Empresa/EliminarDatos';
+import BusquedaEmpresa from '../Components/SubPages/Empresa/BusquedaEmpresa';
+import CrearSucursal from '../Components/SubPages/Empresa/CrearSucursal';
+import ActualizarSucursal from '../Components/SubPages/Empresa/ActualizarSucursal';
 
 const Router = () => (
   <BrowserRouter>
@@ -35,6 +36,7 @@ const Router = () => (
       <Route path="/empresa/eliminardatos" element={<EliminarDatos/>} />
       <Route path="/empresa/busquedadeempresas" element={<BusquedaEmpresa/>} />
       <Route path='/empresa/crearsucursal' element={<CrearSucursal />} />
+      <Route path='/empresa/actualizardatossucursal' element={<ActualizarSucursal/>} />
     </Routes>
     </SideBar>
 </BrowserRouter>

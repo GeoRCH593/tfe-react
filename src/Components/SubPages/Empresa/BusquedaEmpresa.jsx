@@ -1,20 +1,12 @@
-import { GlobalStyle } from "../../../styles/globalStyles";
-import {
-  PageBody,
-  BtnContain,
-  BtnSubmit,
-  TitlePage,
-  FormTitle,
-  FormComplete,
-  FormDiv,
-} from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "./eliminarDatosStyle";
+import {GlobalStyle} from '../../../styles/globalStyles';
+import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, FormDiv} from '../../../styles/Subpages/subpagesStyles';
+import {TableDeleteCompany} from './eliminarDatosStyle';
 
 const Modul = "Empresa";
-const IconClass = "bi bi-person-lines-fill";
-const SubPageTitle = "Eliminar Datos";
+const IconClass = "bi bi-building";
+const SubPageTitle = "Busqueda de empresa";
 
-const EliminarDatos = () => {
+const BusquedaEmpresa = () => {
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -41,32 +33,35 @@ const EliminarDatos = () => {
             <label>Número de Indentificación:</label>
             <input type="number" />
           </FormDiv>
+          <FormDiv>
+            <label>Razón Social:</label>
+            <input type="text"></input>
+          </FormDiv>
+          <FormDiv>
+            <label>Nombre comercial de la empresa:</label>
+            <input type="text"></input>
+          </FormDiv>
           <BtnContain>
             <BtnSubmit type="submit"><i className="bi bi-search"></i>Buscar</BtnSubmit>
           </BtnContain>
+          <hr />
           <br/>
             <TableDeleteCompany>
               <thead>
                 <tr>
                   <th>Identificador</th>
                   <th>Empresa</th>
-                  <th>Selección</th>
                 </tr>
               </thead>
               <tr>
                 <td>RUC: 0123456789</td>
                 <td>Empresa Cia Ltda 1</td>
-                <td><input type="checkbox"></input></td>
               </tr>
-            </TableDeleteCompany>
-            <BtnContain>
-            <BtnSubmit type="submit"><i className="bi bi-trash3"></i>Eliminar</BtnSubmit>
-          </BtnContain>
-          
+            </TableDeleteCompany>          
         </FormComplete>
       </div>
     </PageBody>
   );
 };
 
-export default EliminarDatos;
+export default BusquedaEmpresa;

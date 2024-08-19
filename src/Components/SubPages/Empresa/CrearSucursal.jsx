@@ -11,7 +11,7 @@ import {
 import { TableDeleteCompany } from "./eliminarDatosStyle";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-person-lines-fill";
+const IconClass = "bi bi-building";
 const SubPageTitle = "Crear Sucursal";
 
 const CrearSucursal = () => {
