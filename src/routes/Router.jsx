@@ -25,6 +25,7 @@ import BuscarPos from '../Components/SubPages/Puntos-de-venta/BuscarPos';
 import CrearClientes from '../Components/SubPages/Clientes/CrearClientes';
 import ActualizarClientes from '../Components/SubPages/Clientes/ActualizarClientes';
 import EliminarClientes from '../Components/SubPages/Clientes/EliminarClientes';
+import BuscarClientes from '../Components/SubPages/Clientes/BuscarClientes';
 
 const Router = () => (
   <BrowserRouter>
@@ -57,6 +58,7 @@ const Router = () => (
       <Route path='clientes/crearclientes' element={<CrearClientes />}/>
       <Route path='clientes/actualizarclientes' element={<ActualizarClientes />}/>
       <Route path='clientes/eliminarclientes' element={<EliminarClientes />} />
+      <Route path='clientes/buscarcliente' element={<BuscarClientes />}/>
     </Routes>
     </SideBar>
 </BrowserRouter>

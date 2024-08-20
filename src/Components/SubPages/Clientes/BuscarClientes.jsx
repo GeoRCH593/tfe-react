@@ -13,9 +13,9 @@ import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 
 const Modul = "Clientes";
 const IconClass = "bi bi-person-lines-fill";
-const SubPageTitle = "Eliminar Clientes";
+const SubPageTitle = "Buscar Clientes";
 
-const EliminarClientes = () => {
+const BuscarClientes = () => {
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -28,19 +28,12 @@ const EliminarClientes = () => {
           <h5>{SubPageTitle}</h5>
         </FormTitle>
         <FormComplete>
-          <FormDiv>
-            <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador">
-              <option>R.U.C</option>
-              <option>Cédula</option>
-              <option>Pasaporte</option>
-              <option>Identificador del exterior</option>
-              <option>Consumidor final</option>
-            </select>
-          </FormDiv>
+        <SubTitleList>
+            <h5>Buscar Clientes: </h5>
+          </SubTitleList>
           <FormDiv>
             <label>Número de Indentificación:</label>
-            <input type="number" />
+            <input type="text" />
           </FormDiv>
           <BtnContain>
             <BtnSubmit type="submit">
@@ -74,15 +67,10 @@ const EliminarClientes = () => {
               </td>
             </tr>
           </TableDeleteCompany>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-trash3"></i>Eliminar
-            </BtnSubmit>
-          </BtnContain>
         </FormComplete>
       </div>
     </PageBody>
   );
 };
 
-export default EliminarClientes;
+export default BuscarClientes;
