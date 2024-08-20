@@ -124,6 +124,11 @@ justify-content: center;
  }
 `;
 
+/*Subtitle sobre tabla*/
+export const SubTitleList = styled.div`
+padding: 2em 0 1em 0;
+`;
+
 /*Contenedor boton enviar */
 export const BtnContain = styled.div`
 display: flex;
