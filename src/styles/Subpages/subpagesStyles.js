@@ -103,7 +103,7 @@ export const CheckBoxOne = styled.input`
 export const TablesContain = styled.div`
 min-width: 900px;
 background: #F4F4F4;
-padding: 2em;
+padding: 2em 1em;
 `;
 
 /*Tabla de eliminar datos */
@@ -113,14 +113,15 @@ align-items: center;
 justify-content: center;
  > thead {
   background: #DDDDDD;
-  padding: 2em 3em;
-  font-size: 15px;
+  padding: 2em 2em;
+  font-size: 13px;
   text-align: left;
  }
  > tbody {
   background: #fff;
+  font-size: 13px;
   padding-top: 1em;
-  padding: 2em 3em;
+  padding: 2em 2em;
  }
 `;
 

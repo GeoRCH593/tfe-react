@@ -19,6 +19,7 @@ import EliminarDatosSucursal from '../Components/SubPages/Empresa/EliminarDatosS
 import BuscarSucursal from '../Components/SubPages/Empresa/BuscarSucursal';
 import CrearPos from '../Components/SubPages/Puntos-de-venta/CrearPos';
 import GenerarSecuencial from '../Components/SubPages/Puntos-de-venta/GenerarSecuencial';
+import ActualizarPos from '../Components/SubPages/Puntos-de-venta/ActualizarPos';
 
 const Router = () => (
   <BrowserRouter>
@@ -45,6 +46,7 @@ const Router = () => (
       <Route path='/empresa/buscarsucursal' element={<BuscarSucursal />} />
       <Route path='/puntos-de-venta/crearpos' element={<CrearPos />}/>
       <Route path='/puntos-de-venta/generarsecuencial' element={<GenerarSecuencial />} />
+      <Route path='puntos-de-venta/actualizarpos' element={<ActualizarPos/>} />
     </Routes>
     </SideBar>
 </BrowserRouter>

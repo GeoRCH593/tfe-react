@@ -8,27 +8,27 @@ const makeCards = [
   {
     classDiv: "bi bi-building-add",
     title: "Crear puntos de venta",
-    to: "puntos-de-venta/crear"
+    to: "crearpos"
   },
   {
     classDiv: "bi bi-123",
     title: "Generar secuencial",
-    to: "puntos-de-venta"
+    to: "generarsecuencial"
   },
   {
     classDiv: "bi bi-arrow-left-right",
     title: "Actualizar puntos de venta",
-    to: "clientes"
+    to: "actualizarpos"
   },
   {
     classDiv: "bi bi-file-earmark-x",
     title: "Eliminar Punto de venta",
-    to: "proveedores"
+    to: "eliminarpos"
   },
   {
     classDiv: "bi bi-search",
     title: "Buscar Punto de venta",
-    to: "configuracion"
+    to: "buscarpos"
   },
   
 ];
