@@ -8,16 +8,14 @@ import {
   FormComplete,
   FormDiv,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
-import { IconEditStyled } from "../../../styles/Subpages/icons.js";
-import { SubTitleList } from "../Empresa/eliminarDatosSucursalStyles";
+import { IconEditStyled } from "../../../styles/Subpages/icons";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-building";
+const IconClass = "bi bi-person-lines-fill";
 const IconEdit = "bi bi-pencil-fill";
-const SubPageTitle = "Actualizar Punto de venta";
+const SubPageTitle = "Actualizar datos de cliente";
 
-const ActualizarPos = () => {
+const ActualizarClientes = () => {
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -30,40 +28,8 @@ const ActualizarPos = () => {
           <h5>{SubPageTitle}</h5>
         </FormTitle>
         <FormComplete>
-          <SubTitleList>
-            <h5>Seleccionar de Puntos de venta:</h5>
-          </SubTitleList>
-          <TableDeleteCompany>
-            <thead>
-              <tr>
-                <th>Código</th>
-                <th>Empresa</th>
-                <th>Sucursales</th>
-                <th>Dirección</th>
-                <th>POS</th>
-                <th>Secuencial</th>
-                <th>Acciones</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>001</td>
-                <td>Nombre Empresa</td>
-                <td>Nombre Sucursal</td>
-                <td>Calle 1 y calle 2</td>
-                <td>Punto de venta 001</td>
-                <td>POS 002</td>
-                <td><input type="checkbox"></input></td>
-              </tr>
-            </tbody>
-          </TableDeleteCompany>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Busqueda de POS
-            </BtnSubmit>
-          </BtnContain>
           <FormDiv>
-            <label>Ingrese tipo de identificación:</label>
+            <label>Tipo de identificación:</label>
             <select id="identificador" name="tipo identificador">
               <option>R.U.C</option>
               <option>Cédula</option>
@@ -71,10 +37,19 @@ const ActualizarPos = () => {
               <option>Identificador del exterior</option>
               <option>Consumidor final</option>
             </select>
+            <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <FormDiv>
             <label>Número de Indentificación:</label>
             <input type="number" />
+            <IconEditStyled className={IconEdit}></IconEditStyled>
+          </FormDiv>
+          <FormDiv>
+            <label>Tipo de cliente:</label>
+            <select id="identificador" name="tipo identificador">
+              <option>Persona natural</option>
+              <option>Empresa</option>
+            </select>
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <FormDiv>
@@ -83,31 +58,42 @@ const ActualizarPos = () => {
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <FormDiv>
-            <label>Nombre comercial de la empresa:</label>
+            <label>Dirección:</label>
             <input type="text"></input>
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <FormDiv>
-            <label>Nombre comercial de la empresa:</label>
-            <input type="text"></input>
+            <label>Teléfono:</label>
+            <input type="tel"></input>
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
+
           <FormDiv>
-            <label>Nombre comercial de la empresa:</label>
-            <input type="text"></input>
+            <label>Correo electrónico:</label>
+            <input type="email"></input>
             <IconEditStyled className={IconEdit}></IconEditStyled>
+            <FormDiv>
+              <label>
+                <input type="checkbox"></input>
+                Obligado a llevar contabilidad:
+              </label>
+            </FormDiv>
+            <FormDiv>
+              <label>
+                <input type="checkbox"></input>
+                Extranjero
+              </label>
+            </FormDiv>
           </FormDiv>
           <BtnContain>
             <BtnSubmit type="submit">
-              <i className="bi bi-arrow-left-right"></i>Modificar POS
+              <i className="bi bi-pencil-square"></i>Actualizar
             </BtnSubmit>
           </BtnContain>
-          <br />
-          <hr />
         </FormComplete>
       </div>
     </PageBody>
   );
 };
 
-export default ActualizarPos;
+export default ActualizarClientes;

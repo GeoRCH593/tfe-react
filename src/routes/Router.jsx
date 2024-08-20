@@ -23,6 +23,7 @@ import ActualizarPos from '../Components/SubPages/Puntos-de-venta/ActualizarPos'
 import EliminarPos from '../Components/SubPages/Puntos-de-venta/EliminarPos';
 import BuscarPos from '../Components/SubPages/Puntos-de-venta/BuscarPos';
 import CrearClientes from '../Components/SubPages/Clientes/CrearClientes';
+import ActualizarClientes from '../Components/SubPages/Clientes/ActualizarClientes';
 
 const Router = () => (
   <BrowserRouter>
@@ -53,6 +54,7 @@ const Router = () => (
       <Route path='puntos-de-venta/eliminarpos' element={<EliminarPos />}/>
       <Route path='puntos-de-venta/buscarpos' element={<BuscarPos />}/>
       <Route path='clientes/crearclientes' element={<CrearClientes />}/>
+      <Route path='clientes/actualizarclientes' element={<ActualizarClientes />}/>
     </Routes>
     </SideBar>
 </BrowserRouter>

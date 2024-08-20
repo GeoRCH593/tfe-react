@@ -8,7 +8,7 @@ import {
   FormComplete,
   FormDiv,
 } from "../../../styles/Subpages/subpagesStyles";
-import { IconEditStyled } from "./actualizarDatosStyle";
+import { IconEditStyled } from "../../../styles/Subpages/icons"
 
 const Modul = "Empresa";
 const IconClass = "bi bi-person-lines-fill";

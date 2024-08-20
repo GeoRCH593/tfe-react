@@ -8,22 +8,22 @@ const makeCards = [
   {
     classDiv: "bi bi-person-add",
     title: "Crear clientes",
-    to: "clientes/crear"
+    to: "crearclientes"
   },
   {
     classDiv: "bi bi-person-up",
     title: "Actualizar clientes",
-    to: "clientes/actualizar"
+    to: "actualizarclientes"
   },
   {
     classDiv: "bi bi-person-dash",
     title: "Eliminar cliente",
-    to: "clientes/eliminar"
+    to: "eliminarcliente"
   },
   {
     classDiv: "bi bi-search",
     title: "Buscar cliente",
-    to: "clientes/busqueda"
+    to: "buscarcliente"
   }, 
 ];
 

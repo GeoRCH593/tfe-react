@@ -1,8 +1,8 @@
 import {GlobalStyle} from '../../../styles/globalStyles';
 import {BtnContain, BtnSubmit, FormComplete, FormDiv, FormTitle, PageBody, TitlePage} from '../../../styles/Subpages/subpagesStyles';
 
-const Modul = "Empresa";
-const IconClass = "bi bi-building";
+const Modul = "Clientes";
+const IconClass = "bi bi-person-lines-fill";
 const SubPageTitle = 'Ingresar Cliente nuevo'
 
 const CrearClientes = () => {
@@ -53,7 +53,7 @@ const CrearClientes = () => {
           <input type="email"></input>
         </FormDiv>
         <BtnContain>
-          <BtnSubmit type="submit"><i className="bi bi-person-lines-fill"></i>Crear Nuevo Cliente</BtnSubmit>
+          <BtnSubmit type="submit"><i className="bi bi-person-add"></i>Crear Nuevo Cliente</BtnSubmit>
         </BtnContain>
       </FormComplete>
     </div>
