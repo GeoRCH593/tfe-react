@@ -130,6 +130,9 @@ export const TableDeleteCompany = styled.table`
 /*Subtitle sobre tabla*/
 export const SubTitleList = styled.div`
   padding: 2em 0 1em 0;
+  > h5{
+    font-weight: 700;
+    }
 `;
 
 /*Contenedor boton enviar */
@@ -152,7 +155,7 @@ export const BtnSubmit = styled.button`
   border: none;
   font-family: Open Sans;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   border-radius: 15px;
   transition: all 0.4s ease-in-out;
   &:hover {
