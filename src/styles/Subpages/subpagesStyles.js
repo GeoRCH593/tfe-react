@@ -51,7 +51,7 @@ export const FormTitle = styled.div`
   color: #fff;
   align-items: center;
   justify-content: center;
-  padding: 5px;
+  padding: 0.5em;
 `;
 
 /*Contendedor de cada input y label 1 columna*/

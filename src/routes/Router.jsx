@@ -22,6 +22,7 @@ import GenerarSecuencial from '../Components/SubPages/Puntos-de-venta/GenerarSec
 import ActualizarPos from '../Components/SubPages/Puntos-de-venta/ActualizarPos';
 import EliminarPos from '../Components/SubPages/Puntos-de-venta/EliminarPos';
 import BuscarPos from '../Components/SubPages/Puntos-de-venta/BuscarPos';
+import CrearClientes from '../Components/SubPages/Clientes/CrearClientes';
 
 const Router = () => (
   <BrowserRouter>
@@ -51,6 +52,7 @@ const Router = () => (
       <Route path='puntos-de-venta/actualizarpos' element={<ActualizarPos/>} />
       <Route path='puntos-de-venta/eliminarpos' element={<EliminarPos />}/>
       <Route path='puntos-de-venta/buscarpos' element={<BuscarPos />}/>
+      <Route path='clientes/crearclientes' element={<CrearClientes />}/>
     </Routes>
     </SideBar>
 </BrowserRouter>
