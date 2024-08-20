@@ -8,7 +8,7 @@ import {
   FormComplete,
   FormDiv,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "./eliminarDatosStyle";
+import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 import { SubTitleList } from "./eliminarDatosSucursalStyles";
 
 const Modul = "Empresa";

@@ -99,6 +99,31 @@ export const CheckBoxOne = styled.input`
   }
 `;
 
+/*Contenedor para 2 tablas CREAR BUSQUEDA ELIMINAR */
+export const TablesContain = styled.div`
+min-width: 900px;
+background: #F4F4F4;
+padding: 2em;
+`;
+
+/*Tabla de eliminar datos */
+export const TableDeleteCompany =styled.table`
+width: 100%;
+align-items: center;
+justify-content: center;
+ > thead {
+  background: #DDDDDD;
+  padding: 2em 3em;
+  font-size: 15px;
+  text-align: left;
+ }
+ > tbody {
+  background: #fff;
+  padding-top: 1em;
+  padding: 2em 3em;
+ }
+`;
+
 /*Contenedor boton enviar */
 export const BtnContain = styled.div`
 display: flex;

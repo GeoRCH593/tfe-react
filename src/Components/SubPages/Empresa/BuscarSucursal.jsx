@@ -1,6 +1,6 @@
 import {GlobalStyle} from '../../../styles/globalStyles';
 import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, FormDiv} from '../../../styles/Subpages/subpagesStyles';
-import {TableDeleteCompany} from './eliminarDatosStyle';
+import {TableDeleteCompany} from '../../../styles/Subpages/subpagesStyles';
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -67,7 +67,7 @@ const BuscarSucursal = () => {
           <br />
           <hr />
           <div>
-            <h4>Lista de Sucursales:</h4>
+            <h5>Lista de Sucursales:</h5>
           </div>
           <TableDeleteCompany>
             <thead>

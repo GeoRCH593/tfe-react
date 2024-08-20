@@ -8,7 +8,7 @@ import {
   FormComplete,
   FormDiv,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "./eliminarDatosStyle";
+import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building-fill";

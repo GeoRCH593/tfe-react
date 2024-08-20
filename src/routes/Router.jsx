@@ -17,6 +17,7 @@ import CrearSucursal from '../Components/SubPages/Empresa/CrearSucursal';
 import ActualizarSucursal from '../Components/SubPages/Empresa/ActualizarSucursal';
 import EliminarDatosSucursal from '../Components/SubPages/Empresa/EliminarDatosSucursal';
 import BuscarSucursal from '../Components/SubPages/Empresa/BuscarSucursal';
+import CrearPos from '../Components/SubPages/Puntos-de-venta/CrearPos';
 
 const Router = () => (
   <BrowserRouter>
@@ -41,6 +42,7 @@ const Router = () => (
       <Route path='/empresa/actualizardatossucursal' element={<ActualizarSucursal/>} />
       <Route path='/empresa/eliminardatossucursal' element={<EliminarDatosSucursal />} />\
       <Route path='/empresa/buscarsucursal' element={<BuscarSucursal />} />
+      <Route path='/puntos-de-venta/crearpos' element={<CrearPos />}/>
     </Routes>
     </SideBar>
 </BrowserRouter>
