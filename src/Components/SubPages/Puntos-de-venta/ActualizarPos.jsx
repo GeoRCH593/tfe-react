@@ -102,7 +102,6 @@ const ActualizarPos = () => {
               <i className="bi bi-arrow-left-right"></i>Modificar POS
             </BtnSubmit>
           </BtnContain>
-
           <br />
           <hr />
         </FormComplete>

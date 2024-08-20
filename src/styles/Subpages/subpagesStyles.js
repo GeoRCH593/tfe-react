@@ -1,21 +1,21 @@
 import styled from "styled-components";
 
 export const PageBody = styled.div`
-position: absolute;
-font-family: Open Sans;
-left: 280px;
-width: 80%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-padding: 10px 0;
-z-index: -1;
+  position: absolute;
+  font-family: Open Sans;
+  left: 280px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: -1;
 `;
 
 /*Titulo de pagina titulo e icono */
 export const TitlePage = styled.div`
-position: relative;
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: end;
@@ -30,55 +30,53 @@ position: relative;
     font-size: 2rem;
     width: 50px;
     height: 100%;
-    color: #0C302E;
+    color: #0c302e;
     font-weight: bold;
   }
 `;
 
 /*Contenedor de Formulario Completo 1columna*/
 export const FormComplete = styled.form`
-display: flex;
-flex-direction: column;
-background: #F4F4F4;
-min-width: 800px;
-padding: 3em;
+  display: flex;
+  flex-direction: column;
+  background: #f4f4f4;
+  min-width: 800px;
+  padding: 2em ;
 `;
 
 /*Contendor de titulo formulario */
 export const FormTitle = styled.div`
-display: flex;
-background-color: #0C302E;
-color: #fff;
-align-items: center;
-justify-content: center;
-padding: 5px;
+  display: flex;
+  background-color: #0c302e;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
 `;
 
 /*Contendedor de cada input y label 1 columna*/
 export const FormDiv = styled.div`
-  padding: .3em 2em;
+  padding: 0.3em 2em;
   width: 100%;
   gap: 2em;
   > label {
-    color: #0C302E;
+    color: #0c302e;
     width: 100%;
     font-size: 0.8rem;
     font-weight: 600;
   }
   > input {
-  width: 75%;
-  background-color: #E8EAED;
-  border: none;
-  font-family: Open Sans;
-  transition: all .3s ease-in-out;
-
+    width: 75%;
+    background-color: #e8eaed;
+    border: none;
+    font-family: Open Sans;
+    transition: all 0.3s ease-in-out;
   }
   > select {
-  width: 80%;
-  background-color: #E8EAED;
-  border: none;
+    width: 80%;
+    background-color: #e8eaed;
+    border: none;
   }
-  
 `;
 
 /* Checkbox */
@@ -86,74 +84,76 @@ export const CheckBoxOne = styled.input`
   padding: 5px 5px;
   width: 100%;
   > label {
-    color: #0C302E;
+    color: #0c302e;
     width: 100%;
     font-size: 0.8rem;
     font-weight: 500;
   }
   > input {
-  width: 75%;
+    width: 75%;
   }
   > select {
-  width: 80%
+    width: 80%;
   }
 `;
 
 /*Contenedor para 2 tablas CREAR BUSQUEDA ELIMINAR */
 export const TablesContain = styled.div`
-min-width: 900px;
-background: #F4F4F4;
-padding: 2em 1em;
+  min-width: 900px;
+  background: #f4f4f4;
+  padding: 2em 2em;
 `;
 
 /*Tabla de eliminar datos */
-export const TableDeleteCompany =styled.table`
-width: 100%;
-align-items: center;
-justify-content: center;
- > thead {
-  background: #DDDDDD;
-  padding: 2em 2em;
-  font-size: 13px;
-  text-align: left;
- }
- > tbody {
-  background: #fff;
-  font-size: 13px;
-  padding-top: 1em;
-  padding: 2em 2em;
- }
+export const TableDeleteCompany = styled.table`
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  > thead {
+    background: #dddddd;
+    padding: 2em 2em;
+    font-size: 13px;
+    text-align: left;
+  }
+  > tbody {
+    background: #fff;
+    font-size: 13px;
+    padding-top: 1em;
+    > tr {
+      padding: 1em 0 !important;
+    }
+  }
 `;
 
 /*Subtitle sobre tabla*/
 export const SubTitleList = styled.div`
-padding: 2em 0 1em 0;
+  padding: 2em 0 1em 0;
 `;
 
 /*Contenedor boton enviar */
 export const BtnContain = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-padding-top: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3em;
 `;
 
 /*BOTON ENVIAR */
 export const BtnSubmit = styled.button`
-display: flex;
-justify-content: center;
-align-items: center;
-gap: 0.5em;
-padding: 0.2em 1.5em;
-background: #0C302E;
-color: #fff;
-border: none;
-font-family: Open Sans;
-font-size: 1rem;
-font-weight: bold;
-border-radius: 15px;
-transition: all .4s ease-in-out;
-&:hover{
-  background:  #39B54A;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.2em 1.5em;
+  background: #0c302e;
+  color: #fff;
+  border: none;
+  font-family: Open Sans;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background: #39b54a;
+  }
 `;
