@@ -1,7 +1,7 @@
 import {GlobalStyle} from '../../../styles/globalStyles.js';
 import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, FormDiv} from '../../../styles/Subpages/subpagesStyles.js';
 import {TableDeleteCompany} from '../../../styles/Subpages/subpagesStyles.js';
-import {SubTitleList} from '../Empresa/eliminarDatosSucursalStyles';
+import {SubTitleList} from './buscarPos.js';
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
