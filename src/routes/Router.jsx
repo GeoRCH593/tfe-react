@@ -26,6 +26,10 @@ import CrearClientes from '../Components/SubPages/Clientes/CrearClientes';
 import ActualizarClientes from '../Components/SubPages/Clientes/ActualizarClientes';
 import EliminarClientes from '../Components/SubPages/Clientes/EliminarClientes';
 import BuscarClientes from '../Components/SubPages/Clientes/BuscarClientes';
+import CrearProveedor from '../Components/SubPages/Proveedores/CrearProveedor';
+import ActualizarProveedor from '../Components/SubPages/Proveedores/ActualizarProveedor';
+import EliminarProveedor from '../Components/SubPages/Proveedores/EliminarProveedor';
+import BuscarProveedor from '../Components/SubPages/Proveedores/BuscarProveedor';
 
 const Router = () => (
   <BrowserRouter>
@@ -59,6 +63,10 @@ const Router = () => (
       <Route path='clientes/actualizarclientes' element={<ActualizarClientes />}/>
       <Route path='clientes/eliminarclientes' element={<EliminarClientes />} />
       <Route path='clientes/buscarcliente' element={<BuscarClientes />}/>
+      <Route path='proveedores/crearproveedor' element={<CrearProveedor />} />
+      <Route path='proveedores/actualizarproveedor' element={<ActualizarProveedor />}/>
+      <Route path='proveedores/eliminarproveedor' element={<EliminarProveedor />}/>
+      <Route path='proveedores/buscarproveedor' element={<BuscarProveedor />}/>
     </Routes>
     </SideBar>
 </BrowserRouter>

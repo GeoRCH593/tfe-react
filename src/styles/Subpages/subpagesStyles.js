@@ -135,6 +135,13 @@ export const SubTitleList = styled.div`
     }
 `;
 
+/*Contenedores de checkbox*/
+export const CheckboxDiv = styled.div`
+display: flex;
+gap: 1em;
+padding: 1em 3em 0;
+`;
+
 /*Contenedor boton enviar */
 export const BtnContain = styled.div`
   display: flex;
