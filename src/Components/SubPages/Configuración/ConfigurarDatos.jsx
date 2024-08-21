@@ -2,8 +2,8 @@ import {GlobalStyle} from '../../../styles/globalStyles';
 import {BtnContain, BtnSubmit, CheckboxDiv, FormComplete, FormDiv, FormTitle, PageBody, TitlePage} from '../../../styles/Subpages/subpagesStyles';
 import {IconEditStyled} from '../../../styles/Subpages/icons';
 
-const Modul = "Proveedores";
-const IconClass = "bi bi-person-lines-fill";
+const Modul = "Configuración";
+const IconClass = "bi bi-gear-fill";
 const SubPageTitle = "Actualizar datos del proveedor";
 const IconEdit = "bi bi-pencil-fill";
 

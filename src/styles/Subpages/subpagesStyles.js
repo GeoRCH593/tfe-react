@@ -161,7 +161,7 @@ export const BtnSubmit = styled.button`
   color: #fff;
   border: none;
   font-family: Open Sans;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   border-radius: 15px;
   transition: all 0.4s ease-in-out;
