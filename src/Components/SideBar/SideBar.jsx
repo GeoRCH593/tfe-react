@@ -60,7 +60,7 @@ const makeButtons = [
     icon: <i className="bi bi-gear-fill"></i>,
     title: "Configuración",
     subBtn: [
-      "Configurar datos para facturación",
+      "Configurar datos para facturar",
       "Ingresar Secuencial de factura",
     ],
   },

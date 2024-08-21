@@ -7,13 +7,13 @@ const IconClass = "bi bi-gear-fill"
 const makeCards = [
   {
     classDiv: "bi bi-gear-wide-connected",
-    title: "Configurar datos para facturación",
-    to: "clientes/crear"
+    title: "Configurar datos para facturar",
+    to: "configurardatosparafacturar"
   },
   {
     classDiv: "bi bi-sort-numeric-down",
     title: "Ingresar secuencial de factura",
-    to: "clientes/actualizar"
+    to: "Ingresarsecuencialdefactura"
   },
 
 ];

@@ -54,7 +54,7 @@ const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
             <div key={i}>
               <SubLinks
                 key={i}
-                to={to + "/" + btn.toLowerCase().replace(/\s+/g, "")}
+                to={to + "/" + btn.toLowerCase().normalize('NFD').replace(/\s+/g, "")}
                 onClick={handleclick}
               >
                 {btn}
