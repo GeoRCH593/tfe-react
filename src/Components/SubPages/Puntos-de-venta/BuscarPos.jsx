@@ -46,6 +46,7 @@ const BuscarPos = () => {
                 <th>Secuencial</th>
               </tr>
             </thead>
+            <tbody>
             <tr>
               <td>RUC: 0123456789</td>
               <td>Empresa Cia Ltda 1</td>
@@ -54,6 +55,7 @@ const BuscarPos = () => {
               <td>001</td>
               <td>POS001</td>
             </tr>
+            </tbody>
           </TableDeleteCompany>          
       </FormComplete>
     </div>

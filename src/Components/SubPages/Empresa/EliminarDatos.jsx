@@ -42,27 +42,34 @@ const EliminarDatos = () => {
             <input type="number" />
           </FormDiv>
           <BtnContain>
-            <BtnSubmit type="submit"><i className="bi bi-search"></i>Buscar</BtnSubmit>
+            <BtnSubmit type="submit">
+              <i className="bi bi-search"></i>Buscar
+            </BtnSubmit>
           </BtnContain>
-          <br/>
-            <TableDeleteCompany>
-              <thead>
-                <tr>
-                  <th>Identificador</th>
-                  <th>Empresa</th>
-                  <th>Selección</th>
-                </tr>
-              </thead>
+          <br />
+          <TableDeleteCompany>
+            <thead>
+              <tr>
+                <th>Identificador</th>
+                <th>Empresa</th>
+                <th>Selección</th>
+              </tr>
+            </thead>
+            <tbody>
               <tr>
                 <td>RUC: 0123456789</td>
                 <td>Empresa Cia Ltda 1</td>
-                <td><input type="checkbox"></input></td>
+                <td>
+                  <input type="checkbox"></input>
+                </td>
               </tr>
-            </TableDeleteCompany>
-            <BtnContain>
-            <BtnSubmit type="submit"><i className="bi bi-trash3"></i>Eliminar</BtnSubmit>
+            </tbody>
+          </TableDeleteCompany>
+          <BtnContain>
+            <BtnSubmit type="submit">
+              <i className="bi bi-trash3"></i>Eliminar
+            </BtnSubmit>
           </BtnContain>
-          
         </FormComplete>
       </div>
     </PageBody>

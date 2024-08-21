@@ -1,6 +1,14 @@
-import {GlobalStyle} from '../../../styles/globalStyles';
-import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, FormDiv} from '../../../styles/Subpages/subpagesStyles';
-import {TableDeleteCompany} from '../../../styles/Subpages/subpagesStyles.js'
+import { GlobalStyle } from "../../../styles/globalStyles";
+import {
+  PageBody,
+  BtnContain,
+  BtnSubmit,
+  TitlePage,
+  FormTitle,
+  FormComplete,
+  FormDiv,
+} from "../../../styles/Subpages/subpagesStyles";
+import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -42,22 +50,26 @@ const BusquedaEmpresa = () => {
             <input type="text"></input>
           </FormDiv>
           <BtnContain>
-            <BtnSubmit type="submit"><i className="bi bi-search"></i>Buscar</BtnSubmit>
+            <BtnSubmit type="submit">
+              <i className="bi bi-search"></i>Buscar
+            </BtnSubmit>
           </BtnContain>
           <hr />
-          <br/>
-            <TableDeleteCompany>
-              <thead>
-                <tr>
-                  <th>Identificador</th>
-                  <th>Empresa</th>
-                </tr>
-              </thead>
+          <br />
+          <TableDeleteCompany>
+            <thead>
+              <tr>
+                <th>Identificador</th>
+                <th>Empresa</th>
+              </tr>
+            </thead>
+            <tbody>
               <tr>
                 <td>RUC: 0123456789</td>
                 <td>Empresa Cia Ltda 1</td>
               </tr>
-            </TableDeleteCompany>          
+            </tbody>
+          </TableDeleteCompany>
         </FormComplete>
       </div>
     </PageBody>

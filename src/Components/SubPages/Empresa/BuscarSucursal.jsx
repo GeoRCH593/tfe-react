@@ -1,6 +1,14 @@
-import {GlobalStyle} from '../../../styles/globalStyles';
-import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, FormDiv} from '../../../styles/Subpages/subpagesStyles';
-import {TableDeleteCompany} from '../../../styles/Subpages/subpagesStyles';
+import { GlobalStyle } from "../../../styles/globalStyles";
+import {
+  PageBody,
+  BtnContain,
+  BtnSubmit,
+  TitlePage,
+  FormTitle,
+  FormComplete,
+  FormDiv,
+} from "../../../styles/Subpages/subpagesStyles";
+import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -47,7 +55,7 @@ const BuscarSucursal = () => {
             </BtnSubmit>
           </BtnContain>
           <br />
-          <hr/>
+          <hr />
           <TableDeleteCompany>
             <thead>
               <tr>
@@ -57,12 +65,16 @@ const BuscarSucursal = () => {
                 <th>Selección</th>
               </tr>
             </thead>
-            <tr>
-              <td>RUC: 0123456789</td>
-              <td>Empresa Cia Ltda 1</td>
-              <td>Geovanny Rodríguez</td>
-              <td><input type="checkbox"></input></td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>RUC: 0123456789</td>
+                <td>Empresa Cia Ltda 1</td>
+                <td>Geovanny Rodríguez</td>
+                <td>
+                  <input type="checkbox"></input>
+                </td>
+              </tr>
+            </tbody>
           </TableDeleteCompany>
           <br />
           <hr />
@@ -79,17 +91,19 @@ const BuscarSucursal = () => {
                 <th>Provincia</th>
               </tr>
             </thead>
-            <tr>
-              <td>001</td>
-              <td>Empresa Cia Ltda 1</td>
-              <td>Nombre sucursal 1</td>
-              <td>Calle 1 y Calle 2</td>
-              <td>Azuay</td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Empresa Cia Ltda 1</td>
+                <td>Nombre sucursal 1</td>
+                <td>Calle 1 y Calle 2</td>
+                <td>Azuay</td>
+              </tr>
+            </tbody>
           </TableDeleteCompany>
           <BtnContain>
             <BtnSubmit type="submit">
-            <i className="bi bi-search"></i>Buscar Sucursal
+              <i className="bi bi-search"></i>Buscar Sucursal
             </BtnSubmit>
           </BtnContain>
         </FormComplete>

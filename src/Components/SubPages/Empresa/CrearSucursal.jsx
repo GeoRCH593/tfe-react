@@ -55,7 +55,7 @@ const CrearSucursal = () => {
             </BtnSubmit>
           </BtnContain>
           <br />
-          <hr/>
+          <hr />
           <TableDeleteCompany>
             <thead>
               <tr>
@@ -65,12 +65,16 @@ const CrearSucursal = () => {
                 <th>Selección</th>
               </tr>
             </thead>
-            <tr>
-              <td>RUC: 0123456789</td>
-              <td>Empresa Cia Ltda 1</td>
-              <td>Geovanny Rodríguez</td>
-              <td><input type="checkbox"></input></td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>RUC: 0123456789</td>
+                <td>Empresa Cia Ltda 1</td>
+                <td>Geovanny Rodríguez</td>
+                <td>
+                  <input type="checkbox"></input>
+                </td>
+              </tr>
+            </tbody>
           </TableDeleteCompany>
           <br />
           <hr />
@@ -84,17 +88,21 @@ const CrearSucursal = () => {
                 <th>Editar</th>
               </tr>
             </thead>
-            <tr>
-              <td>001</td>
-              <td>Empresa Cia Ltda 1</td>
-              <td>Nombre sucursal 1</td>
-              <td>Calle 1 y Calle 2</td>
-              <td><i className="bi bi-pencil"></i></td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>001</td>
+                <td>Empresa Cia Ltda 1</td>
+                <td>Nombre sucursal 1</td>
+                <td>Calle 1 y Calle 2</td>
+                <td>
+                  <i className="bi bi-pencil"></i>
+                </td>
+              </tr>
+            </tbody>
           </TableDeleteCompany>
           <BtnContain>
             <BtnSubmit type="submit">
-            <i className="bi bi-building-add"></i>Crear Sucursal
+              <i className="bi bi-building-add"></i>Crear Sucursal
             </BtnSubmit>
           </BtnContain>
         </FormComplete>

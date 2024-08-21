@@ -63,16 +63,18 @@ const EliminarClientes = () => {
                 <th>Acción:</th>
               </tr>
             </thead>
-            <tr>
-              <td>CL001</td>
-              <td>Cliente 1</td>
-              <td>Persona natural</td>
-              <td>Calle 1 y Calle 2</td>
-              <td>098 765 4321</td>
-              <td>
-                <input type="checkbox"></input>
-              </td>
-            </tr>
+            <tbody>
+              <tr>
+                <td>CL001</td>
+                <td>Cliente 1</td>
+                <td>Persona natural</td>
+                <td>Calle 1 y Calle 2</td>
+                <td>098 765 4321</td>
+                <td>
+                  <input type="checkbox"></input>
+                </td>
+              </tr>
+            </tbody>
           </TableDeleteCompany>
           <BtnContain>
             <BtnSubmit type="submit">

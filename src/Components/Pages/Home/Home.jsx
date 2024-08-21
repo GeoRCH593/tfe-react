@@ -50,7 +50,8 @@ const Home = () => {
     <MenusBody>
       <TitlePage>
         <img src={BillieLogo} />
-        <h2>Bienvenido:</h2>
+        <h3>Bienvenido al Sistema de facturación:</h3>
+        <p>Por favor selecciona una opción para iniciar</p>
       </TitlePage>
       <Menu4CardsContain>
         {makeCards.map((card, i)=>(

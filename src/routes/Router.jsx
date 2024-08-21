@@ -31,6 +31,7 @@ import ActualizarProveedor from '../Components/SubPages/Proveedores/ActualizarPr
 import EliminarProveedor from '../Components/SubPages/Proveedores/EliminarProveedor';
 import BuscarProveedor from '../Components/SubPages/Proveedores/BuscarProveedor';
 import ConfigurarDatos from '../Components/SubPages/Configuración/ConfigurarDatos';
+import IngresarSecuencial from '../Components/SubPages/Configuración/IngresarSecuencial';
 
 const Router = () => (
   <BrowserRouter>
@@ -69,6 +70,7 @@ const Router = () => (
       <Route path='proveedores/eliminarproveedor' element={<EliminarProveedor />}/>
       <Route path='proveedores/buscarproveedor' element={<BuscarProveedor />}/>
       <Route path='configuracion/configurardatosparafacturar' element={<ConfigurarDatos/>}/>
+      <Route path='configuracion/ingresarsecuencialdefactura' element={<IngresarSecuencial />}/>
     </Routes>
     </SideBar>
 </BrowserRouter>
