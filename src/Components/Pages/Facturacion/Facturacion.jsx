@@ -23,17 +23,17 @@ const makeCards = [
   {
     classDiv: "bi bi-file-earmark-x",
     title: "Eliminar factura en borrador",
-    to: "facturacion/busqueda"
+    to: "eliminarfacturadeborrador"
   }, 
   {
     classDiv: "bi bi-search",
     title: "Buscar factura",
-    to: "facturacion/eliminar"
+    to: "buscarfactura"
   },
   {
     classDiv: "bi bi-envelope-at",
     title: "Enviar factura por email",
-    to: "facturacion/busqueda"
+    to: "enviarfacturaporemail"
   }, 
 ];
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FactBody =styled.div`
+export const FactBody = styled.div`
   position: absolute;
   font-family: Open Sans;
   width: 100%;
@@ -15,16 +15,16 @@ export const FactBody =styled.div`
 
 export const FactSubBody = styled.div`
   min-width: 800px;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   padding: 1em 2em;
 `;
 
 /*Contendedor de cada input y label 1 columna*/
 export const FactDiv = styled.div`
-display: flex;
-justify-content: flex-start;
-padding: 0.3em 2em;
-gap: 1em;
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.3em 2em;
+  gap: 1em;
   > label {
     width: 40%;
     color: #0c302e;
@@ -56,7 +56,6 @@ export const TitleSubpage = styled.div`
   padding: 0.5em;
 `;
 
-
 /*Tabla de busqueda facturacion */
 export const TableSearchDiv = styled.table`
   width: 100%;
@@ -80,7 +79,7 @@ export const TableSearchDiv = styled.table`
 `;
 
 /*Tabla de busqueda facturacion */
-export const TableValues= styled.table`
+export const TableValues = styled.table`
   width: 100%;
 
   padding: 1em 0;
@@ -103,7 +102,33 @@ export const TableValues= styled.table`
 
 /*Contenedor Para seleccionar datos de facturas borrador */
 export const SearchFactDiv = styled.div`
-display: flex;
-flex-direction: row;
+  display: flex;
+  flex-direction: row;
+`;
 
+/*Campos de seleccion para facturacion */
+export const SelectDiv = styled.div`
+  padding: 0.3em 2em;
+  width: 100%;
+  gap: 2em;
+  > label {
+    color: #0c302e;
+    width: 100%;
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+  > input {
+    width: 75%;
+    background-color: #e8eaed;
+    border: none;
+    font-family: Open Sans;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+  }
+  > select {
+    width: 80%;
+    background-color: #e8eaed;
+    border: none;
+    font-size: 14px;
+  }
 `;
