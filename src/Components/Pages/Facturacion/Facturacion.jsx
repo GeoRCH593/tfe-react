@@ -8,7 +8,7 @@ const makeCards = [
   {
     classDiv: "bi bi-receipt-cutoff",
     title: "Crear nueva factura",
-    to: "facturacion/crear"
+    to: "crearnuevafactura"
   },
   {
     classDiv: "bi bi-arrow-left-right",

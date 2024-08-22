@@ -1,0 +1,48 @@
+
+.fact-body{
+  position: absolute;
+  font-family: Open Sans;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  z-index: -1;
+}
+
+.fact-sub {
+  min-width: 800px;
+}
+
+.part-one {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.part-three {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  align-items: start;
+  justify-content: space-between;
+}
+
+
+
+.izq-part-one {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding: 1em 0;
+  gap: 3px;
+}
+
+.der-part-two {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding: 1em 0;
+  gap: 5px;
+}
