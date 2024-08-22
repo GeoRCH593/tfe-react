@@ -1,6 +1,13 @@
-import {GlobalStyle} from '../../../styles/globalStyles';
-import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, FormDiv} from '../../../styles/Subpages/subpagesStyles';
-import {IconEditStyled} from '../../../styles/Subpages/icons';
+import { GlobalStyle } from "../../../styles/globalStyles";
+import {
+  PageBody,
+  TitlePage,
+  FormTitle,
+  FormComplete,
+  FormDiv,
+} from "../../../styles/Subpages/subpagesStyles";
+import { IconEditStyled } from "../../../styles/Subpages/icons";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building-fill";
@@ -21,8 +28,8 @@ const ActualizarSucursal = () => {
         </FormTitle>
         <FormComplete>
           <FormDiv>
-          <label>Codigo de Emisión SRI:</label>
-          <input type="text" />
+            <label>Codigo de Emisión SRI:</label>
+            <input type="text" />
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <FormDiv>
@@ -70,9 +77,10 @@ const ActualizarSucursal = () => {
             <input type="email"></input>
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
-          <BtnContain>
-        <BtnSubmit type="submit"><i className="bi bi-pencil-square"></i>Actualizar</BtnSubmit>
-      </BtnContain>
+          <ButtonSubmit
+            IconClass={"bi bi-pencil-square"}
+            submitText={"Actualzar"}
+          />
         </FormComplete>
       </div>
     </PageBody>

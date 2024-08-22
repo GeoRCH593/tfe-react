@@ -1,14 +1,14 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   FormComplete,
   FormDiv,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import { SubTitleList } from "./eliminarDatosSucursalStyles";
 
 const Modul = "Empresa";
@@ -50,11 +50,10 @@ const EliminarDatosSucursal = () => {
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Busqueda Empresa
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonNormal 
+           classIcon={"bi bi-search"} 
+           textButton={"Busqueda Empresa"}
+          />
           <br />
           <hr />
           <TableGeneral>
@@ -104,11 +103,11 @@ const EliminarDatosSucursal = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-trash3"></i>Eliminar Sucursal
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            IconClass={"bi bi-trash-3"}
+            submitText={"Eliminar Sucursal"}
+          />
+
         </FormComplete>
       </div>
     </PageBody>

@@ -1,14 +1,14 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   FormComplete,
   FormDiv,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -49,11 +49,7 @@ const CrearSucursal = () => {
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Busqueda Empresa
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonNormal classIcon={"bi bi-search"} textButton={"Busqueda Empresa"}/>
           <br />
           <hr />
           <TableGeneral>
@@ -100,11 +96,10 @@ const CrearSucursal = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-building-add"></i>Crear Sucursal
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            IconClass={"bi bi-building-add"}
+            submitText={"Crear Sucursal"}
+          />
         </FormComplete>
       </div>
     </PageBody>

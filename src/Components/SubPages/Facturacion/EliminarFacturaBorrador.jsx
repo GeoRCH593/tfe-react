@@ -1,5 +1,13 @@
-import {GlobalStyle} from '../../../styles/globalStyles';
-import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, SubTitleList, TableGeneral} from '../../../styles/Subpages/subpagesStyles';
+import { GlobalStyle } from "../../../styles/globalStyles";
+import {
+  PageBody,
+  TitlePage,
+  FormTitle,
+  FormComplete,
+  SubTitleList,
+  TableGeneral,
+} from "../../../styles/Subpages/subpagesStyles";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Facturación";
 const IconClass = "bi bi-receipt";
@@ -51,11 +59,10 @@ const EliminarFacturaBorrador = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-trash3"></i>Eliminar Facturas
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            IconClass={"bi bi-trash3"}
+            submitText={"Eliminar facturas"}
+          />
         </FormComplete>
       </div>
     </PageBody>

@@ -1,6 +1,7 @@
 import {GlobalStyle} from '../../../styles/globalStyles';
-import {BtnContain, BtnSubmit, CheckboxDiv, FormComplete, FormDiv, FormTitle, PageBody, TitlePage} from '../../../styles/Subpages/subpagesStyles';
+import {CheckboxDiv, FormComplete, FormDiv, FormTitle, PageBody, TitlePage} from '../../../styles/Subpages/subpagesStyles';
 import {IconEditStyled} from '../../../styles/Subpages/icons';
+import ButtonSubmit from '../../Buttons/ButtonSubmit';
 
 const Modul = "Configuración";
 const IconClass = "bi bi-gear-fill";
@@ -90,11 +91,7 @@ const ConfigurarDatos = () => {
             <label>Obligado a llevar contabilidad</label>
           </CheckboxDiv>
         </FormDiv>
-        <BtnContain>
-          <BtnSubmit type="submit">
-            <i className="bi bi-floppy"></i>Guardar Cambios
-          </BtnSubmit>
-        </BtnContain>
+        <ButtonSubmit IconClass={"bi bi-floppy"} submitText={"Guardar cambios"}/>
       </FormComplete>
     </div>
   </PageBody>

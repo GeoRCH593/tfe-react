@@ -1,16 +1,16 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   FormComplete,
   SubTitleList,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import EditButton from "../../Buttons/EditButton.jsx";
 import { SearchFactDiv } from "../Facturacion/facturacionStyles.js";
 import { ConfDiv } from "./configuracionStyles.js";
+import ButtonSubmit from '../../Buttons/ButtonSubmit';
 
 const Modul = "Configuración";
 const IconClass = "bi bi-gear-fill";
@@ -56,11 +56,10 @@ const IngresarSecuencial = () => {
               <input type="date" />
             </ConfDiv>
           </SearchFactDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Buscar factura
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            IconClass={"bi bi-search"}
+            submitText={"Buscar Factura"}
+          />
           <br />
           <hr />
           <SubTitleList>
@@ -88,17 +87,16 @@ const IngresarSecuencial = () => {
                 <td>Producción</td>
                 <td>Borrador</td>
                 <td>
-                  <i className="bi bi-pencil-fill">Editar</i>
+                  <EditButton/>
                 </td>
                 <td>Anular factura</td>
               </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-floppy"></i>Guardar Cambios
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            IconClass={"bi bi-floppy"}
+            submitText={"Guardar cambios"}
+          />
         </FormComplete>
       </div>
     </PageBody>

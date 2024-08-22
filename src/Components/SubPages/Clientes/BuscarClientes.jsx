@@ -1,8 +1,6 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   FormComplete,
@@ -10,6 +8,7 @@ import {
   SubTitleList,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonSubmit from '../../Buttons/ButtonSubmit';
 
 const Modul = "Clientes";
 const IconClass = "bi bi-person-lines-fill";
@@ -35,11 +34,7 @@ const BuscarClientes = () => {
             <label>Número de Indentificación:</label>
             <input type="text" />
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Buscar Cliente
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit IconClass={"bi bi-search"} submitText={"Buscar"}/>
           <br />
           <hr />
           <SubTitleList>

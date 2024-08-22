@@ -1,8 +1,6 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   FormComplete,
@@ -10,6 +8,7 @@ import {
   SubTitleList,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonSubmit from '../../Buttons/ButtonSubmit';
 
 const Modul = "Clientes";
 const IconClass = "bi bi-person-lines-fill";
@@ -42,11 +41,7 @@ const EliminarClientes = () => {
             <label>Número de Indentificación:</label>
             <input type="number" />
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Buscar Cliente
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit IconClass={"bi bi-search"} submitText={"Buscar Cliente"}/>
           <br />
           <hr />
           <SubTitleList>
@@ -76,11 +71,7 @@ const EliminarClientes = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-trash3"></i>Eliminar
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit IconClass={"bi bi-trash3"} submitText={"Eliminar"}/>
         </FormComplete>
       </div>
     </PageBody>

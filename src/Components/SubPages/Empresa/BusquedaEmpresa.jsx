@@ -1,14 +1,13 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   FormComplete,
   FormDiv,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -49,11 +48,10 @@ const BusquedaEmpresa = () => {
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Buscar
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            IconClass={"bi bi-search"}
+            submitText={"Buscar"}
+          />
           <hr />
           <br />
           <TableGeneral>

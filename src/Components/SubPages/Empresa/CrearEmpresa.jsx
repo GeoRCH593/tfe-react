@@ -1,13 +1,12 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
-  BtnContain,
-  BtnSubmit,
   FormComplete,
   FormDiv,
   FormTitle,
   PageBody,
   TitlePage,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -84,9 +83,11 @@ const CrearEmpresa = () => {
             <label>Correo electrónico:</label>
             <input type="email"></input>
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit"><i className="bi bi-building-add"></i>Crear Empresa</BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            IconClass={"bi bi-building-add"}
+            submitText={"Crear Empresa"}
+          />
+
         </FormComplete>
       </div>
     </PageBody>
