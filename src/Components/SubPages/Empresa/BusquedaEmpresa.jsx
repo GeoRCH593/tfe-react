@@ -49,7 +49,7 @@ const BusquedaEmpresa = () => {
             <input type="text"></input>
           </FormDiv>
           <ButtonSubmit
-            iconClass={"bi bi-search"}
+            classIconId={"bi bi-search"}
             submitText={"Buscar"}
           />
           <hr />

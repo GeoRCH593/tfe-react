@@ -58,7 +58,7 @@ const ActualizarPos = () => {
             </tbody>
           </TableGeneral>
           <ButtonNormal 
-           classIcon={"bi bi-search"} 
+           classIconId={"bi bi-search"} 
            textButton={"Busqueda de POS"}
           />
           <FormDiv>
@@ -97,7 +97,7 @@ const ActualizarPos = () => {
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <ButtonSubmit
-            iconClass={"bi bi-arrow-left-right"}
+            classIconId={"bi bi-arrow-left-right"}
             submitText={"Modificar POS"}
           />
           <br />

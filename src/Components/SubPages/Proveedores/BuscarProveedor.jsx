@@ -35,7 +35,7 @@ const BuscarProveedor = () => {
             <input type="text" />
           </FormDiv>
           <ButtonNormal 
-           classIcon={"bi bi-search"} 
+           classIconId={"bi bi-search"} 
            textButton={"Cliente"}
           />
           <br />

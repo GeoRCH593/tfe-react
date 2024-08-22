@@ -59,7 +59,7 @@ const CrearClientes = () => {
             <label>Correo electrónico:</label>
             <input type="email"></input>
           </FormDiv>
-          <ButtonSubmit iconClass={"bi bi-person-add"} submitText={"Crear nuevo liente"}/>
+          <ButtonSubmit classIconId={"bi bi-person-add"} submitText={"Crear nuevo liente"}/>
         </FormComplete>
       </div>
     </PageBody>

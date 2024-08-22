@@ -34,7 +34,7 @@ const BuscarClientes = () => {
             <label>Número de Indentificación:</label>
             <input type="text" />
           </FormDiv>
-          <ButtonSubmit iconClass={"bi bi-search"} submitText={"Buscar"}/>
+          <ButtonSubmit classIconId={"bi bi-search"} submitText={"Buscar"}/>
           <br />
           <hr />
           <SubTitleList>

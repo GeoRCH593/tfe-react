@@ -99,7 +99,7 @@ const ConfigurarDatos = () => {
             </CheckboxDiv>
           </FormDiv>
           <ButtonSubmit
-            iconClass={"bi bi-floppy"}
+            classIconId={"bi bi-floppy"}
             submitText={"Guardar cambios"}
           />
         </FormComplete>

@@ -56,7 +56,7 @@ const EnviarFacturaEmail = () => {
             </SelectDiv>
           </SearchFactDiv>
           <ButtonNormal
-            classIcon={"bi bi-search"}
+            classIconId={"bi bi-search"}
             textButton={"Buscar factura"}
           />
           <hr />
@@ -94,7 +94,7 @@ const EnviarFacturaEmail = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            iconClass={"bi bi-envelope-paper"}
+            classIconId={"bi bi-envelope-paper"}
             submitText={"Enviar a correo"}
           />
         </FormComplete>

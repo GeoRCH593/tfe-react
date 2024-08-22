@@ -11,7 +11,7 @@ import ButtonNormal from "../../Buttons/ButtonNormal.jsx";
 import { SearchFactDiv, SelectDiv } from "./facturacionStyles.js";
 
 const Modul = "Facturación";
-const IconClass = "bi bi-receipt";
+const IconName = "bi bi-receipt";
 const SubPageTitle = "Busqueda de Facturas";
 
 const BuscarFacturas = () => {
@@ -19,7 +19,7 @@ const BuscarFacturas = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -55,7 +55,7 @@ const BuscarFacturas = () => {
             </SelectDiv>
           </SearchFactDiv>
           <ButtonNormal
-            classIcon={"bi bi-search"}
+            classIconId={"bi bi-search"}
             textButton={"Buscar Factura"}
           />
           <hr />

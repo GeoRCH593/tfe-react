@@ -49,7 +49,7 @@ const CrearSucursal = () => {
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
           </FormDiv>
-          <ButtonNormal classIcon={"bi bi-search"} textButton={"Busqueda Empresa"}/>
+          <ButtonNormal classIconId={"bi bi-search"} textButton={"Busqueda Empresa"}/>
           <br />
           <hr />
           <TableGeneral>
@@ -97,7 +97,7 @@ const CrearSucursal = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            iconClass={"bi bi-shop-window"}
+            classIconId={"bi bi-shop-window"}
             submitText={"Crear Sucursal"}
           />
         </FormComplete>

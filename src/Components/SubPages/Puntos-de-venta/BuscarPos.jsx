@@ -35,7 +35,7 @@ const BuscarPos = () => {
               <option>Empresa 003</option>
             </select>
           </FormDiv>
-          <ButtonNormal classIcon={"bi bi-search"} textButton={"Buscar POS"} />
+          <ButtonNormal classIconId={"bi bi-search"} textButton={"Buscar POS"} />
           <hr />
           <SubTitleList>
             <h5>Lista de Puntos de venta:</h5>

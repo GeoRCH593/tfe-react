@@ -24,7 +24,7 @@ const CamposAdicionales = () => {
         </tbody>
       </TableGeneral>
       <ButtonNormal
-        classIcon={"bi bi-distribute-vertical"}
+        classIconId={"bi bi-distribute-vertical"}
         textButton={"Añadir campo"}
       />
     </div>

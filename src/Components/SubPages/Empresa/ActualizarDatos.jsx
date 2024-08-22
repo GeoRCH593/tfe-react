@@ -96,7 +96,7 @@ const ActualizarDatos = () => {
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <ButtonSubmit
-            iconClass={"bi bi-pencil-square"}
+            classIconId={"bi bi-pencil-square"}
             submitText={"Actualizar"}
           />
         </FormComplete>

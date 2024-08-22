@@ -84,7 +84,7 @@ const CrearEmpresa = () => {
             <input type="email"></input>
           </FormDiv>
           <ButtonSubmit
-            iconClass={"bi bi-building-add"}
+            classIconId={"bi bi-building-add"}
             submitText={"Crear Empresa"}
           />
         </FormComplete>

@@ -50,7 +50,7 @@ const CrearPos = () => {
             </tbody>
           </TableGeneral>
           <ButtonNormal 
-           classIcon={"bi bi-search"} 
+           classIconId={"bi bi-search"} 
            textButton={"Busqueda Empresa"}
           />
 
@@ -84,7 +84,7 @@ const CrearPos = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            iconClass={"bi bi-shop"}
+            classIconId={"bi bi-shop"}
             submitText={"Crear Punto de venta"}
           />
         </TablesContain>

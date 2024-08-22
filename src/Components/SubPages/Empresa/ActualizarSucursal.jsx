@@ -24,7 +24,7 @@ const ActualizarSucursal = () => {
       </TitlePage>
       <div>
         <FormTitle>
-          <h5>{SubPageTitle}</h5>z
+          <h5>{SubPageTitle}</h5>
         </FormTitle>
         <FormComplete>
           <FormDiv>
@@ -78,7 +78,7 @@ const ActualizarSucursal = () => {
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <ButtonSubmit
-            iconClass={"bi bi-pencil-square"}
+            classIconId={"bi bi-pencil-square"}
             submitText={"Actualzar"}
           />
         </FormComplete>

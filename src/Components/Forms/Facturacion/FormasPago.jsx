@@ -30,7 +30,7 @@ const FormasPago = () => {
         </tbody>
       </TableGeneral>
       <ButtonNormal 
-           classIcon={"bi bi-wallet2"} 
+           classIconId={"bi bi-wallet2"} 
            textButton={"Añadir forma de pago"}
           />
     </div>

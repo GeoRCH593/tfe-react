@@ -93,7 +93,7 @@ const ActualizarProveedor = () => {
             </CheckboxDiv>
           </FormDiv>
           <ButtonSubmit
-            iconClass={"bi bi-pencil-square"}
+            classIconId={"bi bi-pencil-square"}
             submitText={"Actualizar"}
           />
         </FormComplete>

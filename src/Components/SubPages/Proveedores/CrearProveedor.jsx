@@ -73,7 +73,7 @@ const CrearProveedor = () => {
             <label>Extranjero</label>
           </CheckboxDiv>
           <ButtonSubmit
-            iconClass={"bi bi-person-plus-fill"}
+            classIconId={"bi bi-person-plus-fill"}
             submitText={"Crear nuevo proveedor"}
           />
         </FormComplete>

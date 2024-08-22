@@ -57,7 +57,7 @@ const IngresarSecuencial = () => {
             </ConfDiv>
           </SearchFactDiv>
           <ButtonSubmit
-            IconClass={"bi bi-search"}
+            classIconId={"bi bi-search"}
             submitText={"Buscar Factura"}
           />
           <br />
@@ -94,7 +94,7 @@ const IngresarSecuencial = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            iconClass={"bi bi-floppy"}
+            classIconId={"bi bi-floppy"}
             submitText={"Guardar cambios"}
           />
         </FormComplete>

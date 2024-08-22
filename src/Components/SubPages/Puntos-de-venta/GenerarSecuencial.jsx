@@ -53,7 +53,7 @@ const GenerarSecuencial = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            iconClass={"bi bi-123"}
+            classIconId={"bi bi-123"}
             submitText={"Generar secuencial"}
           />
         </TablesContain>

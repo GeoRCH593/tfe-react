@@ -1,11 +1,11 @@
 import { BtnContain, BtnSubmit, IconButton } from "./buttonsStyles";
 import { PropTypes } from "prop-types";
 
-const ButtonNormal = ({ classIcon, textButton }) => {
+const ButtonNormal = ({ classIconId, textButton, onClick}) => {
   return (
     <BtnContain>
-      <BtnSubmit type="button">
-        <IconButton className={classIcon}></IconButton>
+      <BtnSubmit type="button" onClick={onClick}>
+        <IconButton className={classIconId}></IconButton>
         {textButton}
       </BtnSubmit>
     </BtnContain>
@@ -13,8 +13,9 @@ const ButtonNormal = ({ classIcon, textButton }) => {
 };
 
 ButtonNormal.propTypes = {
-  classIcon: PropTypes.string,
+  classIconId: PropTypes.string,
   textButton: PropTypes.string,
+  onClick: PropTypes.string
 };
 
 export default ButtonNormal;

@@ -60,7 +60,7 @@ const EliminarFacturaBorrador = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            iconClass={"bi bi-trash3"}
+            classIconId={"bi bi-trash3"}
             submitText={"Eliminar facturas"}
           />
         </FormComplete>

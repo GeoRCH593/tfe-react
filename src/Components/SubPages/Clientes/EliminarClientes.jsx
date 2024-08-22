@@ -43,7 +43,7 @@ const EliminarClientes = () => {
             <input type="number" />
           </FormDiv>
           <ButtonNormal 
-           classIcon={"bi bi-search"} 
+           classIconId={"bi bi-search"} 
            textButton={"Buscar cliente"}
           />
           <br />
@@ -75,7 +75,7 @@ const EliminarClientes = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <ButtonSubmit iconClass={"bi bi-trash3"} submitText={"Eliminar"}/>
+          <ButtonSubmit classIconId={"bi bi-trash3"} submitText={"Eliminar"}/>
         </FormComplete>
       </div>
     </PageBody>

@@ -43,7 +43,7 @@ const EliminarProveedor = () => {
             <input type="number" />
           </FormDiv>
           <ButtonNormal 
-           classIcon={"bi bi-search"} 
+           classIconId={"bi bi-search"} 
            textButton={"Buscar Proveedor"}
           />
           <br />
@@ -76,7 +76,7 @@ const EliminarProveedor = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            iconClass={"bi bi-trash3"}
+            classIconId={"bi bi-trash3"}
             submitText={"Eliminar"}
           />
         </FormComplete>

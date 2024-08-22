@@ -84,7 +84,7 @@ const ActualizarClientes = () => {
               </label>
             </FormDiv>
           </FormDiv>
-          <ButtonSubmit iconClass={"bi bi-arrow-left-right"} submitText={"Actualizar clientes"}/>
+          <ButtonSubmit classIconId={"bi bi-arrow-left-right"} submitText={"Actualizar clientes"}/>
         </FormComplete>
       </div>
     </PageBody>

@@ -36,6 +36,7 @@ import CrearNuevaFactura from '../Components/SubPages/Facturacion/CrearNuevaFact
 import EliminarFacturaBorrador from '../Components/SubPages/Facturacion/EliminarFacturaBorrador';
 import BuscarFacturas from '../Components/SubPages/Facturacion/BuscarFacturas';
 import EnviarFacturaEmail from '../Components/SubPages/Facturacion/EnviarFacturaEmail';
+import ModificarFinalizarFactura from '../Components/SubPages/Facturacion/ModificarFinalizarFactura';
 
 const Router = () => (
   <BrowserRouter>
@@ -76,8 +77,8 @@ const Router = () => (
       <Route path='configuracion/configurardatosparafacturar' element={<ConfigurarDatos/>}/>
       <Route path='configuracion/ingresarsecuencialdefactura' element={<IngresarSecuencial />}/>
       <Route path='facturacion/crearnuevafactura' element={<CrearNuevaFactura />} />
-
-
+      <Route path='facturacion/modificarenborrador' element={<ModificarFinalizarFactura/>}/>
+      <Route path='facturacion/finalizarfacturaenborrador' element={<ModificarFinalizarFactura/>}/>
       <Route path='facturacion/eliminarfacturadeborrador' element={<EliminarFacturaBorrador/>}/>
       <Route path='facturacion/buscarfactura' element={<BuscarFacturas />}/>
       <Route path='facturacion/enviarfacturaporemail' element={<EnviarFacturaEmail />} />

@@ -51,7 +51,7 @@ const EliminarDatosSucursal = () => {
             <input type="text"></input>
           </FormDiv>
           <ButtonNormal 
-           classIcon={"bi bi-search"} 
+           classIconId={"bi bi-search"} 
            textButton={"Busqueda Empresa"}
           />
           <br />
@@ -104,7 +104,7 @@ const EliminarDatosSucursal = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            iconClass={"bi bi-trash3"}
+            classIconId={"bi bi-trash3"}
             submitText={"Eliminar Sucursal"}
           />
 

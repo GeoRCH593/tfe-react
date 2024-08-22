@@ -9,7 +9,7 @@ export const FactComplete = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;
+  padding: 1em 0;
   z-index: -1;
 `;
 
@@ -213,4 +213,14 @@ gap: 1em;
     color: #39B54A;
   }
  }
+`;
+
+export const TwoButtonDiv = styled.div`
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+gap: 2em;
+padding: 2em 0;
+;
 `;

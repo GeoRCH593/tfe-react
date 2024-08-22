@@ -50,7 +50,7 @@ const BuscarSucursal = () => {
             <input type="text"></input>
           </FormDiv>
           <ButtonNormal 
-           classIcon={"bi bi-search"} 
+           classIconId={"bi bi-search"} 
            textButton={"Buscar Empresa"}
           />
           <br />
@@ -101,7 +101,7 @@ const BuscarSucursal = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            iconClass={"bi bi-search"}
+            classIconId={"bi bi-search"}
             submitText={"Buscar Sucursal"}
           />
         </FormComplete>

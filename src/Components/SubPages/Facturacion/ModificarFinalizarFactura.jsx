@@ -11,19 +11,21 @@ import {
   FactSubBody,
   NumFactDiv,
   TitleSubpage,
+  TwoButtonDiv,
 } from "./facturacionStyles.js";
-
 import FormasPago from "../../Forms/Facturacion/FormasPago.jsx";
 import CamposAdicionales from "../../Forms/Facturacion/CamposAdicionales.jsx";
 import TablaValores from "../../Forms/Facturacion/TablaValores.jsx";
 import TablaBuscar from "../../Forms/Facturacion/TablaBuscar.jsx";
 import ButtonSubmit from "../../Buttons/ButtonSubmit.jsx";
+import { IconEditStyled } from "../../../styles/Subpages/icons";
 
 const Modul = "Facturación";
 const IconName = "bi bi-receipt";
-const SubPageTitle = "Crear nueva factura";
+const SubPageTitle = "Modificar y finalizar factura en borrador";
+const IconEdit = "bi bi-pencil-fill";
 
-const CrearNuevaFactura = () => {
+const ModificarFinalizarFactura = () => {
   return (
     <FactComplete>
       <FactBody>
@@ -41,10 +43,12 @@ const CrearNuevaFactura = () => {
               <FactDiv>
                 <label>Cliente:</label>
                 <input type="text"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Identificación:</label>
                 <input type="text"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Tipo:</label>
@@ -55,26 +59,32 @@ const CrearNuevaFactura = () => {
                   <option>Identificador del exterior</option>
                   <option>Consumidor final</option>
                 </select>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Razón social:</label>
                 <input type="text"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Dirección:</label>
                 <input type="text"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Teléfono:</label>
                 <input type="text"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Correo:</label>
                 <input type="email"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Extranjero:</label>
                 <input type="checkbox"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
             </FactPartLeft>
             <FactPartRight>
@@ -85,18 +95,22 @@ const CrearNuevaFactura = () => {
               <FactDiv>
                 <label>Fecha de emisión:</label>
                 <input type="text"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Nombre comercial:</label>
                 <input type="text"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Punto de emisión:</label>
                 <input type="text"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Guia de emisión:</label>
                 <input type="text"></input>
+                <IconEditStyled className={IconEdit}></IconEditStyled>
               </FactDiv>
               <FactDiv>
                 <label>Factura comercial negociable:</label>
@@ -122,14 +136,20 @@ const CrearNuevaFactura = () => {
               <TablaValores />
             </FactPartRight>
           </FactPartThree>
-          <ButtonSubmit
-            classIconId={"bi bi-receipt-cutoff"}
-            submitText={"Crear Factura"}
-          />
+          <TwoButtonDiv>
+            <ButtonSubmit
+              classIconId={"bi bi-floppy"}
+              submitText={"Guardar Modificación"}
+            />
+            <ButtonSubmit
+              classIconId={"bi bi-file-earmark-check"}
+              submitText={"Finalizar Factura"}
+            />
+          </TwoButtonDiv>
         </FactSubBody>
       </FactBody>
     </FactComplete>
   );
 };
 
-export default CrearNuevaFactura;
+export default ModificarFinalizarFactura;

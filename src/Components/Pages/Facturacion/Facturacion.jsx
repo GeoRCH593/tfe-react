@@ -12,13 +12,13 @@ const makeCards = [
   },
   {
     classDiv: "bi bi-arrow-left-right",
-    title: "Modificar el borrador",
-    to: "facturacion/actualizar"
+    title: "Modificar en borrador",
+    to: "modificarenborrador"
   },
   {
     classDiv: "bi bi-check-square",
     title: "Finalizar factura en borrador",
-    to: "facturacion/eliminar"
+    to: "finalizarfacturaenborrador"
   },
   {
     classDiv: "bi bi-file-earmark-x",
