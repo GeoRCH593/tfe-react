@@ -100,3 +100,10 @@ export const TableValues= styled.table`
     }
   }
 `;
+
+/*Contenedor Para seleccionar datos de facturas borrador */
+export const SearchFactDiv = styled.div`
+display: flex;
+flex-direction: row;
+
+`;
