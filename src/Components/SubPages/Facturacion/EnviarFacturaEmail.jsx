@@ -1,6 +1,5 @@
 import {GlobalStyle} from '../../../styles/globalStyles';
-import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, SubTitleList} from '../../../styles/Subpages/subpagesStyles';
-import {TableDeleteCompany} from '../../../styles/Subpages/subpagesStyles.js';
+import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, SubTitleList, TableGeneral} from '../../../styles/Subpages/subpagesStyles';
 import {SearchFactDiv, SelectDiv} from './facturacionStyles.js';
 
 const Modul = "Facturación";
@@ -56,7 +55,7 @@ const EnviarFacturaEmail = () => {
         <SubTitleList>
           <h5>Resultados: </h5>
         </SubTitleList>
-        <TableDeleteCompany>
+        <TableGeneral>
           <thead>
             <tr>
               <th>Código:</th>
@@ -83,7 +82,7 @@ const EnviarFacturaEmail = () => {
               <td><input type='checkbox'/></td>
             </tr>
           </tbody>
-        </TableDeleteCompany>
+        </TableGeneral>
         <BtnContain>
           <BtnSubmit type="button">
             <i className="bi bi-search"></i>Enviar por correo

@@ -7,8 +7,8 @@ import {
   FormTitle,
   FormComplete,
   FormDiv,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -56,7 +56,7 @@ const CrearSucursal = () => {
           </BtnContain>
           <br />
           <hr />
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Identificador</th>
@@ -75,10 +75,10 @@ const CrearSucursal = () => {
                 </td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <br />
           <hr />
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Código</th>
@@ -99,7 +99,7 @@ const CrearSucursal = () => {
                 </td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-building-add"></i>Crear Sucursal

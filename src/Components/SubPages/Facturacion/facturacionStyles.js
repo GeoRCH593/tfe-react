@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+/*Contenedor completo para facturación */
 export const FactBody = styled.div`
   position: absolute;
   font-family: Open Sans;
@@ -13,11 +14,19 @@ export const FactBody = styled.div`
   z-index: -1;
 `;
 
+/*Contenedor interno para facturación */
 export const FactSubBody = styled.div`
   min-width: 800px;
   background-color: #f4f4f4;
   padding: 1em 2em;
 `;
+
+
+
+
+
+
+
 
 /*Contendedor de cada input y label 1 columna*/
 export const FactDiv = styled.div`

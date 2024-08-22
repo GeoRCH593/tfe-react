@@ -8,7 +8,7 @@ import {
   FormComplete,
   FormDiv,
 } from "../../../styles/Subpages/subpagesStyles";
-import { IconEditStyled } from "../../../styles/Subpages/icons"
+import { IconEditStyled } from "../../../styles/Subpages/icons";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-person-lines-fill";
@@ -97,8 +97,10 @@ const ActualizarDatos = () => {
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <BtnContain>
-        <BtnSubmit type="submit"><i className="bi bi-pencil-square"></i>Actualizar</BtnSubmit>
-      </BtnContain>
+            <BtnSubmit type="submit">
+              <i className="bi bi-pencil-square"></i>Actualizar
+            </BtnSubmit>
+          </BtnContain>
         </FormComplete>
       </div>
     </PageBody>

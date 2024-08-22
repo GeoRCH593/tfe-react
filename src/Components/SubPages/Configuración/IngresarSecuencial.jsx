@@ -7,8 +7,8 @@ import {
   FormTitle,
   FormComplete,
   SubTitleList,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 import { SearchFactDiv } from "../Facturacion/facturacionStyles.js";
 import { ConfDiv } from "./configuracionStyles.js";
 
@@ -66,7 +66,7 @@ const IngresarSecuencial = () => {
           <SubTitleList>
             <h5>Resultados: </h5>
           </SubTitleList>
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Código:</th>
@@ -93,7 +93,7 @@ const IngresarSecuencial = () => {
                 <td>Anular factura</td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-floppy"></i>Guardar Cambios

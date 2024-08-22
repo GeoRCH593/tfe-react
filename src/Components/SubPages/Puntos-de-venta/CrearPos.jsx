@@ -6,8 +6,8 @@ import {
   TitlePage,
   FormTitle,
   TablesContain,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles";
 import {SubTitleList} from '../Empresa/eliminarDatosSucursalStyles';
 
 const Modul = "Empresa";
@@ -27,7 +27,7 @@ const CrearPos = () => {
           <h5>{SubPageTitle}</h5>
         </FormTitle>
         <TablesContain>
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Código</th>
@@ -48,7 +48,7 @@ const CrearPos = () => {
               <td>POS # 4</td>
             </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-search"></i>Busqueda Empresa
@@ -59,7 +59,7 @@ const CrearPos = () => {
           <SubTitleList>
             <h5>Lista de Puntos de venta:</h5>
           </SubTitleList>
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Valor Secuencial</th>
@@ -82,7 +82,7 @@ const CrearPos = () => {
               <td>Sucursal 002</td>
             </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-shop"></i>Crear Punto de venta

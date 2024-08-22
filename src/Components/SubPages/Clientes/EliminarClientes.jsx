@@ -8,8 +8,8 @@ import {
   FormComplete,
   FormDiv,
   SubTitleList,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 
 const Modul = "Clientes";
 const IconClass = "bi bi-person-lines-fill";
@@ -52,7 +52,7 @@ const EliminarClientes = () => {
           <SubTitleList>
             <h5>Lista de Clientes: </h5>
           </SubTitleList>
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Código:</th>
@@ -75,7 +75,7 @@ const EliminarClientes = () => {
                 </td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-trash3"></i>Eliminar

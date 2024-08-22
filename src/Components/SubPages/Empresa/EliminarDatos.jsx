@@ -7,8 +7,8 @@ import {
   FormTitle,
   FormComplete,
   FormDiv,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building-fill";
@@ -47,7 +47,7 @@ const EliminarDatos = () => {
             </BtnSubmit>
           </BtnContain>
           <br />
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Identificador</th>
@@ -64,7 +64,7 @@ const EliminarDatos = () => {
                 </td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-trash3"></i>Eliminar

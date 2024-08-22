@@ -107,10 +107,11 @@ export const TablesContain = styled.div`
 `;
 
 /*Tabla de eliminar datos */
-export const TableDeleteCompany = styled.table`
+export const TableGeneral = styled.table`
   width: 100%;
   align-items: center;
   justify-content: center;
+  padding-top: 1em;
   > thead {
     background: #dddddd;
     padding: 2em 2em;

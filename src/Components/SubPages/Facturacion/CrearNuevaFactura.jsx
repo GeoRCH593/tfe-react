@@ -2,7 +2,7 @@ import {
   TitlePage,
   BtnContain,
   BtnSubmit,
-  TableDeleteCompany,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
 import "./crearFactura.css";
 import {
@@ -103,15 +103,18 @@ const CrearNuevaFactura = () => {
           </div>
           <div className="part-two">
             <hr />
-            <TableSearch/>
+            <TableSearch />
             <hr />
             <i className="bi bi-search"></i>
-            <input type="text"placeholder="Buscar y añadir producto o servicio"/>
+            <input
+              type="text"
+              placeholder="Buscar y añadir producto o servicio"
+            />
           </div>
           <div className="part-three">
             <div className="izq-part-one">
               <h5>Formas de pago</h5>
-              <TableDeleteCompany>
+              <TableGeneral>
                 <thead>
                   <tr>
                     <th>Formas de pago:</th>
@@ -132,14 +135,14 @@ const CrearNuevaFactura = () => {
                     </td>
                   </tr>
                 </tbody>
-              </TableDeleteCompany>
+              </TableGeneral>
               <BtnContain>
                 <BtnSubmit type="submit">Añadir Forma de pago</BtnSubmit>
               </BtnContain>
               <br />
               <hr />
               <h5>Campos Adicionales:</h5>
-              <TableDeleteCompany>
+              <TableGeneral>
                 <thead>
                   <tr>
                     <th>Nombre:</th>
@@ -156,7 +159,7 @@ const CrearNuevaFactura = () => {
                     </td>
                   </tr>
                 </tbody>
-              </TableDeleteCompany>
+              </TableGeneral>
               <BtnContain>
                 <BtnSubmit type="submit">Añadir campo adicional</BtnSubmit>
               </BtnContain>
@@ -236,7 +239,6 @@ const CrearNuevaFactura = () => {
             </BtnSubmit>
           </BtnContain>
         </FactSubBody>
-      
       </div>
     </FactBody>
   );

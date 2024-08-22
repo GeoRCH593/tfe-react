@@ -7,8 +7,8 @@ import {
   FormTitle,
   FormComplete,
   FormDiv,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 import { SubTitleList } from "./eliminarDatosSucursalStyles";
 
 const Modul = "Empresa";
@@ -57,7 +57,7 @@ const EliminarDatosSucursal = () => {
           </BtnContain>
           <br />
           <hr />
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Identificador</th>
@@ -76,13 +76,13 @@ const EliminarDatosSucursal = () => {
                 </td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <br />
           <hr />
           <SubTitleList>
             <h5>Lista de sucursales: </h5>
           </SubTitleList>
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Código</th>
@@ -103,7 +103,7 @@ const EliminarDatosSucursal = () => {
                 </td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-trash3"></i>Eliminar Sucursal

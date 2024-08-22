@@ -7,8 +7,8 @@ import {
   FormTitle,
   FormComplete,
   FormDiv,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -56,7 +56,7 @@ const BusquedaEmpresa = () => {
           </BtnContain>
           <hr />
           <br />
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Identificador</th>
@@ -69,7 +69,7 @@ const BusquedaEmpresa = () => {
                 <td>Empresa Cia Ltda 1</td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
         </FormComplete>
       </div>
     </PageBody>

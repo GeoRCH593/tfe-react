@@ -7,8 +7,8 @@ import {
   FormTitle,
   FormComplete,
   FormDiv,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles";
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -56,7 +56,7 @@ const BuscarSucursal = () => {
           </BtnContain>
           <br />
           <hr />
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Identificador</th>
@@ -75,13 +75,13 @@ const BuscarSucursal = () => {
                 </td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
-          <br />
+          </TableGeneral>
           <hr />
           <div>
             <h5>Lista de Sucursales:</h5>
           </div>
-          <TableDeleteCompany>
+          <br />
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Código</th>
@@ -100,7 +100,7 @@ const BuscarSucursal = () => {
                 <td>Azuay</td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-search"></i>Buscar Sucursal

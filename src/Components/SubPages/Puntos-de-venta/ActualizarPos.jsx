@@ -7,8 +7,8 @@ import {
   FormTitle,
   FormComplete,
   FormDiv,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 import { IconEditStyled } from "../../../styles/Subpages/icons.js";
 import { SubTitleList } from "../Empresa/eliminarDatosSucursalStyles";
 
@@ -33,7 +33,7 @@ const ActualizarPos = () => {
           <SubTitleList>
             <h5>Seleccionar de Puntos de venta:</h5>
           </SubTitleList>
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Código</th>
@@ -56,7 +56,7 @@ const ActualizarPos = () => {
                 <td><input type="checkbox"></input></td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-search"></i>Busqueda de POS

@@ -1,6 +1,5 @@
 import {GlobalStyle} from '../../../styles/globalStyles';
-import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, TablesContain} from '../../../styles/Subpages/subpagesStyles';
-import {TableDeleteCompany} from '../../../styles/Subpages/subpagesStyles.js';
+import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, TablesContain, TableGeneral} from '../../../styles/Subpages/subpagesStyles';
 import {SubTitleList} from '../Empresa/eliminarDatosSucursalStyles';
 
 const Modul = "Empresa";
@@ -23,7 +22,7 @@ const EliminarPos = () => {
         <SubTitleList>
           <h5>Seleccionar de Puntos de venta:</h5>
         </SubTitleList>
-        <TableDeleteCompany>
+        <TableGeneral>
           <thead>
             <tr>
               <th>Código</th>
@@ -55,7 +54,7 @@ const EliminarPos = () => {
               <td><input type="checkbox"></input></td>
             </tr>
           </tbody>
-        </TableDeleteCompany>
+        </TableGeneral>
         <BtnContain>
           <BtnSubmit type="submit">
             <i className="bi bi-trash3"></i>Eliminar POS

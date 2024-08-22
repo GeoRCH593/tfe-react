@@ -8,8 +8,8 @@ import {
   FormComplete,
   FormDiv,
   SubTitleList,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { TableDeleteCompany } from "../../../styles/Subpages/subpagesStyles.js";
 
 const Modul = "Proveedores";
 const IconClass = "bi bi-person-lines-fill";
@@ -45,7 +45,7 @@ const BuscarProveedor = () => {
           <SubTitleList>
             <h5>Lista de Proveedores: </h5>
           </SubTitleList>
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Código:</th>
@@ -68,7 +68,7 @@ const BuscarProveedor = () => {
                 </td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
         </FormComplete>
       </div>
     </PageBody>

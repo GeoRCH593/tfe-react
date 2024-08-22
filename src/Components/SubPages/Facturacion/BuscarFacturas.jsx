@@ -1,6 +1,5 @@
 import {GlobalStyle} from '../../../styles/globalStyles';
-import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, SubTitleList} from '../../../styles/Subpages/subpagesStyles';
-import {TableDeleteCompany} from '../../../styles/Subpages/subpagesStyles.js';
+import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, SubTitleList, TableGeneral} from '../../../styles/Subpages/subpagesStyles';
 import {SearchFactDiv, SelectDiv} from './facturacionStyles.js';
 
 const Modul = "Facturación";
@@ -56,7 +55,7 @@ const BuscarFacturas = () => {
         <SubTitleList>
           <h5>Resultados: </h5>
         </SubTitleList>
-        <TableDeleteCompany>
+        <TableGeneral>
           <thead>
             <tr>
               <th>Código:</th>
@@ -66,7 +65,7 @@ const BuscarFacturas = () => {
               <th>Ambiente:</th>
               <th>Estado:</th>
               <th>Secuencial</th>
-              <th>Acciones</th>
+              <th>Punto de emisión</th>
             </tr>
           </thead>
           <tbody>
@@ -77,13 +76,11 @@ const BuscarFacturas = () => {
               <td>05-06-2024</td>
               <td>Producción</td>
               <td>Borrador</td>
-              <td>
-                <i className="bi bi-pencil-fill">Editar</i>
-              </td>
-              <td>Anular factura</td>
+              <td>001</td>
+              <td>Sucursal 1</td>
             </tr>
           </tbody>
-        </TableDeleteCompany>
+        </TableGeneral>
       </FormComplete>
     </div>
   </PageBody>

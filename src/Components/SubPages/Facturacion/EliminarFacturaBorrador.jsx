@@ -1,6 +1,5 @@
 import {GlobalStyle} from '../../../styles/globalStyles';
-import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, SubTitleList} from '../../../styles/Subpages/subpagesStyles';
-import {TableDeleteCompany} from '../../../styles/Subpages/subpagesStyles.js';
+import {PageBody, BtnContain, BtnSubmit, TitlePage, FormTitle, FormComplete, SubTitleList, TableGeneral} from '../../../styles/Subpages/subpagesStyles';
 
 const Modul = "Facturación";
 const IconClass = "bi bi-receipt";
@@ -22,7 +21,7 @@ const EliminarFacturaBorrador = () => {
           <SubTitleList>
             <h5>Facturas en borrador: </h5>
           </SubTitleList>
-          <TableDeleteCompany>
+          <TableGeneral>
             <thead>
               <tr>
                 <th>Código:</th>
@@ -51,7 +50,7 @@ const EliminarFacturaBorrador = () => {
                 </td>
               </tr>
             </tbody>
-          </TableDeleteCompany>
+          </TableGeneral>
           <BtnContain>
             <BtnSubmit type="submit">
               <i className="bi bi-trash3"></i>Eliminar Facturas
