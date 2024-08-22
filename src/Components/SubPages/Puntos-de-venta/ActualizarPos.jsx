@@ -1,8 +1,6 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   FormComplete,
@@ -11,9 +9,11 @@ import {
 } from "../../../styles/Subpages/subpagesStyles";
 import { IconEditStyled } from "../../../styles/Subpages/icons.js";
 import { SubTitleList } from "../Empresa/eliminarDatosSucursalStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal.jsx";
+import ButtonSubmit from "../../Buttons/ButtonSubmit.jsx";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-building";
+const IconName = "bi bi-building";
 const IconEdit = "bi bi-pencil-fill";
 const SubPageTitle = "Actualizar Punto de venta";
 
@@ -22,7 +22,7 @@ const ActualizarPos = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -57,11 +57,10 @@ const ActualizarPos = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Busqueda de POS
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonNormal 
+           classIcon={"bi bi-search"} 
+           textButton={"Busqueda de POS"}
+          />
           <FormDiv>
             <label>Ingrese tipo de identificación:</label>
             <select id="identificador" name="tipo identificador">
@@ -97,11 +96,10 @@ const ActualizarPos = () => {
             <input type="text"></input>
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-arrow-left-right"></i>Modificar POS
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            iconClass={"bi bi-arrow-left-right"}
+            submitText={"Modificar POS"}
+          />
           <br />
           <hr />
         </FormComplete>

@@ -13,7 +13,7 @@ import { ConfDiv } from "./configuracionStyles.js";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
 
 const Modul = "Configuración";
-const IconClass = "bi bi-gear-fill";
+const IconName = "bi bi-gear-fill";
 const SubPageTitle = "Actualizar secuencial de la factura";
 
 const IngresarSecuencial = () => {
@@ -21,7 +21,7 @@ const IngresarSecuencial = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -94,7 +94,7 @@ const IngresarSecuencial = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            IconClass={"bi bi-floppy"}
+            iconClass={"bi bi-floppy"}
             submitText={"Guardar cambios"}
           />
         </FormComplete>

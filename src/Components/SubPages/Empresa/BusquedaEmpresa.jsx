@@ -10,7 +10,7 @@ import {
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-building";
+const IconName = "bi bi-building";
 const SubPageTitle = "Busqueda de empresa";
 
 const BusquedaEmpresa = () => {
@@ -18,7 +18,7 @@ const BusquedaEmpresa = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -49,7 +49,7 @@ const BusquedaEmpresa = () => {
             <input type="text"></input>
           </FormDiv>
           <ButtonSubmit
-            IconClass={"bi bi-search"}
+            iconClass={"bi bi-search"}
             submitText={"Buscar"}
           />
           <hr />

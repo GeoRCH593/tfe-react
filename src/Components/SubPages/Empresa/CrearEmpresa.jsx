@@ -9,15 +9,15 @@ import {
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-building";
-const SubPageTitle = 'Crear una empresa'
+const IconName = "bi bi-building";
+const SubPageTitle = "Crear una empresa";
 
 const CrearEmpresa = () => {
   return (
     <PageBody>
       <GlobalStyle />
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -84,10 +84,9 @@ const CrearEmpresa = () => {
             <input type="email"></input>
           </FormDiv>
           <ButtonSubmit
-            IconClass={"bi bi-building-add"}
+            iconClass={"bi bi-building-add"}
             submitText={"Crear Empresa"}
           />
-
         </FormComplete>
       </div>
     </PageBody>

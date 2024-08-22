@@ -32,22 +32,22 @@ const makeCards = [
   {
     classDiv: "bi bi-shop-window",
     title: "Crear Sucursal",
-    to: "configuracion",
+    to: "crearsucursal",
   },
   {
     classDiv: "bi bi-file-earmark-arrow-up",
     title: "Actualizar datos de sucursal",
-    to: "facturacion",
+    to: "actualizardatossucursal",
   },
   {
     classDiv: "bi bi-folder-x",
     title: "Eliminar datos de sucursal",
-    to: "cerrar-sesion",
+    to: "celiminardatossucursal",
   },
   {
     classDiv: "bi bi-search",
     title: "Buscar sucursal",
-    to: "cerrar-sesion",
+    to: "buscarsucursal",
   },
 ];
 

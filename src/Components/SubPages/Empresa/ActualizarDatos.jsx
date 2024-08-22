@@ -10,7 +10,7 @@ import { IconEditStyled } from "../../../styles/Subpages/icons";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
 
 const Modul = "Empresa";
-const IconClass = "bi bi-person-lines-fill";
+const IconName = "bi bi-person-lines-fill";
 const IconEdit = "bi bi-pencil-fill";
 const SubPageTitle = "Actualizar Datos";
 
@@ -19,7 +19,7 @@ const ActualizarDatos = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -96,7 +96,7 @@ const ActualizarDatos = () => {
             <IconEditStyled className={IconEdit}></IconEditStyled>
           </FormDiv>
           <ButtonSubmit
-            IconClass={"bi bi-pencil-square"}
+            iconClass={"bi bi-pencil-square"}
             submitText={"Actualizar"}
           />
         </FormComplete>

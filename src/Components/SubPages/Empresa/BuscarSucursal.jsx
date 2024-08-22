@@ -7,10 +7,11 @@ import {
   FormDiv,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-building";
+const IconName = "bi bi-building";
 const SubPageTitle = "Busqueda de sucursal";
 
 const BuscarSucursal = () => {
@@ -18,7 +19,7 @@ const BuscarSucursal = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -48,9 +49,9 @@ const BuscarSucursal = () => {
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
           </FormDiv>
-          <ButtonSubmit
-            IconClass={"bi bi-search"}
-            submitText={"Buscar Empresa"}
+          <ButtonNormal 
+           classIcon={"bi bi-search"} 
+           textButton={"Buscar Empresa"}
           />
           <br />
           <hr />
@@ -100,7 +101,7 @@ const BuscarSucursal = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            IconClass={"bi bi-search"}
+            iconClass={"bi bi-search"}
             submitText={"Buscar Sucursal"}
           />
         </FormComplete>

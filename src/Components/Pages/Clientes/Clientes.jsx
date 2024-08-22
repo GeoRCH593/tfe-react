@@ -23,7 +23,7 @@ const makeCards = [
   {
     classDiv: "bi bi-search",
     title: "Buscar cliente",
-    to: "buscarcliente"
+    to: "buscarclientes"
   }, 
 ];
 

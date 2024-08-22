@@ -1,8 +1,6 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   FormComplete,
@@ -10,9 +8,11 @@ import {
   SubTitleList,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Proveedores";
-const IconClass = "bi bi-person-lines-fill";
+const IconName = "bi bi-person-rolodex";
 const SubPageTitle = "Eliminar Nuevo proveedor";
 
 const EliminarProveedor = () => {
@@ -20,7 +20,7 @@ const EliminarProveedor = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -42,11 +42,10 @@ const EliminarProveedor = () => {
             <label>Número de Indentificación:</label>
             <input type="number" />
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Buscar Proveedor
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonNormal 
+           classIcon={"bi bi-search"} 
+           textButton={"Buscar Proveedor"}
+          />
           <br />
           <hr />
           <SubTitleList>
@@ -76,11 +75,10 @@ const EliminarProveedor = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-trash3"></i>Eliminar
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            iconClass={"bi bi-trash3"}
+            submitText={"Eliminar"}
+          />
         </FormComplete>
       </div>
     </PageBody>

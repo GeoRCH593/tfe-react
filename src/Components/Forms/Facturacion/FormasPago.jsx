@@ -1,8 +1,7 @@
 import {
   TableGeneral,
-  BtnContain,
-  BtnSubmit,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
 import EditButton from "../../Buttons/EditButton";
 
 const FormasPago = () => {
@@ -30,9 +29,10 @@ const FormasPago = () => {
           </tr>
         </tbody>
       </TableGeneral>
-      <BtnContain>
-        <BtnSubmit type="button">Añadir Forma de pago</BtnSubmit>
-      </BtnContain>
+      <ButtonNormal 
+           classIcon={"bi bi-wallet2"} 
+           textButton={"Añadir forma de pago"}
+          />
     </div>
   );
 };

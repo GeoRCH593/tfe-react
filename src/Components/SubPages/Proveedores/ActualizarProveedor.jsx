@@ -1,7 +1,5 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
-  BtnContain,
-  BtnSubmit,
   CheckboxDiv,
   FormComplete,
   FormDiv,
@@ -10,9 +8,10 @@ import {
   TitlePage,
 } from "../../../styles/Subpages/subpagesStyles";
 import { IconEditStyled } from "../../../styles/Subpages/icons";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Proveedores";
-const IconClass = "bi bi-person-lines-fill";
+const IconName = "bi bi-person-rolodex";
 const SubPageTitle = "Actualizar datos del proveedor";
 const IconEdit = "bi bi-pencil-fill";
 
@@ -21,7 +20,7 @@ const ActualizarProveedor = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -93,11 +92,10 @@ const ActualizarProveedor = () => {
               <label>Extranjero</label>
             </CheckboxDiv>
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-pencil-square"></i>Actualizar
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            iconClass={"bi bi-pencil-square"}
+            submitText={"Actualizar"}
+          />
         </FormComplete>
       </div>
     </PageBody>

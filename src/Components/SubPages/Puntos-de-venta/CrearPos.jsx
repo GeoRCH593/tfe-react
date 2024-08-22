@@ -1,17 +1,17 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   TablesContain,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import {SubTitleList} from '../Empresa/eliminarDatosSucursalStyles';
 
 const Modul = "Empresa";
-const IconClass = "bi bi-shop";
+const IconName = "bi bi-shop";
 const SubPageTitle = "Crear Punto de Venta (POS)";
 
 const CrearPos = () => {
@@ -19,7 +19,7 @@ const CrearPos = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -49,11 +49,11 @@ const CrearPos = () => {
             </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Busqueda Empresa
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonNormal 
+           classIcon={"bi bi-search"} 
+           textButton={"Busqueda Empresa"}
+          />
+
           <br />
           <hr />
           <SubTitleList>
@@ -83,11 +83,10 @@ const CrearPos = () => {
             </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-shop"></i>Crear Punto de venta
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            iconClass={"bi bi-shop"}
+            submitText={"Crear Punto de venta"}
+          />
         </TablesContain>
       </div>
     </PageBody>

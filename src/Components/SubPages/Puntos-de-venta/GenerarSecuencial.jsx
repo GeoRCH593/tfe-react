@@ -1,17 +1,16 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   TablesContain,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
 import { SubTitleList } from "../../../styles/Subpages/subpagesStyles";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-shop";
+const IconName = "bi bi-shop";
 const SubPageTitle = "Crear Punto de Venta (POS)";
 
 const GenerarSecuencial = () => {
@@ -19,7 +18,7 @@ const GenerarSecuencial = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -53,11 +52,10 @@ const GenerarSecuencial = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-123"></i>Generar Secuencial
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            iconClass={"bi bi-123"}
+            submitText={"Generar secuencial"}
+          />
         </TablesContain>
       </div>
     </PageBody>

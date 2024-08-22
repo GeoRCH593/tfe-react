@@ -11,7 +11,7 @@ import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-building-fill";
+const IconName = "bi bi-building-fill";
 const SubPageTitle = "Eliminar Datos";
 
 const EliminarDatos = () => {
@@ -19,7 +19,7 @@ const EliminarDatos = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -65,7 +65,7 @@ const EliminarDatos = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            IconClass={"bi bi-trash-3"}
+            iconClass={"bi bi-trash3"}
             submitText={"Eliminar"}
           />
         </FormComplete>

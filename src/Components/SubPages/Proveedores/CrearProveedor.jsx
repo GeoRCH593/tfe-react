@@ -1,7 +1,5 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
-  BtnContain,
-  BtnSubmit,
   CheckboxDiv,
   FormComplete,
   FormDiv,
@@ -9,9 +7,10 @@ import {
   PageBody,
   TitlePage,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Proveedores";
-const IconClass = "bi bi-person-lines-fill";
+const IconName = "bi bi-person-rolodex";
 const SubPageTitle = "Ingresar Nuevo proveedor";
 
 const CrearProveedor = () => {
@@ -19,7 +18,7 @@ const CrearProveedor = () => {
     <PageBody>
       <GlobalStyle />
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -73,11 +72,10 @@ const CrearProveedor = () => {
             <input type="checkbox"></input>
             <label>Extranjero</label>
           </CheckboxDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-person-plus-fill"></i>Crear Nuevo Proveedor
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonSubmit
+            iconClass={"bi bi-person-plus-fill"}
+            submitText={"Crear nuevo proveedor"}
+          />
         </FormComplete>
       </div>
     </PageBody>

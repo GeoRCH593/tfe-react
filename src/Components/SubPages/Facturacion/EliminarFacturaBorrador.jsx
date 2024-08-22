@@ -10,7 +10,7 @@ import {
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Facturación";
-const IconClass = "bi bi-receipt";
+const IconName = "bi bi-receipt";
 const SubPageTitle = "Eliminar Factura Borrador";
 
 const EliminarFacturaBorrador = () => {
@@ -18,7 +18,7 @@ const EliminarFacturaBorrador = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -60,7 +60,7 @@ const EliminarFacturaBorrador = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            IconClass={"bi bi-trash3"}
+            iconClass={"bi bi-trash3"}
             submitText={"Eliminar facturas"}
           />
         </FormComplete>

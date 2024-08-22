@@ -12,7 +12,7 @@ import ButtonSubmit from "../../Buttons/ButtonSubmit.jsx";
 import { SearchFactDiv, SelectDiv } from "./facturacionStyles.js";
 
 const Modul = "Facturación";
-const IconClass = "bi bi-receipt";
+const IconName = "bi bi-receipt";
 const SubPageTitle = "Enviar Factura por email";
 
 const EnviarFacturaEmail = () => {
@@ -20,7 +20,7 @@ const EnviarFacturaEmail = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -94,7 +94,7 @@ const EnviarFacturaEmail = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            IconClass={"bi bi-envelope-paper"}
+            iconClass={"bi bi-envelope-paper"}
             submitText={"Enviar a correo"}
           />
         </FormComplete>

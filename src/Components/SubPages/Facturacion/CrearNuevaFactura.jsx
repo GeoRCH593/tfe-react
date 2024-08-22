@@ -1,6 +1,4 @@
-import {
-  TitlePage,
-} from "../../../styles/Subpages/subpagesStyles";
+import { TitlePage } from "../../../styles/Subpages/subpagesStyles";
 import {
   FactBody,
   FactComplete,
@@ -21,7 +19,7 @@ import TablaBuscar from "../../Forms/Facturacion/TablaBuscar.jsx";
 import ButtonSubmit from "../../Buttons/ButtonSubmit.jsx";
 
 const Modul = "Facturación";
-const IconClass = "bi bi-receipt";
+const IconName = "bi bi-receipt";
 const SubPageTitle = "Crear nueva factura";
 
 const CrearNuevaFactura = () => {
@@ -29,7 +27,7 @@ const CrearNuevaFactura = () => {
     <FactComplete>
       <FactBody>
         <TitlePage>
-          <i className={IconClass}></i>
+          <i className={IconName}></i>
           <h2>Módulo: {Modul}</h2>
         </TitlePage>
         <TitleSubpage>
@@ -125,7 +123,7 @@ const CrearNuevaFactura = () => {
             </FactPartRight>
           </FactPartTwo>
           <ButtonSubmit
-            IconClass={"bi bi-receipt-cutoff"}
+            iconClass={"bi bi-receipt-cutoff"}
             submitText={"Crear Factura"}
           />
         </FactSubBody>

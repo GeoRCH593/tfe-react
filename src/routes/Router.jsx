@@ -68,7 +68,7 @@ const Router = () => (
       <Route path='clientes/crearclientes' element={<CrearClientes />}/>
       <Route path='clientes/actualizarclientes' element={<ActualizarClientes />}/>
       <Route path='clientes/eliminarclientes' element={<EliminarClientes />} />
-      <Route path='clientes/buscarcliente' element={<BuscarClientes />}/>
+      <Route path='clientes/buscarclientes' element={<BuscarClientes />}/>
       <Route path='proveedores/crearproveedor' element={<CrearProveedor />} />
       <Route path='proveedores/actualizarproveedor' element={<ActualizarProveedor />}/>
       <Route path='proveedores/eliminarproveedor' element={<EliminarProveedor />}/>

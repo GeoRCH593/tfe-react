@@ -1,8 +1,6 @@
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
-  BtnContain,
-  BtnSubmit,
   TitlePage,
   FormTitle,
   FormComplete,
@@ -10,9 +8,10 @@ import {
   SubTitleList,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
 
 const Modul = "Proveedores";
-const IconClass = "bi bi-person-lines-fill";
+const IconName = "bi bi-person-rolodex";
 const SubPageTitle = "Buscar proveedor";
 
 const BuscarProveedor = () => {
@@ -20,7 +19,7 @@ const BuscarProveedor = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -35,11 +34,10 @@ const BuscarProveedor = () => {
             <label>Número de Indentificación:</label>
             <input type="text" />
           </FormDiv>
-          <BtnContain>
-            <BtnSubmit type="submit">
-              <i className="bi bi-search"></i>Buscar Cliente
-            </BtnSubmit>
-          </BtnContain>
+          <ButtonNormal 
+           classIcon={"bi bi-search"} 
+           textButton={"Cliente"}
+          />
           <br />
           <hr />
           <SubTitleList>

@@ -12,7 +12,7 @@ import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import { SubTitleList } from "./eliminarDatosSucursalStyles";
 
 const Modul = "Empresa";
-const IconClass = "bi bi-building-fill";
+const IconName = "bi bi-building-fill";
 const SubPageTitle = "Eliminar datos de sucursal";
 
 const EliminarDatosSucursal = () => {
@@ -20,7 +20,7 @@ const EliminarDatosSucursal = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -104,7 +104,7 @@ const EliminarDatosSucursal = () => {
             </tbody>
           </TableGeneral>
           <ButtonSubmit
-            IconClass={"bi bi-trash-3"}
+            iconClass={"bi bi-trash3"}
             submitText={"Eliminar Sucursal"}
           />
 

@@ -11,7 +11,7 @@ import {
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
 
 const Modul = "Clientes";
-const IconClass = "bi bi-person-lines-fill";
+const IconName = "bi bi-person-lines-fill";
 const SubPageTitle = "Buscar Clientes";
 
 const BuscarClientes = () => {
@@ -19,7 +19,7 @@ const BuscarClientes = () => {
     <PageBody>
       <GlobalStyle></GlobalStyle>
       <TitlePage>
-        <i className={IconClass}></i>
+        <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>
       </TitlePage>
       <div>
@@ -34,7 +34,7 @@ const BuscarClientes = () => {
             <label>Número de Indentificación:</label>
             <input type="text" />
           </FormDiv>
-          <ButtonSubmit IconClass={"bi bi-search"} submitText={"Buscar"}/>
+          <ButtonSubmit iconClass={"bi bi-search"} submitText={"Buscar"}/>
           <br />
           <hr />
           <SubTitleList>

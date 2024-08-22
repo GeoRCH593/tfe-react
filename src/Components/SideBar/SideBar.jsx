@@ -41,7 +41,7 @@ const makeButtons = [
       "Crear clientes",
       "Actualizar clientes",
       "Eliminar clientes",
-      "Buscar cliente",
+      "Buscar clientes",
     ],
   },
   {

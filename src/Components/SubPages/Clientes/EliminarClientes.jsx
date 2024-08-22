@@ -8,6 +8,7 @@ import {
   SubTitleList,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
 
 const Modul = "Clientes";
@@ -41,7 +42,10 @@ const EliminarClientes = () => {
             <label>Número de Indentificación:</label>
             <input type="number" />
           </FormDiv>
-          <ButtonSubmit IconClass={"bi bi-search"} submitText={"Buscar Cliente"}/>
+          <ButtonNormal 
+           classIcon={"bi bi-search"} 
+           textButton={"Buscar cliente"}
+          />
           <br />
           <hr />
           <SubTitleList>
@@ -71,7 +75,7 @@ const EliminarClientes = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <ButtonSubmit IconClass={"bi bi-trash3"} submitText={"Eliminar"}/>
+          <ButtonSubmit iconClass={"bi bi-trash3"} submitText={"Eliminar"}/>
         </FormComplete>
       </div>
     </PageBody>
