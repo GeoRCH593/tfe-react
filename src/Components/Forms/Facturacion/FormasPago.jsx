@@ -1,3 +1,6 @@
+
+
+
 const FormasPago = () => {
   return (
     <div>

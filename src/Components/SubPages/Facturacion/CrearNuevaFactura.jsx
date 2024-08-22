@@ -8,10 +8,12 @@ import "./crearFactura.css";
 import {
   FactBody,
   FactDiv,
-  TableSearch,
+  FactSubBody,
   TableValues,
   TitleSubpage,
 } from "./facturacionStyles.js";
+
+import TableSearch from "../../Forms/Facturacion/TableSearch.jsx";
 
 const Modul = "Facturación";
 const IconClass = "bi bi-receipt";
@@ -28,7 +30,7 @@ const CrearNuevaFactura = () => {
         <TitleSubpage>
           <h5>{SubPageTitle}</h5>
         </TitleSubpage>
-        <div className="fact-sub">
+        <FactSubBody>
           <div className="part-one">
             <div className="izq-part-one">
               <h5>Adquiriente:</h5>
@@ -101,42 +103,10 @@ const CrearNuevaFactura = () => {
           </div>
           <div className="part-two">
             <hr />
-            <TableSearch>
-              <thead>
-                <tr>
-                  <th>Código:</th>
-                  <th>Cantidad:</th>
-                  <th>Producto:</th>
-                  <th>Precio U.:</th>
-                  <th>Tarifa:</th>
-                  <th>Descuento:</th>
-                  <th>Valor total:</th>
-                  <th>Valor ICE</th>
-                  <th>Acciones</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>S0135</td>
-                  <td>2</td>
-                  <td>Producto A</td>
-                  <td>$ 150.00</td>
-                  <td>-</td>
-                  <td>0</td>
-                  <td>$ 300.00</td>
-                  <td>0</td>
-                  <td>
-                    <i className="bi bi-pencil-fill">Editar</i>
-                  </td>
-                </tr>
-              </tbody>
-            </TableSearch>
+            <TableSearch/>
             <hr />
             <i className="bi bi-search"></i>
-            <input
-              type="text"
-              placeholder="Buscar y añadir producto o servicio"
-            />
+            <input type="text"placeholder="Buscar y añadir producto o servicio"/>
           </div>
           <div className="part-three">
             <div className="izq-part-one">
@@ -260,7 +230,13 @@ const CrearNuevaFactura = () => {
               </TableValues>
             </div>
           </div>
-        </div>
+          <BtnContain>
+            <BtnSubmit type="submit">
+              <i className="bi bi-receipt-cutoff"></i>Crear Factura
+            </BtnSubmit>
+          </BtnContain>
+        </FactSubBody>
+      
       </div>
     </FactBody>
   );

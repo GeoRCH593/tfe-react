@@ -1,13 +1,4 @@
 
-
-
-.fact-sub {
-  min-width: 800px;
-  background-color: #F4F4F4;
-  padding: 1em 2em;
-
-}
-
 .part-one {
   display: flex;
   width: 100%;
@@ -21,8 +12,6 @@
   align-items: start;
   justify-content: space-between;
 }
-
-
 
 .izq-part-one {
   display: flex;

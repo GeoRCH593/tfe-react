@@ -13,6 +13,12 @@ export const FactBody =styled.div`
   z-index: -1;
 `;
 
+export const FactSubBody = styled.div`
+  min-width: 800px;
+  background-color: #F4F4F4;
+  padding: 1em 2em;
+`;
+
 /*Contendedor de cada input y label 1 columna*/
 export const FactDiv = styled.div`
 display: flex;
@@ -22,7 +28,7 @@ gap: 1em;
   > label {
     width: 40%;
     color: #0c302e;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 700;
   }
   > input {
@@ -52,7 +58,7 @@ export const TitleSubpage = styled.div`
 
 
 /*Tabla de busqueda facturacion */
-export const TableSearch = styled.table`
+export const TableSearchDiv = styled.table`
   width: 100%;
   align-items: center;
   justify-content: center;
