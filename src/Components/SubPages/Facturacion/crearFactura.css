@@ -1,18 +1,11 @@
 
-.fact-body{
-  position: absolute;
-  font-family: Open Sans;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 0;
-  z-index: -1;
-}
+
 
 .fact-sub {
   min-width: 800px;
+  background-color: #F4F4F4;
+  padding: 1em 2em;
+
 }
 
 .part-one {
