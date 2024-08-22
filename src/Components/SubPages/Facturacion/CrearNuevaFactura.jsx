@@ -6,6 +6,7 @@ import {
   FactPartLeft,
   FactPartOne,
   FactPartRight,
+  FactPartThree,
   FactPartTwo,
   FactSubBody,
   NumFactDiv,
@@ -76,7 +77,6 @@ const CrearNuevaFactura = () => {
                 <input type="checkbox"></input>
               </FactDiv>
             </FactPartLeft>
-
             <FactPartRight>
               <h5>Establecimiento:</h5>
               <NumFactDiv>
@@ -104,14 +104,14 @@ const CrearNuevaFactura = () => {
               </FactDiv>
             </FactPartRight>
           </FactPartOne>
-          <div className="part-two">
+          <FactPartTwo>
             <hr />
             <TablaBuscar />
             <hr />
-          </div>
-          <FactPartTwo>
+          </FactPartTwo>
+          <FactPartThree>
             <FactPartLeft>
-              <h5>Formas de pago</h5>
+              <h5>Formas de pago:</h5>
               <FormasPago />
               <br />
               <hr />
@@ -121,7 +121,7 @@ const CrearNuevaFactura = () => {
             <FactPartRight>
               <TablaValores />
             </FactPartRight>
-          </FactPartTwo>
+          </FactPartThree>
           <ButtonSubmit
             iconClass={"bi bi-receipt-cutoff"}
             submitText={"Crear Factura"}

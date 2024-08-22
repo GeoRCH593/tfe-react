@@ -50,8 +50,13 @@ export const FactPartRight = styled.div`
   gap: 5px;
 `;
 
-/*Contenedor Parte Dos Facturacion */
+/*Contenedor Parte Dos para busqueda */
 export const FactPartTwo = styled.div`
+padding: 1em 0;
+`;
+
+/*Contenedor Parte Tres Facturacion */
+export const FactPartThree = styled.div`
   display: flex;
   width: 100%;
   gap: 1em;
