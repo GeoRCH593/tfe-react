@@ -7,14 +7,13 @@ import {
   FormDiv,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
-import { IconEditStyled } from "../../../styles/Subpages/icons.js";
 import { SubTitleList } from "../Empresa/eliminarDatosSucursalStyles";
 import ButtonNormal from "../../Buttons/ButtonNormal.jsx";
 import ButtonSubmit from "../../Buttons/ButtonSubmit.jsx";
+import ModifyButton from "../../Buttons/ModifyButton.jsx";
 
 const Modul = "Empresa";
 const IconName = "bi bi-building";
-const IconEdit = "bi bi-pencil-fill";
 const SubPageTitle = "Actualizar Punto de venta";
 
 const ActualizarPos = () => {
@@ -74,27 +73,27 @@ const ActualizarPos = () => {
           <FormDiv>
             <label>Número de Indentificación:</label>
             <input type="number" />
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Razón Social:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <ButtonSubmit
             classIconId={"bi bi-arrow-left-right"}

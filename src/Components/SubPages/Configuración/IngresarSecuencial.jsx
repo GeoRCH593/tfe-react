@@ -87,7 +87,7 @@ const IngresarSecuencial = () => {
                 <td>Producción</td>
                 <td>Borrador</td>
                 <td>
-                  <EditButton/>
+                  <EditButton onClick={()=> alert("Editar Secuencial")}/>
                 </td>
                 <td>Anular factura</td>
               </tr>

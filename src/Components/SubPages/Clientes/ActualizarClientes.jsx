@@ -6,12 +6,11 @@ import {
   FormComplete,
   FormDiv,
 } from "../../../styles/Subpages/subpagesStyles";
-import { IconEditStyled } from "../../../styles/Subpages/icons";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
+import ModifyButton from "../../Buttons/ModifyButton";
 
 const Modul = "Empresa";
 const IconName = "bi bi-person-lines-fill";
-const IconEdit = "bi bi-pencil-fill";
 const SubPageTitle = "Actualizar datos de cliente";
 
 const ActualizarClientes = () => {
@@ -36,12 +35,12 @@ const ActualizarClientes = () => {
               <option>Identificador del exterior</option>
               <option>Consumidor final</option>
             </select>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Número de Indentificación:</label>
             <input type="number" />
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Tipo de cliente:</label>
@@ -49,28 +48,28 @@ const ActualizarClientes = () => {
               <option>Persona natural</option>
               <option>Empresa</option>
             </select>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Razón Social:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Dirección:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Teléfono:</label>
             <input type="tel"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
 
           <FormDiv>
             <label>Correo electrónico:</label>
             <input type="email"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
             <FormDiv>
               <label>
                 <input type="checkbox"></input>

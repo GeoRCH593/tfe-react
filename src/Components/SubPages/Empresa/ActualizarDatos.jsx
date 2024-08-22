@@ -6,12 +6,11 @@ import {
   FormComplete,
   FormDiv,
 } from "../../../styles/Subpages/subpagesStyles";
-import { IconEditStyled } from "../../../styles/Subpages/icons";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
+import ModifyButton from "../../Buttons/ModifyButton";
 
 const Modul = "Empresa";
 const IconName = "bi bi-person-lines-fill";
-const IconEdit = "bi bi-pencil-fill";
 const SubPageTitle = "Actualizar Datos";
 
 const ActualizarDatos = () => {
@@ -36,37 +35,37 @@ const ActualizarDatos = () => {
               <option>Identificador del exterior</option>
               <option>Consumidor final</option>
             </select>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Número de Indentificación:</label>
             <input type="number" />
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Razón Social:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Dirección de la empresa:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Provincia:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Cantón:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>
@@ -77,7 +76,7 @@ const ActualizarDatos = () => {
           <FormDiv>
             <label>Teléfono:</label>
             <input type="tel"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>
@@ -88,12 +87,12 @@ const ActualizarDatos = () => {
           <FormDiv>
             <label>Subir imagen de logotipo:</label>
             <input type="file"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Correo electrónico:</label>
             <input type="email"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+          <ModifyButton />  
           </FormDiv>
           <ButtonSubmit
             classIconId={"bi bi-pencil-square"}

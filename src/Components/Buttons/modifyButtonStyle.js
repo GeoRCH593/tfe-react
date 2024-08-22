@@ -1,5 +1,11 @@
 import styled from 'styled-components';
 
+
+export const ButtonModify =styled.button`
+background-color: none;
+border: none;
+`;
+
 export const IconEditStyled = styled.i`
 color: #0C302E;
 font-size: 1.2em;

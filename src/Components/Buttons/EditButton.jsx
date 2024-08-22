@@ -5,7 +5,7 @@ const iconEdit = "bi bi-pencil-fill"
 
 const EditButton = ({ onClick }) => {
   return (
-    <EditIconButton onClick={onClick}>
+    <EditIconButton type="button" onClick={onClick}>
       <IconEdit className={iconEdit}>  Editar</IconEdit>
     </EditIconButton>
   );

@@ -9,6 +9,7 @@ import {
 } from "../../../styles/Subpages/subpagesStyles";
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
+import EditButton from "../../Buttons/EditButton";
 
 const Modul = "Empresa";
 const IconName = "bi bi-building";
@@ -91,7 +92,7 @@ const CrearSucursal = () => {
                 <td>Nombre sucursal 1</td>
                 <td>Calle 1 y Calle 2</td>
                 <td>
-                  <i className="bi bi-pencil"></i>
+                  <EditButton onClick={()=> alert("Editar Empresa")}/>
                 </td>
               </tr>
             </tbody>

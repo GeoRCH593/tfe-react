@@ -18,12 +18,11 @@ import CamposAdicionales from "../../Forms/Facturacion/CamposAdicionales.jsx";
 import TablaValores from "../../Forms/Facturacion/TablaValores.jsx";
 import TablaBuscar from "../../Forms/Facturacion/TablaBuscar.jsx";
 import ButtonSubmit from "../../Buttons/ButtonSubmit.jsx";
-import { IconEditStyled } from "../../../styles/Subpages/icons";
+import ModifyButton from "../../Buttons/ModifyButton.jsx";
 
 const Modul = "Facturación";
 const IconName = "bi bi-receipt";
 const SubPageTitle = "Modificar y finalizar factura en borrador";
-const IconEdit = "bi bi-pencil-fill";
 
 const ModificarFinalizarFactura = () => {
   return (
@@ -43,12 +42,12 @@ const ModificarFinalizarFactura = () => {
               <FactDiv>
                 <label>Cliente:</label>
                 <input type="text"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Identificación:</label>
                 <input type="text"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Tipo:</label>
@@ -59,32 +58,32 @@ const ModificarFinalizarFactura = () => {
                   <option>Identificador del exterior</option>
                   <option>Consumidor final</option>
                 </select>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Razón social:</label>
                 <input type="text"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Dirección:</label>
                 <input type="text"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Teléfono:</label>
                 <input type="text"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Correo:</label>
                 <input type="email"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Extranjero:</label>
                 <input type="checkbox"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
             </FactPartLeft>
             <FactPartRight>
@@ -95,22 +94,22 @@ const ModificarFinalizarFactura = () => {
               <FactDiv>
                 <label>Fecha de emisión:</label>
                 <input type="text"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Nombre comercial:</label>
                 <input type="text"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Punto de emisión:</label>
                 <input type="text"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Guia de emisión:</label>
                 <input type="text"></input>
-                <IconEditStyled className={IconEdit}></IconEditStyled>
+                <ModifyButton />
               </FactDiv>
               <FactDiv>
                 <label>Factura comercial negociable:</label>

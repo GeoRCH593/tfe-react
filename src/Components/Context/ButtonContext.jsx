@@ -2,14 +2,15 @@ import {FormButton} from './buttonStyle.js';
 import {PropTypes} from 'prop-types';
 
 
-const ButtonContext = ({title}) => {
+const ButtonContext = ({title, onClick}) => {
   return (
-    <FormButton>{title}</FormButton>
+    <FormButton onClick={onClick}>{title}</FormButton>
   );
 };
 
 ButtonContext.propTypes = {
   title: PropTypes.string,
+  onClick: PropTypes.string,
 
 };
 export default ButtonContext;

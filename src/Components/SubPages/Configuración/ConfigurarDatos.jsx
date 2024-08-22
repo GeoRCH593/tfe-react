@@ -7,13 +7,12 @@ import {
   PageBody,
   TitlePage,
 } from "../../../styles/Subpages/subpagesStyles";
-import { IconEditStyled } from "../../../styles/Subpages/icons";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
+import ModifyButton from "../../Buttons/ModifyButton";
 
 const Modul = "Configuración";
 const IconName = "bi bi-gear-fill";
 const SubPageTitle = "Actualizar datos del proveedor";
-const IconEdit = "bi bi-pencil-fill";
 
 const ConfigurarDatos = () => {
   return (
@@ -37,12 +36,12 @@ const ConfigurarDatos = () => {
               <option>Identificador del exterior</option>
               <option>Consumidor final</option>
             </select>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Número de Indentificación:</label>
             <input type="number" />
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Tipo de cliente:</label>
@@ -50,37 +49,37 @@ const ConfigurarDatos = () => {
               <option>Persona natural</option>
               <option>Empresa</option>
             </select>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Razón Social:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Dirección del emisor:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Provincia:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Cantón:</label>
             <input type="text"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Teléfono:</label>
             <input type="tel"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Correo electrónico:</label>
             <input type="email"></input>
-            <IconEditStyled className={IconEdit}></IconEditStyled>
+            <ModifyButton />
             <CheckboxDiv>
               <input type="checkbox"></input>
               <label>Extranjero</label>

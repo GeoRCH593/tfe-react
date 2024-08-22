@@ -67,8 +67,8 @@ const UserRegister = () => {
           </LabelInputPolitics>
         </form>
         <ButtonContain>
-          <ButtonContext title={"REGISTRAR"}></ButtonContext>
-          <ButtonContext title={"CANCELAR"}></ButtonContext>
+          <ButtonContext onClick={()=> alert("Realizaste un registro")} title={"REGISTRAR"}></ButtonContext>
+          <ButtonContext onCLick={()=> alert("Cancelaste el evento")} title={"CANCELAR"}></ButtonContext>
         </ButtonContain>
       </FormContainer>
     </RegisterBody>
