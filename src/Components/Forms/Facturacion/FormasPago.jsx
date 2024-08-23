@@ -36,6 +36,7 @@ const FormasPago = () => {
         textButton={"Añadir forma de pago"}
         onClick={()=> setModalState(!modalState)}
       />
+      {/* Modal forma de pago*/}
       <Modals
         title={"Formas de pago:"}
         estado={modalState}

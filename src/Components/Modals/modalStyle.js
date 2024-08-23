@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+/*Pantalla oscura con opacidad */
 export const Overlay = styled.div`
   display: flex;
   align-items: center;
@@ -11,8 +12,9 @@ export const Overlay = styled.div`
   left: 0;
   background: rgba(0, 0, 0, 0.5);
   padding: 2.5em;
+  z-index: 120;
 `;
-
+/*Medida del Modal exterior */
 export const ContainerModal = styled.div`
   width: 500px;
   background: #faf9f9;
@@ -23,6 +25,7 @@ export const ContainerModal = styled.div`
   padding: 1.2em;
 `;
 
+/*Emcabezado del modal */
 export const HeaderModal = styled.div`
   display: flex;
   align-items: center;
@@ -94,19 +97,19 @@ export const ModalButton = styled.button`
   }
 `;
 
-/*Modal estilo de contenedor para formulario */
+/*Modal estilo de contenedor para formulario label e input*/
 export const ModalFormDiv = styled.div`
 display: flex;
 justify-content: space-evenly;
-  padding: 0.3em 3em;
+  padding: 0.3em 2em;
   width: 100%;
-  > label {
+   label {
     color: #0c302e;
     width: 100%;
     font-size: 0.9rem;
     font-weight: 700;
   }
-  > input {
+   input {
     width: 75%;
     background-color: #e8eaed;
     border: none;
@@ -114,7 +117,7 @@ justify-content: space-evenly;
     font-size: 14px;
     transition: all 0.3s ease-in-out;
   }
-  > select {
+   select {
     width: 80%;
     background-color: #e8eaed;
     border: none;
