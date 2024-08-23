@@ -9,7 +9,6 @@ import {
 } from "../../../styles/Subpages/subpagesStyles";
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
-
 const Modul = "Empresa";
 const IconName = "bi bi-building-fill";
 const SubPageTitle = "Eliminar Datos";

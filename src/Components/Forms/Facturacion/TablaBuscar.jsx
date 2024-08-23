@@ -1,5 +1,7 @@
 import EditButton from "../../Buttons/EditButton";
 import { SearchTableDiv, TableSearchDiv } from "../../SubPages/Facturacion/facturacionStyles";
+
+
 const TablaBuscar = () => {
   return (
     <div>
@@ -28,7 +30,7 @@ const TablaBuscar = () => {
             <td>$ 300.00</td>
             <td>0</td>
             <td>
-              <EditButton/>
+              <EditButton onClick={()=> alert("Editar valores")}/>
             </td>
           </tr>
         </tbody>
