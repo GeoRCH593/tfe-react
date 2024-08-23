@@ -7,35 +7,41 @@ import {
   ModalButtonContainer,
   Overlay,
 } from "./modalStyle";
-import PropTypes from "react";
+import PropTypes from "prop-types";
 
-const Modals = ({ children, title, aceptar, cancelar, cerrar }) => {
+const Modals = ({ children, title, estado, cambiarEstado}) => {
   return (
-    <Overlay>
-      <GlobalStyle />
-      <ContainerModal>
-        <HeaderModal>
-          <h3>Formas de pago:{title}</h3>
-          <CloseButton onClick={cerrar}>
-            <i className="bi bi-x-lg"></i>
-          </CloseButton>
-        </HeaderModal>
-        {children}
-        <ModalButtonContainer>
-        <ModalButton onClick={aceptar}>Aceptar </ModalButton>
-        <ModalButton onClick={cancelar}>Cancelar</ModalButton>
-        </ModalButtonContainer>
-      </ContainerModal>
-    </Overlay>
+    <>
+      {estado &&
+        <Overlay>
+          <GlobalStyle />
+          <ContainerModal>
+            <HeaderModal>
+              <h3>{title}</h3>
+              <CloseButton onClick={()=> cambiarEstado(!estado)}>
+                <i className="bi bi-x-lg"></i>
+              </CloseButton>
+            </HeaderModal>
+            {children}
+            <ModalButtonContainer>
+              <ModalButton type="submit">Aceptar</ModalButton>
+              <ModalButton type="button">Cancelar</ModalButton>
+            </ModalButtonContainer>
+          </ContainerModal>
+        </Overlay>
+      }
+    </>
   );
 };
 
 Modals.propTypes = {
   children: PropTypes.string,
-  aceptar: PropTypes.string,
-  cancelar: PropTypes.string,
-  cerrar: PropTypes.string,
   title: PropTypes.string,
+  estado: PropTypes.string,
+  cambiarEstado: PropTypes.func,
+  aceptar: PropTypes.func,
+  cancelar: PropTypes.func,
+  cerrar: PropTypes.func,
 };
 
 export default Modals;
