@@ -40,6 +40,7 @@ export const HeaderModal = styled.div`
   }
 `;
 
+/*Boton cerrar modal X */
 export const CloseButton = styled.button`
   position: absolute;
   top: 1em;
@@ -56,12 +57,14 @@ export const CloseButton = styled.button`
   }
 `;
 
+/*Contenido dentro del modal children*/
 export const ContentModal = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
 `;
 
+/*Contenedor de 2 botones aceptar y cancelar */
 export const ModalButtonContainer = styled.div`
 display: flex;
 flex-direction: row;
@@ -70,6 +73,7 @@ gap: 2em;
 
 `;
 
+/*Estilo de boton para modal  */
 export const ModalButton = styled.button`
   display: flex;
   justify-content: center;
@@ -83,8 +87,11 @@ export const ModalButton = styled.button`
   font-size: 1rem;
   font-weight: 600;
   border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.44) 0px 5px 8px;
   transition: all 0.4s ease-in-out;
   &:hover {
     background: #39b54a;
+    color: #0c302e;
+    box-shadow: rgba(0, 0, 0, 0.44) 0px 2px 5px;
   }
 `;
