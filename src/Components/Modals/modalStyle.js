@@ -61,3 +61,30 @@ display: flex;
 flex-direction: column;
 align-items: center;
 `;
+
+export const ModalButtonContainer = styled.div`
+display: flex;
+flex-direction: row;
+justify-content: center;
+gap: 2em;
+
+`;
+
+export const ModalButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.2em 1.5em;
+  background: #0c302e;
+  color: #fff;
+  border: none;
+  font-family: Open Sans;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 15px;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background: #39b54a;
+  }
+`;

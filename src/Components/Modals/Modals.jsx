@@ -3,9 +3,12 @@ import {
   CloseButton,
   ContainerModal,
   HeaderModal,
+  ModalButton,
+  ModalButtonContainer,
   Overlay,
 } from "./modalStyle";
 import PropTypes from "react";
+
 
 const Modals = ({ children }) => {
   return (
@@ -19,6 +22,11 @@ const Modals = ({ children }) => {
           </CloseButton>
         </HeaderModal>
         {children}
+        <ModalButtonContainer>
+        <ModalButton>Aceptar </ModalButton>
+        <ModalButton>Cancelar</ModalButton>
+        </ModalButtonContainer>
+       
       </ContainerModal>
     </Overlay>
   );
