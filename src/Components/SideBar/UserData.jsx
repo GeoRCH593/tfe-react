@@ -1,4 +1,7 @@
-import { UserDataStyle } from "../../styles/Sidebar/userData.js";
+import {
+  UserDataContent,
+  UserDataStyle,
+} from "../../styles/Sidebar/userData.js";
 import UserImg from "../../assets/images/user-img.jpg";
 
 const User = "Geovanny Rodríguez";
@@ -10,12 +13,12 @@ const UserData = () => {
   return (
     <UserDataStyle>
       <img src={UserImg}></img>
-      <div>
+      <UserDataContent>
         <h6>{User}</h6>
-        <p>{Admin}</p>
-        <p>{UpdateData}</p>
-        <p>{CLoseSession}</p>
-      </div>
+        <a>{Admin}</a>
+        <a>{UpdateData}</a>
+        <a>{CLoseSession}</a>
+      </UserDataContent>
     </UserDataStyle>
   );
 };

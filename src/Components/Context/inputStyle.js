@@ -8,7 +8,7 @@ export const FormContain = styled.div`
     color: #fff;
     width: 100%;
     font-size: 0.8rem;
-    font-weight: 100;
+    font-weight: 300;
   }
 `;
 
@@ -32,6 +32,6 @@ export const FormInput = styled.input`
   }
   &::placeholder {
     font-size: 0.8rem;
-    font-weight: 200;
+    font-weight: 400;
   }
 `;

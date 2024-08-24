@@ -37,10 +37,14 @@ const UserSignIn = () => {
             placeholder={"Ingrese contraseña"}
           />
           <ForgotPass>¿Olvidaste tu contraseña?</ForgotPass>
-          <ButtonContext onClick={()=> alert("Enviaste información")} title={"ACCEDER"}></ButtonContext>
+          <ButtonContext
+            onClick={() => alert("Enviaste información")}
+            title={"ACCEDER"}
+          ></ButtonContext>
         </form>
         <NewUser>
-          <ButtonContext title={"CREAR NUEVO USUARIO"}></ButtonContext>
+          <p>¿No tienes una cuenta?</p>
+          <a>¡Créa una nueva!</a>
         </NewUser>
       </FormContainer>
     </SignInBody>

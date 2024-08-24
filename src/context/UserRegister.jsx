@@ -12,7 +12,7 @@ import { GlobalStyle } from "../styles/globalStyles";
 import BillieIcon from "../assets/billie-icon-white-green.svg";
 import InputContext from "../Components/Context/InputContext";
 import ButtonContext from "../Components/Context/ButtonContext";
-import {LabelInputPolitics} from '../styles/ContextStyles/userRegister';
+import { LabelInputPolitics } from "../styles/ContextStyles/userRegister";
 
 const UserRegister = () => {
   return (
@@ -57,18 +57,20 @@ const UserRegister = () => {
             />
           </PassContain>
           <LabelInputPolitics>
-          <InputPolitics
-            type="checkbox"
-            name="Usepolitics"
-            value=""
-          />
-          Aceptar todos los términos y condiciones de envío de información
-          acorde a nuestras Políticas de uso.
+            <InputPolitics type="checkbox" name="Usepolitics" value="" />
+            Aceptar todos los términos y condiciones de envío de información
+            acorde a nuestras Políticas de uso.
           </LabelInputPolitics>
         </form>
         <ButtonContain>
-          <ButtonContext onClick={()=> alert("Realizaste un registro")} title={"REGISTRAR"}></ButtonContext>
-          <ButtonContext onCLick={()=> alert("Cancelaste el evento")} title={"CANCELAR"}></ButtonContext>
+          <ButtonContext
+            onClick={() => alert("Realizaste un registro")}
+            title={"REGISTRAR"}
+          ></ButtonContext>
+          <ButtonContext
+            onCLick={() => alert("Cancelaste el evento")}
+            title={"CANCELAR"}
+          ></ButtonContext>
         </ButtonContain>
       </FormContainer>
     </RegisterBody>
