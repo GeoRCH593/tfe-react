@@ -32,7 +32,6 @@ export const HeaderModal = styled.div`
   justify-content: space-between;
   margin-bottom: 1em;
   padding-bottom: 1em;
-  border-bottom: 0.5px solid #39b54a;
 
   h3 {
     font-weight: 500;
@@ -50,7 +49,7 @@ export const CloseButton = styled.button`
   border: none;
   i {
     color: #000;
-    font-size: 1.5em;
+    font-size: 1.4em;
     transition: all 0.3s ease-in-out;
     &:hover {
       color: #39b54a;
