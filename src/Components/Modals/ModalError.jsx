@@ -4,7 +4,7 @@ import { CloseButton, Overlay } from "./modalStyle";
 import PropTypes from "prop-types";
 import { ContainModalError, IconModalError, ModalButtonError } from "./modalErrorStyle";
 
-const ModalError = ({ estado, cambiarEstado }) => {
+const ModalError = ({ estado, cambiarEstado, titulo, subtitulo }) => {
   return (
     <Overlay>
       <GlobalStyle />
@@ -14,8 +14,8 @@ const ModalError = ({ estado, cambiarEstado }) => {
         </CloseButton>
         <IconModalError>
           <i className="bi bi-x-octagon"></i>
-          <h1>¡Error!</h1>
-          <h5>Se ha producido un problema</h5>
+          <h1>{titulo}</h1>
+          <h5>{subtitulo}</h5>
         </IconModalError>
         <ButtonContainer>
           <ModalButtonError type="submit">Aceptar</ModalButtonError>
@@ -29,6 +29,8 @@ ModalError.propTypes = {
   estado: PropTypes.string,
   cambiarEstado: PropTypes.func,
   aceptar: PropTypes.func,
+  titulo: PropTypes.string,
+  subtitulo: PropTypes.string,
 };
 
 export default ModalError;

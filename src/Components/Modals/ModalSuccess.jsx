@@ -7,7 +7,7 @@ import {
 import { CloseButton, ModalButton, Overlay } from "./modalStyle";
 import PropTypes from "prop-types";
 
-const ModalSuccess = ({ estado, cambiarEstado }) => {
+const ModalSuccess = ({ estado, cambiarEstado, titulo, subtitulo }) => {
   return (
     <Overlay>
       <GlobalStyle />
@@ -17,8 +17,8 @@ const ModalSuccess = ({ estado, cambiarEstado }) => {
         </CloseButton>
         <IconModal>
           <i className="bi bi-check2-circle"></i>
-          <h1>¡Exito!</h1>
-          <h5>Su tarea a sido realizada</h5>
+          <h1>{titulo}</h1>
+          <h5>{subtitulo}</h5>
         </IconModal>
         <ButtonContainer>
           <ModalButton type="submit">Aceptar</ModalButton>
@@ -30,6 +30,8 @@ const ModalSuccess = ({ estado, cambiarEstado }) => {
 
 ModalSuccess.propTypes = {
   estado: PropTypes.string,
+  titulo: PropTypes.string,
+  subtitulo: PropTypes.string,
   cambiarEstado: PropTypes.func,
   aceptar: PropTypes.func,
 };

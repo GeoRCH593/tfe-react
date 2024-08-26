@@ -4,7 +4,7 @@ import {CloseButton, Overlay} from './modalStyle';
 import PropTypes from 'prop-types';
 import { ContainModalAlert, IconModalAlert, ModalButtonAlert } from './modalAlertStyle';
 
-const ModalAlert = ({estado, cambiarEstado,}) => {
+const ModalAlert = ({estado, cambiarEstado, titulo, subtitulo}) => {
   return (
     <Overlay>
       <GlobalStyle />
@@ -14,8 +14,8 @@ const ModalAlert = ({estado, cambiarEstado,}) => {
         </CloseButton>
         <IconModalAlert>
           <i className="bi bi-exclamation-triangle"></i>
-          <h1>¡Precaución!</h1>
-          <h5>Se modificarán sus datos</h5>
+          <h1>{titulo}</h1>
+          <h5>{subtitulo}</h5>
         </IconModalAlert>
         <ButtonContainer>
           <ModalButtonAlert type="submit">Aceptar</ModalButtonAlert>
@@ -27,6 +27,8 @@ const ModalAlert = ({estado, cambiarEstado,}) => {
 
 ModalAlert.propTypes = {
   estado: PropTypes.string,
+  titulo: PropTypes.string,
+  subtitulo: PropTypes.string,
   cambiarEstado: PropTypes.func,
   aceptar: PropTypes.func,
 };
