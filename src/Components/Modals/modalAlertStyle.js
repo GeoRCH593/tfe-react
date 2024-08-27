@@ -10,7 +10,7 @@ export const IconModalAlert = styled(IconModal)`
  i {
   color: #FFA903 !important;
  }
- h1 {
+ h2 {
   color: #FFA903 !important;
  }
 `;

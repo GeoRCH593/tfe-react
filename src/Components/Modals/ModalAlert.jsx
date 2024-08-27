@@ -20,8 +20,8 @@ const ModalAlert = ({ estado, cambiarEstado, titulo, subtitulo }) => {
             </CloseButton>
             <IconModalAlert>
               <i className="bi bi-exclamation-triangle"></i>
-              <h1>{titulo}</h1>
-              <h5>{subtitulo}</h5>
+              <h2>{titulo}</h2>
+              <h6>{subtitulo}</h6>
             </IconModalAlert>
             <ButtonContainer>
               <ModalButtonAlert type="submit">Aceptar</ModalButtonAlert>

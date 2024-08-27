@@ -14,8 +14,8 @@ const ModalError = ({ estado, cambiarEstado, titulo, subtitulo }) => {
         </CloseButton>
         <IconModalError>
           <i className="bi bi-x-octagon"></i>
-          <h1>{titulo}</h1>
-          <h5>{subtitulo}</h5>
+          <h2>{titulo}</h2>
+          <h6>{subtitulo}</h6>
         </IconModalError>
         <ButtonContainer>
           <ModalButtonError type="submit">Aceptar</ModalButtonError>

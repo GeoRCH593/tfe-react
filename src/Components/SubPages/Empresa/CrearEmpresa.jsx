@@ -8,6 +8,7 @@ import {
 } from "../../../styles/Subpages/subpagesStyles";
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import ModalAlert from "../../Modals/ModalAlert";
+import { useForm } from "react-hook-form";
 import { useState } from "react";
 
 const Modul = "Empresa";
@@ -16,6 +17,7 @@ const SubPageTitle = "Crear una empresa";
 
 const CrearEmpresa = () => {
   const [modalState, setModalState] = useState(false);
+  const {register} = useForm()
 
   return (
     <PageBody>

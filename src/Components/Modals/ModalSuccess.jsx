@@ -17,8 +17,8 @@ const ModalSuccess = ({ estado, cambiarEstado, titulo, subtitulo }) => {
         </CloseButton>
         <IconModal>
           <i className="bi bi-check2-circle"></i>
-          <h1>{titulo}</h1>
-          <h5>{subtitulo}</h5>
+          <h2>{titulo}</h2>
+          <h6>{subtitulo}</h6>
         </IconModal>
         <ButtonContainer>
           <ModalButton type="submit">Aceptar</ModalButton>

@@ -71,6 +71,7 @@ export const ModalButtonContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   gap: 2em;
+  padding-bottom: 1em;
 `;
 
 /*Estilo de boton para modal  */

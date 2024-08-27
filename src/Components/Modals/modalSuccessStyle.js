@@ -21,7 +21,7 @@ export const IconModal = styled.div`
     font-size: 5em;
     color: #39b54a;
   }
-  h1 {
+  h2 {
     color: #39b54a;
   }
 `;

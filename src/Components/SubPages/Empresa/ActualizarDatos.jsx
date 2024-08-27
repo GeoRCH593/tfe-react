@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
@@ -17,6 +18,10 @@ const IconName = "bi bi-person-lines-fill";
 const SubPageTitle = "Actualizar Datos";
 
 const ActualizarDatos = () => {
+  const [identificacion, setIdentificacion] =useState("0123456789");
+
+
+
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -70,12 +75,12 @@ const ActualizarDatos = () => {
               <option>Identificador del exterior</option>
               <option>Consumidor final</option>
             </select>
-          <ModifyButton />  
+          <ModifyButton/>  
           </FormDiv>
           <FormDiv>
             <label>Número de Indentificación:</label>
-            <input type="number" />
-          <ModifyButton />  
+            <input type="text" value={identificacion}  />
+          <ModifyButton  onClick={setIdentificacion} />  
           </FormDiv>
           <FormDiv>
             <label>Razón Social:</label>

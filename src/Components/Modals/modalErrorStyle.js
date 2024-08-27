@@ -10,7 +10,7 @@ export const IconModalError = styled(IconModal)`
  i {
   color: #FF0000 !important;
  }
- h1 {
+ h2 {
   color: #FF0000 !important;
  }
 `;
