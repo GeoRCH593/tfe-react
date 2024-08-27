@@ -6,13 +6,17 @@ import {
   PageBody,
   TitlePage,
 } from "../../../styles/Subpages/subpagesStyles";
-import ButtonSubmit from "../../Buttons/ButtonSubmit";
+import ButtonNormal from "../../Buttons/ButtonNormal";
+import ModalAlert from "../../Modals/ModalAlert";
+import { useState } from "react";
 
 const Modul = "Empresa";
 const IconName = "bi bi-building";
 const SubPageTitle = "Crear una empresa";
 
 const CrearEmpresa = () => {
+  const [modalState, setModalState] = useState(false);
+
   return (
     <PageBody>
       <GlobalStyle />
@@ -83,12 +87,19 @@ const CrearEmpresa = () => {
             <label>Correo electrónico:</label>
             <input type="email"></input>
           </FormDiv>
-          <ButtonSubmit
+          <ButtonNormal
             classIconId={"bi bi-building-add"}
-            submitText={"Crear Empresa"}
+            textButton={"Crear Empresa"}
+            onClick={()=> setModalState(!modalState)}
           />
         </FormComplete>
       </div>
+      <ModalAlert
+        titulo={"Ingresar Datos"}
+        subtitulo={"Porfavor ingresar datos en los campos"}
+        estado={modalState}
+        cambiarEstado={setModalState}
+      />
     </PageBody>
   );
 };

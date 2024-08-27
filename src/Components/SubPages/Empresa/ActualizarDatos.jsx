@@ -5,7 +5,10 @@ import {
   FormTitle,
   FormComplete,
   FormDiv,
+  SubTitleList,
+  TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
 import ModifyButton from "../../Buttons/ModifyButton";
 
@@ -26,6 +29,38 @@ const ActualizarDatos = () => {
           <h5>{SubPageTitle}</h5>
         </FormTitle>
         <FormComplete>
+        <SubTitleList>
+            <h5>Busqueda de empresa:</h5>
+          </SubTitleList>
+          <TableGeneral>
+            <thead>
+              <tr>
+                <th>ID:</th>
+                <th>Numero ID:</th>
+                <th>Nombre:</th>
+                <th>Dirección:</th>
+                <th>Provincia</th>
+                <th>Canton:</th>
+                <th>Seleccionar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RUC</td>
+                <td>0123456789</td>
+                <td>Empresa 1</td>
+                <td>Calle 1 y calle 2</td>
+                <td>Azuay</td>
+                <td>Cuenca</td>
+                <td><input type="checkbox"></input></td>
+              </tr>
+            </tbody>
+          </TableGeneral>
+          <ButtonNormal 
+           classIconId={"bi bi-search"} 
+           textButton={"Busqueda de POS"}
+          />
+          <br />
           <FormDiv>
             <label>Ingrese tipo de identificación:</label>
             <select id="identificador" name="tipo identificador">
