@@ -17,7 +17,7 @@ const SubPageTitle = "Crear una empresa";
 
 const CrearEmpresa = () => {
   const [modalState, setModalState] = useState(false);
-  const {register} = useForm()
+  const { register } = useForm();
 
   return (
     <PageBody>
@@ -32,38 +32,40 @@ const CrearEmpresa = () => {
         </FormTitle>
         <FormComplete>
           <FormDiv>
-            <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador">
-              <option>R.U.C</option>
-              <option>Cédula</option>
-              <option>Pasaporte</option>
-              <option>Identificador del exterior</option>
-              <option>Consumidor final</option>
+            <label htmlFor="id">Ingrese tipo de identificación:</label>
+            <select id="identificador" name="tipo identificador"
+            {...register("identificador")}
+            >
+              <option value={"RUC"}>R.U.C</option>
+              <option value={"cedula"}>Cédula</option>
+              <option value={"pasaporte"}>Pasaporte</option>
+              <option value={"id exterior"}>Identificador del exterior</option>
+              <option value={"consumidor final"}>Consumidor final</option>
             </select>
           </FormDiv>
           <FormDiv>
-            <label>Número de Indentificación:</label>
-            <input type="number" />
+            <label htmlFor="numero id">Número de Indentificación:</label>
+            <input type="text" {...register("numero id")} />
           </FormDiv>
           <FormDiv>
-            <label>Razón Social:</label>
-            <input type="text"></input>
+            <label htmlFor="razon">Razón Social:</label>
+            <input type="text" {...register("razon")} />
           </FormDiv>
           <FormDiv>
-            <label>Nombre comercial de la empresa:</label>
-            <input type="text"></input>
+            <label htmlFor="nombre">Nombre comercial de la empresa:</label>
+            <input type="text" {...register("nombre")}/>
           </FormDiv>
           <FormDiv>
-            <label>Dirección de la empresa:</label>
-            <input type="text"></input>
+            <label htmlFor="direccion">Dirección de la empresa:</label>
+            <input type="text" {...register("direccion")}/>
           </FormDiv>
           <FormDiv>
-            <label>Provincia:</label>
-            <input type="text"></input>
+            <label htmlFor="provincia">Provincia:</label>
+            <input type="text" {...register("provincia")}/>
           </FormDiv>
           <FormDiv>
-            <label>Cantón:</label>
-            <input type="text"></input>
+            <label htmlFor="canton">Cantón:</label>
+            <input type="text" {...register("canton")}/>
           </FormDiv>
           <FormDiv>
             <label>
@@ -72,8 +74,8 @@ const CrearEmpresa = () => {
             </label>
           </FormDiv>
           <FormDiv>
-            <label>Teléfono:</label>
-            <input type="tel"></input>
+            <label htmlFor="telefono">Teléfono:</label>
+            <input type="tel" {...register("telefono")}/>
           </FormDiv>
           <FormDiv>
             <label>
@@ -86,13 +88,13 @@ const CrearEmpresa = () => {
             <input type="file"></input>
           </FormDiv>
           <FormDiv>
-            <label>Correo electrónico:</label>
+            <label htmlFor="correo">Correo electrónico:</label>
             <input type="email"></input>
           </FormDiv>
           <ButtonNormal
             classIconId={"bi bi-building-add"}
             textButton={"Crear Empresa"}
-            onClick={()=> setModalState(!modalState)}
+            onClick={() => setModalState(!modalState)}
           />
         </FormComplete>
       </div>
