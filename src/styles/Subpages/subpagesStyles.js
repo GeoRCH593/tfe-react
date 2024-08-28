@@ -60,6 +60,7 @@ export const FormDiv = styled.div`
   flex-direction: column;
   padding: 0.3em 2em;
   width: 100%;
+  gap: 0.2em;
   > label {
     color: #0c302e;
     width: 100%;
@@ -83,6 +84,7 @@ export const FormDiv = styled.div`
   > span {
     font-size: 0.7em;
     color: #ff0000;
+    font-style: italic;
   }
 `;
 

@@ -13,7 +13,7 @@ const ModifyButton = ({onClick}) => {
 };
 
 ModifyButton.propTypes = {
-  onClick: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 
