@@ -68,10 +68,10 @@ const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
 
 SideBarBtns.propTypes = {
   to: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.object,
   title: PropTypes.string,
   span: PropTypes.string,
-  subBtn: PropTypes.string,
+  subBtn: PropTypes.array,
   handleclick: PropTypes.string,
 };
 

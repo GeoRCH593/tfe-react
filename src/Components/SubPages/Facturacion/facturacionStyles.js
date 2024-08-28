@@ -5,6 +5,7 @@ export const FactComplete = styled.div`
   position: absolute;
   font-family: Open Sans;
   width: 100%;
+  left: 130px;
   display: flex;
   flex-direction: column;
   align-items: center;

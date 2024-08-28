@@ -41,7 +41,7 @@ export const FormComplete = styled.form`
   flex-direction: column;
   background: #f4f4f4;
   min-width: 800px;
-  padding: 2em ;
+  padding: 2em;
 `;
 
 /*Contendor de titulo formulario */
@@ -54,11 +54,12 @@ export const FormTitle = styled.div`
   padding: 0.5em;
 `;
 
-/*Contendedor de cada input y label 1 columna*/
+/*Contendedor de cada input, label, span 1 columna*/
 export const FormDiv = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 0.3em 2em;
   width: 100%;
-  gap: 2em;
   > label {
     color: #0c302e;
     width: 100%;
@@ -78,6 +79,10 @@ export const FormDiv = styled.div`
     background-color: #e8eaed;
     border: none;
     font-size: 14px;
+  }
+  > span {
+    font-size: 0.7em;
+    color: #ff0000;
   }
 `;
 
@@ -131,14 +136,14 @@ export const TableGeneral = styled.table`
 /*Subtitle sobre tabla*/
 export const SubTitleList = styled.div`
   padding: 2em 0 1em 0;
-  > h5{
+  > h5 {
     font-weight: 700;
-    }
+  }
 `;
 
 /*Contenedores de checkbox*/
 export const CheckboxDiv = styled.div`
-display: flex;
-gap: 1em;
-padding: 1em 3em 0;
+  display: flex;
+  gap: 1em;
+  padding: 1em 3em 0;
 `;

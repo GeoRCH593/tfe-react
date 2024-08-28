@@ -6,7 +6,7 @@ import {
   PageBody,
   TitlePage,
 } from "../../../styles/Subpages/subpagesStyles";
-import ButtonNormal from "../../Buttons/ButtonNormal";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import ModalAlert from "../../Modals/ModalAlert";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -17,7 +17,13 @@ const SubPageTitle = "Crear una empresa";
 
 const CrearEmpresa = () => {
   const [modalState, setModalState] = useState(false);
-  const { register } = useForm();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const isSubmit = (data) => console.log(data);
 
   return (
     <PageBody>
@@ -30,11 +36,13 @@ const CrearEmpresa = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={handleSubmit(isSubmit)}>
           <FormDiv>
             <label htmlFor="id">Ingrese tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador"
-            {...register("identificador")}
+            <select
+              id="identificador"
+              name="tipo identificador"
+              {...register("identificador")}
             >
               <option value={"RUC"}>R.U.C</option>
               <option value={"cedula"}>Cédula</option>
@@ -44,57 +52,70 @@ const CrearEmpresa = () => {
             </select>
           </FormDiv>
           <FormDiv>
-            <label htmlFor="numero id">Número de Indentificación:</label>
-            <input type="text" {...register("numero id")} />
+            <label>Número de Indentificación:</label>
+            <input type="text" {...register("numeroid", { required: true })} />
+            {errors.numeroid && <span>* Este campo es obligatorio</span>}
           </FormDiv>
           <FormDiv>
-            <label htmlFor="razon">Razón Social:</label>
-            <input type="text" {...register("razon")} />
+            <label>Razón Social:</label>
+            <input
+              type="text"
+              {...register("razonSocial", { required: true })}
+            />
+            {errors.razonSocial && <span>* Este campo es obligatorio</span>}
           </FormDiv>
           <FormDiv>
-            <label htmlFor="nombre">Nombre comercial de la empresa:</label>
-            <input type="text" {...register("nombre")}/>
+            <label>Nombre comercial de la empresa:</label>
+            <input type="text" {...register("nombre",  {required: true })} />
+            {errors.nombre && <span>* Este campo es obligatorio</span>}
           </FormDiv>
           <FormDiv>
-            <label htmlFor="direccion">Dirección de la empresa:</label>
-            <input type="text" {...register("direccion")}/>
+            <label>Dirección de la empresa:</label>
+            <input type="text" {...register("direccion", {required: true })} />
+            {errors.direccion && <span>* Este campo es obligatorio</span>}
           </FormDiv>
           <FormDiv>
-            <label htmlFor="provincia">Provincia:</label>
-            <input type="text" {...register("provincia")}/>
+            <label>Provincia:</label>
+            <input type="text" {...register("provincia", {required: true})} />
+            {errors.provincia && <span>* Este campo es obligatorio</span>}
           </FormDiv>
           <FormDiv>
-            <label htmlFor="canton">Cantón:</label>
-            <input type="text" {...register("canton")}/>
+            <label>Cantón:</label>
+            <input type="text" {...register("canton", {required:true })} />
+            {errors.canton && <span>* Este campo es obligatorio</span>}
           </FormDiv>
           <FormDiv>
             <label>
-              <input type="checkbox"></input>
+              <input type="checkbox" {...register("extranjero")} />
               Extranjero
             </label>
           </FormDiv>
           <FormDiv>
-            <label htmlFor="telefono">Teléfono:</label>
-            <input type="tel" {...register("telefono")}/>
+            <label>Teléfono:</label>
+            <input type="tel" {...register("telefono", {required: true })} />
+            {errors.telefono && <span>* Este campo es obligatorio</span>}
           </FormDiv>
           <FormDiv>
             <label>
-              <input type="checkbox"></input>
+              <input
+                type="checkbox"
+                {...register("obligado llevar contabilidad")}
+              />
               Obligado a llevar contabilidad:
             </label>
           </FormDiv>
           <FormDiv>
             <label>Subir imagen de logotipo:</label>
-            <input type="file"></input>
+            <input type="file" {...register("logotipo", {required:true })} />
           </FormDiv>
           <FormDiv>
-            <label htmlFor="correo">Correo electrónico:</label>
-            <input type="email"></input>
+            <label>Correo electrónico:</label>
+            <input type="email" {...register("correo", {required:true } )}></input>
+            {errors.correo && <span>* Este campo es obligatorio</span>}
           </FormDiv>
-          <ButtonNormal
+          <ButtonSubmit
             classIconId={"bi bi-building-add"}
-            textButton={"Crear Empresa"}
-            onClick={() => setModalState(!modalState)}
+            submitText={"Crear Empresa"}
           />
         </FormComplete>
       </div>

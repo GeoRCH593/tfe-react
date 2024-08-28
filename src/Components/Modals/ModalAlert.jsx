@@ -24,7 +24,7 @@ const ModalAlert = ({ estado, cambiarEstado, titulo, subtitulo }) => {
               <h6>{subtitulo}</h6>
             </IconModalAlert>
             <ButtonContainer>
-              <ModalButtonAlert type="submit">Aceptar</ModalButtonAlert>
+              <ModalButtonAlert type="submit" onClick={() => cambiarEstado(!estado)}>Aceptar</ModalButtonAlert>
             </ButtonContainer>
           </ContainModalAlert>
         </Overlay>
@@ -34,7 +34,7 @@ const ModalAlert = ({ estado, cambiarEstado, titulo, subtitulo }) => {
 };
 
 ModalAlert.propTypes = {
-  estado: PropTypes.string,
+  estado: PropTypes.boolean,
   titulo: PropTypes.string,
   subtitulo: PropTypes.string,
   cambiarEstado: PropTypes.func,

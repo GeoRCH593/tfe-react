@@ -11,8 +11,12 @@ import { GlobalStyle } from "../styles/globalStyles";
 import BillieIcon from "../assets/billie-icon-white-green.svg";
 import InputContext from "../Components/Context/InputContext";
 import ButtonContext from "../Components/Context/ButtonContext";
+import { useForm } from "react-hook-form";
 
 const UserSignIn = () => {
+
+  const {register} = useForm()
+
   return (
     <SignInBody>
       <GlobalStyle />
@@ -28,6 +32,7 @@ const UserSignIn = () => {
             name="user"
             type={"text"}
             placeholder={"Ingrese usuario o correo"}
+            {...register("nombre")}
           />
           <InputContext
             nameLabel={"Contraseña"}
@@ -35,6 +40,7 @@ const UserSignIn = () => {
             name="pass"
             type={"password"}
             placeholder={"Ingrese contraseña"}
+            {...register("password")}
           />
           <ForgotPass>¿Olvidaste tu contraseña?</ForgotPass>
           <ButtonContext

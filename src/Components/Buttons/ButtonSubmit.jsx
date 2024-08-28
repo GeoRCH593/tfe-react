@@ -15,6 +15,6 @@ const ButtonSubmit = ({ classIconId, submitText, onClick }) => {
 ButtonSubmit.propTypes = {
   submitText: PropTypes.string,
   classIconId: PropTypes.string,
-  onClick: PropTypes.string
+  onClick: PropTypes.func,
 };
 export default ButtonSubmit;
