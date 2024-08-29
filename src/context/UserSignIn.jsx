@@ -14,6 +14,7 @@ import InputContext from "../Components/Context/InputContext";
 import ButtonContext from "../Components/Context/ButtonContext";
 import { useForm } from "react-hook-form";
 
+
 const UserSignIn = () => {
 
   const {
@@ -50,9 +51,9 @@ const UserSignIn = () => {
             name="pass"
             type={"password"}
             placeholder={"Ingrese contraseña"}
-            {...register("password", {required:true})}
+            {...register("contrasena", {required:true})}
           />
-          {errors.password && <span>* La contraseña es requerida</span>}
+          {errors.contrasena && <span>* La contraseña es requerida</span>}
           <ForgotPass>¿Olvidaste tu contraseña?</ForgotPass>
           <ButtonContext
             title={"ACCEDER"}
