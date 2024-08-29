@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { DangerColor, GrayLight, GrayLighter, GrayMedium, Light, Secondary } from "../common/colorStyles";
 
 export const PageBody = styled.div`
   position: absolute;
@@ -30,7 +31,7 @@ export const TitlePage = styled.div`
     font-size: 2rem;
     width: 50px;
     height: 100%;
-    color: #0c302e;
+    color: ${Secondary};
     font-weight: bold;
   }
 `;
@@ -39,7 +40,7 @@ export const TitlePage = styled.div`
 export const FormComplete = styled.form`
   display: flex;
   flex-direction: column;
-  background: #f4f4f4;
+  background: ${GrayLighter};
   min-width: 800px;
   padding: 2em;
 `;
@@ -47,8 +48,8 @@ export const FormComplete = styled.form`
 /*Contendor de titulo formulario */
 export const FormTitle = styled.div`
   display: flex;
-  background-color: #0c302e;
-  color: #fff;
+  background-color: ${Secondary};
+  color: ${Light};
   align-items: center;
   justify-content: center;
   padding: 0.5em;
@@ -60,7 +61,7 @@ export const FormDiv = styled.div`
   width: 100%;
   gap: 0.2em;
   > label {
-    color: #0c302e;
+    color: ${Secondary};
     width: 100%;
     font-size: 0.9rem;
     font-weight: 600;
@@ -68,7 +69,7 @@ export const FormDiv = styled.div`
   > input {
     width: 75%;
     padding-left: 0.6em;
-    background-color: #e8eaed;
+    background-color: ${GrayLight};
     border: none;
     font-family: Open Sans;
     font-size: 14px;
@@ -76,13 +77,13 @@ export const FormDiv = styled.div`
   }
   > select {
     width: 80%;
-    background-color: #e8eaed;
+    background-color: ${GrayLight};
     border: none;
     font-size: 14px;
   }
   > span {
     font-size: 0.7em;
-    color: #ff0000;
+    color: ${DangerColor};
     font-style: italic;
     padding-left: 1em;
   }
@@ -98,7 +99,7 @@ export const CheckBoxOne = styled.input`
   padding: 5px 5px;
   width: 100%;
   > label {
-    color: #0c302e;
+    color: ${Secondary};
     width: 100%;
     font-size: 0.8rem;
     font-weight: 500;
@@ -114,7 +115,7 @@ export const CheckBoxOne = styled.input`
 /*Contenedor para 2 tablas CREAR BUSQUEDA ELIMINAR */
 export const TablesContain = styled.div`
   min-width: 900px;
-  background: #f4f4f4;
+  background: ${GrayLighter};
   padding: 2em 2em;
 `;
 
@@ -125,13 +126,13 @@ export const TableGeneral = styled.table`
   justify-content: center;
   padding-top: 1em;
   > thead {
-    background: #dddddd;
+    background: ${GrayMedium};
     padding: 2em 2em;
     font-size: 13px;
     text-align: left;
   }
   > tbody {
-    background: #fff;
+    background: ${Light};
     font-size: 13px;
     padding-top: 1em;
     > tr {

@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { GlobalStyle } from "../../../styles/globalStyles";
+import { GlobalStyle } from "../../../styles/common/globalStyles";
 import {
   PageBody,
   TitlePage,
@@ -26,7 +26,7 @@ const BuscarSucursal = () => {
 
   return (
     <PageBody>
-      <GlobalStyle></GlobalStyle>
+      <GlobalStyle/>
       <TitlePage>
         <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>

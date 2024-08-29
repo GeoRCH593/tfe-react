@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Dark, GrayLight, GrayLighter, Light, Primary, Secondary } from "../../styles/common/colorStyles";
 
 /*Pantalla oscura con opacidad */
 export const Overlay = styled.div`
@@ -17,10 +18,10 @@ export const Overlay = styled.div`
 /*Medida del Modal exterior */
 export const ContainerModal = styled.div`
   width: 500px;
-  background: #faf9f9;
+  background: ${GrayLighter};
   position: relative;
   border-radius: 2em;
-  border: solid 2px #39b54a;
+  border: solid 2px ${Primary};
   box-shadow: rgba(100, 100, 111, 0.7) 0px 7px 29px 0px;
   padding: 1.2em;
 `;
@@ -36,7 +37,7 @@ export const HeaderModal = styled.div`
   h3 {
     font-weight: 500;
     font-size: 1.4em;
-    color: #39b54a;
+    color: ${Primary};
   }
 `;
 
@@ -48,11 +49,11 @@ export const CloseButton = styled.button`
   background: none;
   border: none;
   i {
-    color: #000;
+    color: ${Dark};
     font-size: 1.4em;
     transition: all 0.3s ease-in-out;
     &:hover {
-      color: #39b54a;
+      color: ${Primary};
     }
   }
 `;
@@ -81,8 +82,8 @@ export const ModalButton = styled.button`
   align-items: center;
   gap: 0.5em;
   padding: 0.2em 1.5em;
-  background: #0c302e;
-  color: #fff;
+  background: ${Secondary};
+  color: ${Light};
   border: none;
   font-family: Open Sans;
   font-size: 1rem;
@@ -91,8 +92,8 @@ export const ModalButton = styled.button`
   box-shadow: rgba(0, 0, 0, 0.44) 0px 5px 8px;
   transition: all 0.4s ease-in-out;
   &:hover {
-    background: #39b54a;
-    color: #0c302e;
+    background: ${Primary};
+    color: ${Secondary};
     box-shadow: rgba(0, 0, 0, 0.44) 0px 2px 5px;
   }
 `;
@@ -104,14 +105,14 @@ justify-content: space-evenly;
   padding: 0.3em 2em;
   width: 100%;
    label {
-    color: #0c302e;
+    color: ${Secondary};
     width: 100%;
     font-size: 0.9rem;
     font-weight: 700;
   }
    input {
     width: 75%;
-    background-color: #e8eaed;
+    background-color: ${GrayLight};
     border: none;
     font-family: Open Sans;
     font-size: 14px;
@@ -119,7 +120,7 @@ justify-content: space-evenly;
   }
    select {
     width: 80%;
-    background-color: #e8eaed;
+    background-color: ${GrayLight};
     border: none;
     font-size: 14px;
   }

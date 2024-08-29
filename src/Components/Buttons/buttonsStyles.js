@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Light, Primary, Secondary } from "../../styles/common/colorStyles"
 
 /*Contenedor boton enviar */
 export const BtnContain = styled.div`
@@ -15,8 +16,8 @@ export const BtnStyle = styled.button`
   align-items: center;
   gap: 0.5em;
   padding: 0.2em 1.5em;
-  background: #0c302e;
-  color: #fff;
+  background: ${Secondary};
+  color: ${Light};
   border: none;
   font-family: Open Sans;
   font-size: 0.8rem;
@@ -24,13 +25,13 @@ export const BtnStyle = styled.button`
   border-radius: 15px;
   transition: all 0.4s ease-in-out;
   &:hover {
-    background: #39b54a;
+    background: ${Primary};
   }
 `;
 
 export const IconButton = styled.i`
   transition: all 0.3s ease-in-out;
   &:hover {
-    color: #39B54A;
+    color: ${Primary};
   }
     `;

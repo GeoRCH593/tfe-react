@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Primary, Secondary } from '../../styles/common/colorStyles';
 
 
 export const ButtonModify =styled.button`
@@ -7,11 +8,11 @@ border: none;
 `;
 
 export const IconEditStyled = styled.i`
-color: #0C302E;
+color: ${Secondary};
 font-size: 1.2em;
 cursor: pointer;
 transition: all .3s ease-in-out;
 &:hover {
-  color: #39B54A; 
+  color: ${Primary}; 
 }
 `;

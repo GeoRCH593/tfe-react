@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Secondary } from "../common/colorStyles";
 
 /*Estilo Contendedor de titulo e img  */
 
@@ -44,7 +45,7 @@ export const TitlePage2 = styled.div`
     font-size: 2rem;
     width: 50px;
     height: 100%;
-    color: #0C302E;
+    color: ${Secondary};
     font-weight: bold;
   }
 `;

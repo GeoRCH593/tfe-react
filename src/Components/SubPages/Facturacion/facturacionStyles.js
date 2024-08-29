@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Primary } from "../../../styles/common/colorStyles";
 
 /*Contenedor completo para facturación */
 export const FactComplete = styled.div`
@@ -197,7 +198,7 @@ padding: 3em 0 0;
 gap: 1em;
 
 > i {
-  color: #39B54A;
+  color: ${Primary};
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   &:hover {
@@ -211,7 +212,7 @@ gap: 1em;
 
 
    &::placeholder {
-    color: #39B54A;
+    color: ${Primary};
   }
  }
 `;

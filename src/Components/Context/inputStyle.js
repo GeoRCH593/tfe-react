@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { GrayMedium, Light, Secondary } from "../../styles/common/colorStyles";
 
 /*Contenedor INPUT Y LABEL */
 export const FormContain = styled.div`
-  background-color: #0c302e;
+  background-color: ${Secondary};
   font-family: Open Sans;
   > label {
-    color: #fff;
+    color: ${Light};
     width: 100%;
     font-size: 0.8rem;
     font-weight: 300;
@@ -16,7 +17,7 @@ export const FormContain = styled.div`
 export const FormInput = styled.input`
   box-sizing: border-box;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid ${GrayMedium};
   font-family: Roboto;
   font-size: 1rem;
   padding: 0.1rem;
@@ -25,11 +26,11 @@ export const FormInput = styled.input`
   transition: all 0.4s ease-in-out;
 
   &:focus {
-    color: #0C302E;
+    color: ${Secondary};
     font-weight: 400;
   }
   &:active{
-    color: #0C302E;
+    color: ${Secondary};
   }
   &::placeholder {
     font-size: 0.8rem;

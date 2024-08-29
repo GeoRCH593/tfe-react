@@ -1,21 +1,22 @@
 import styled from "styled-components";
 import {ContainerModal, ModalButton} from './modalStyle';
 import { IconModal } from "./modalSuccessStyle";
+import { AlertColor, Dark } from "../../styles/common/colorStyles";
 
 export const ContainModalAlert = styled(ContainerModal)`
- border: solid 2px #FFA903 !important;
+ border: solid 2px ${AlertColor} !important;
 `;
 
 export const IconModalAlert = styled(IconModal)`
  i {
-  color: #FFA903 !important;
+  color: ${AlertColor} !important;
  }
  h2 {
-  color: #FFA903 !important;
+  color: ${AlertColor} !important;
  }
 `;
 
 export const ModalButtonAlert = styled(ModalButton)`
-background: #FFA903;
-color: #000;
+background: ${AlertColor};
+color: ${Dark};
 `;

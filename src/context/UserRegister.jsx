@@ -9,7 +9,7 @@ import {
   InputPolitics,
   FormRegister,
 } from "../styles/ContextStyles/userRegister.js";
-import { GlobalStyle } from "../styles/globalStyles";
+import { GlobalStyle } from "../styles/common/globalStyles.js";
 import BillieIcon from "../assets/billie-icon-white-green.svg";
 import ButtonContext from "../Components/Context/ButtonContext";
 import { LabelInputPolitics } from "../styles/ContextStyles/userRegister";

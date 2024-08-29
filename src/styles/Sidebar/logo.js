@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Light } from '../common/colorStyles';
 
 export const LogoWrapper = styled.div`
   width: 100%;
@@ -8,7 +9,7 @@ export const LogoWrapper = styled.div`
   > a {
     width: 100%;
     text-decoration: none;
-    color: #fff;
+    color: ${Light};
     display: flex;
     align-items: center;
     justify-content: center;

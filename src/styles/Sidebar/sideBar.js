@@ -1,5 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { ColorHover, GrayDark, GrayLighter, Light, Primary, Secondary, SmenuColor } from "../common/colorStyles";
+
 /*Contenedor general sidebar */
 export const SideBarWrapper = styled.div`
   position: fixed;
@@ -12,7 +14,7 @@ export const SideBarWrapper = styled.div`
 `;
 /* Contenedor de la botonera*/
 export const SideBarBody = styled.div`
-  background-color: #0c302e;
+  background-color: ${Secondary};
   height: 100vh;
   overflow-y: scroll;
   padding-bottom: 60px;
@@ -34,7 +36,7 @@ export const NavLinks = styled(NavLink)`
   font-size: 14px;
   font-weight: 300;
   position: relative;
-  color: #909090;
+  color: ${GrayDark};
   padding: 10px 20px;
   text-decoration: none;
   display: flex;
@@ -44,12 +46,12 @@ export const NavLinks = styled(NavLink)`
   border-radius: 10px;
   transition: all 0.5s ease-in-out;
   &:hover {
-    background: #39b54a1a;
-    color: #ffffff;
+    background: ${ColorHover};
+    color: ${Light};
   }
   &:active {
-    background: #ffffff;
-    color: #39b54a;
+    background: ${Light};
+    color: ${Primary};
   }
 `;
 
@@ -91,7 +93,7 @@ export const Subfooter = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  color: #909090;
+  color: ${GrayDark};
   font-size: 12px;
   user-select: none;
   cursor: default;
@@ -100,7 +102,7 @@ export const Subfooter = styled.div`
 /* Contenedor de links textos del menu sidebar */
 export const NavBtn = styled(Link)`
   position: relative;
-  color: #f4f4f4;
+  color: ${GrayLighter};
   font-weight: 400;
   padding: 15px 20px;
   text-decoration: none;
@@ -113,8 +115,8 @@ export const NavBtn = styled(Link)`
   background: ${(props) => props.open && "#fff"};
   transition: all 0.5s ease-in-out;
   &:hover {
-    background: #39b54a1a;
-    color: #39B54A;
+    background: ${ColorHover};
+    color: ${Primary};
     
   }
 `;
@@ -130,7 +132,7 @@ export const Newest = styled.div`
 /*Estilos de flecha para los menus */
 export const Arrow = styled.div`
   position: absolute;
-  color: #fff;
+  color: ${Light};
   top: 50%;
   right: 20px;
   transition: all 0.3s ease-in-out;
@@ -141,7 +143,7 @@ export const Arrow = styled.div`
     height: 0;
     border-style: solid;
     border-width: 5px 0 5px 6px;
-    border-color: transparent transparent transparent #ffffff;
+    border-color: transparent transparent transparent ${Light};
     pointer-events: none;
     transform: ${(props) => (props.open ? "rotate(0deg)" : "rotate(90deg)")};
     border-left: ${(props) => !props.open && "6px solid #39B54A"};
@@ -153,7 +155,7 @@ export const SubMenu = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: #00000029;
+  background: ${SmenuColor};
   overflow: hidden;
   height: ${(props) => (props.opened === "true" ? props.tall * 30 * 0 : 0)}px;
   transition: all 0.6s ease-in-out;
@@ -163,7 +165,7 @@ export const SubMenu = styled.div`
 
 /*Estilos de la lista de elementos del submenu  */
 export const SubLinks = styled(NavLink)`
-  color: #fff;
+  color: ${Light};
   font-size: 14px;
   height: 45px !important;
   padding: 0px 50px;
@@ -175,13 +177,13 @@ export const SubLinks = styled(NavLink)`
     margin-left: 14px;
   }
   &:hover {
-    background: #39b54a1a;
-    color: #39b54a;
+    background: ${ColorHover};
+    color: ${Primary};
     
   }
   &:active {
-    background: #fff;
-    color: #39b54a;
+    background: ${Light};
+    color: ${Primary};
     transition: all 0.4s ease;
   }
 `;

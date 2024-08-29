@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { GlobalStyle } from "../../../styles/globalStyles";
+import { GlobalStyle } from "../../../styles/common/globalStyles";
 import {PageBody, TitlePage, FormTitle, FormComplete, FormDiv, SubTitleList, TableGeneral, CheckboxDiv} from '../../../styles/Subpages/subpagesStyles';
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
@@ -14,7 +14,7 @@ const ActualizarDatos = () => {
 
   return (
     <PageBody>
-      <GlobalStyle></GlobalStyle>
+      <GlobalStyle />
       <TitlePage>
         <i className={IconName}></i>
         <h2>Módulo: {Modul}</h2>

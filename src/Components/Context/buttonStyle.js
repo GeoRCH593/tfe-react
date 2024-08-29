@@ -1,10 +1,11 @@
 import styled from 'styled-components';
+import { Darkest, Light, Primary } from '../../styles/common/colorStyles';
 
 /*Botones de formulario */
 export const FormButton = styled.button`
 width: 100%;
-background: #39B54A;
-color: #000C49;
+background: ${Primary};
+color: ${Darkest};
 outline: none;
 border: none;
 font-family: Open Sans;
@@ -13,8 +14,7 @@ font-weight: bold;
 border-radius: 15px;
 transition: all .4s ease-in-out;
 &:hover{
-  color: #39B54A;
-  background: #fff;
-  
+  color: ${Primary};
+  background: ${Light};
 }
 `;

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { FormDiv } from "../Subpages/subpagesStyles";
+import { AlertColor, DangerColor, GrayDark, GrayDarker, Light, Primary, Secondary } from "../common/colorStyles";
 
 /*Container de formulario global */
 export const SignInBody = styled.div`
@@ -7,13 +8,13 @@ export const SignInBody = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #6d6c6c;
+  background-color: ${GrayDarker};
   font-family: Open Sans;
 `;
 
 /*Container de FORMULARIO completo*/
 export const FormContainer = styled.div`
-  background-color: #0c302e;
+  background-color: ${Secondary};
   width: 350px;
   padding: 1rem 4rem 2em;
   box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.5);
@@ -21,7 +22,7 @@ export const FormContainer = styled.div`
   align-items: center;
   justify-content: center;
   span {
-    color:#FF0000;
+    color: ${DangerColor};
     font-size: 0.8em;
   }
 `;
@@ -47,7 +48,7 @@ padding: 0.2em 0;
 label {
   width: 100%;
   font-size: 0.7em;
-  color:#fff;
+  color: ${Light};
   font-weight: 200;
 }
 input {
@@ -56,7 +57,7 @@ input {
   border-radius: 5px;
 }
 span{
-  color:#FFA903;
+  color: ${AlertColor};
   font-size: 0.7em;
 }
 `;
@@ -73,14 +74,14 @@ export const IconLogo = styled.img`
 export const TitleForm = styled.h6`
   font-family: Open Sans;
   font-weight: 100;
-  color: #ffffff;
+  color: ${Light};
   padding-bottom: 1rem;
   text-align: center;
 `;
 
 /*Olvidaste la contraseña */
 export const ForgotPass = styled.p`
-  color: #fff;
+  color: ${Light};
   font-family: Open Sans;
   font-size: 0.8rem;
   font-weight: 100;
@@ -96,14 +97,14 @@ export const NewUser = styled.div`
   font-size: 0.7rem;
   transition: 0.4s ease-in-out all;
   p {
-    color: #fff;
+    color: ${Light};
   }
   a {
-    color: #909090 !important;
+    color: ${GrayDark} !important;
     cursor: pointer;
 
     &:hover {
-      color: #39B54A !important;
+      color: ${Primary} !important;
     }
   }
 `;

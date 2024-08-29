@@ -1,21 +1,22 @@
 import styled from "styled-components";
 import {ContainerModal, ModalButton} from './modalStyle';
 import {IconModal} from './modalSuccessStyle';
+import { DangerColor, Light } from "../../styles/common/colorStyles";
 
 export const ContainModalError = styled(ContainerModal)`
- border: solid 2px #FF0000 !important;
+ border: solid 2px ${DangerColor} !important;
 `;
 
 export const IconModalError = styled(IconModal)`
  i {
-  color: #FF0000 !important;
+  color: ${DangerColor} !important;
  }
  h2 {
-  color: #FF0000 !important;
+  color: ${DangerColor}!important;
  }
 `;
 
 export const ModalButtonError = styled(ModalButton)`
-background: #FF0000;
-color: #fff;
+background: ${DangerColor};
+color: ${Light};
 `;

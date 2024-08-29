@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import { GlobalStyle } from "../../../styles/globalStyles";
+import { GlobalStyle } from "../../../styles/common/globalStyles";
 import {
   FormComplete,
   FormDiv,

@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { ColorHover, GrayDark, Light, Primary } from "../common/colorStyles";
 
 /* */
 export const UserDataStyle = styled.div`
   display: flex;
-  background: #39b84a1a;
+  background: ${ColorHover};
   align-items: center;
   justify-content: center;
   min-height: 8em;
@@ -19,19 +20,19 @@ export const UserDataContent = styled.div`
   flex-direction: column;
   align-items: start;
   font-family: Roboto;
-  color: #909090;
+  color: ${GrayDark};
   font-size: 13px;
   font-weight: 300;
   padding-left: 10px;
   h6 {
-    color: #fff;
+    color: ${Light};
   }
   a {
     margin: 0;
     padding: 0;
     transition: all 0.4s ease-in;
     &:hover {
-      color: #39b54a !important;
+      color: ${Primary} !important;
       cursor: pointer;
     }
   }

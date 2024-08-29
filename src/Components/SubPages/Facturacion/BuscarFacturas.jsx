@@ -1,4 +1,4 @@
-import { GlobalStyle } from "../../../styles/globalStyles";
+import { GlobalStyle } from "../../../styles/common/globalStyles.js";
 import {
   PageBody,
   TitlePage,

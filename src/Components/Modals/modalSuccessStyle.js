@@ -1,11 +1,12 @@
 import styled from "styled-components";
+import { LightModal, Primary } from "../../styles/common/colorStyles";
 
 export const ContainModalAdvice = styled.div`
   width: 450px;
-  background: #faf9f9;
+  background: ${LightModal};
   position: relative;
   border-radius: 2em;
-  border: solid 2px #39b54a;
+  border: solid 2px ${Primary};
   box-shadow: rgba(100, 100, 111, 0.7) 0px 7px 29px 0px;
   padding: 1.2em;
 `;
@@ -19,10 +20,10 @@ export const IconModal = styled.div`
     width: 80px;
     height: 100px;
     font-size: 5em;
-    color: #39b54a;
+    color: ${Primary};
   }
   h2 {
-    color: #39b54a;
+    color: ${Primary};
   }
 `;
 

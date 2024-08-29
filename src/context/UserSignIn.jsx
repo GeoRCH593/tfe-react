@@ -9,13 +9,13 @@ import {
   FormSignIn,
   FormSignDiv,
 } from "../styles/ContextStyles/userSignIn";
-import { GlobalStyle } from "../styles/globalStyles";
+import { GlobalStyle } from "../styles/common/globalStyles";
 import BillieIcon from "../assets/billie-icon-white-green.svg";
 import ButtonContext from "../Components/Context/ButtonContext";
 import { useForm } from "react-hook-form";
 
 const UserSignIn = () => {
-  
+
   const {
     register,
     handleSubmit,
@@ -38,7 +38,7 @@ const UserSignIn = () => {
           <FormSignDiv>
             <label>Usuario:</label>
             <input type="text" {...register("usuario", { required: true })} />
-            {errors.usuario && <span>* La identificación es obligatoria</span>}
+            {errors.usuario && <span>* Introduzca el usuario</span>}
           </FormSignDiv>
           <FormSignDiv>
             <label>Contraseña:</label>
@@ -46,7 +46,7 @@ const UserSignIn = () => {
               type="password"
               {...register("password", { required: true })}
             />
-            {errors.password && <span>* La identificación es obligatoria</span>}
+            {errors.password && <span>* Introduzca password</span>}
           </FormSignDiv>
           <ForgotPass>¿Olvidaste tu contraseña?</ForgotPass>
           <ButtonContext titleText={"ACCEDER"}></ButtonContext>
