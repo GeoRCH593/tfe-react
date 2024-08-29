@@ -1,13 +1,13 @@
-import { BtnContain, BtnSubmit, IconButton } from "./buttonsStyles";
+import { BtnContain, BtnStyle, IconButton } from "./buttonsStyles";
 import { PropTypes } from "prop-types";
 
-const ButtonSubmit = ({ classIconId, submitText}) => {
+const ButtonSubmit = ({ classIconId, submitText, onClick }) => {
   return (
     <BtnContain>
-      <BtnSubmit type="submit">
+      <BtnStyle type="submit" onClick={onClick}>
         <IconButton className={classIconId}></IconButton>
         {submitText}
-      </BtnSubmit>
+      </BtnStyle>
     </BtnContain>
   );
 };

@@ -9,7 +9,7 @@ export const BtnContain = styled.div`
 `;
 
 /*BOTON ENVIAR */
-export const BtnSubmit = styled.button`
+export const BtnStyle = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -10,7 +10,7 @@ import {
 } from "../../styles/Sidebar/sideBar";
 import { PropTypes } from "prop-types";
 
-const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick }) => {
+const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick}) => {
   const [openSubMenu, setOpenSubMenu] = useState(false);
 
   const handleSubMenu = () => {

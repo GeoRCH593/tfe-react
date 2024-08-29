@@ -6,14 +6,26 @@ import {
   FormComplete,
   FormDiv,
   TableGeneral,
+  FormDivSpan,
 } from "../../../styles/Subpages/subpagesStyles";
-import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
+import {useForm} from 'react-hook-form';
 const Modul = "Empresa";
 const IconName = "bi bi-building-fill";
 const SubPageTitle = "Eliminar Datos";
 
 const EliminarDatos = () => {
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  
+  const dataSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
+
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -25,10 +37,10 @@ const EliminarDatos = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={dataSubmit}>
           <FormDiv>
             <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador">
+            <select id="identificador" {...register("identificador")}>
               <option>R.U.C</option>
               <option>Cédula</option>
               <option>Pasaporte</option>
@@ -36,13 +48,14 @@ const EliminarDatos = () => {
               <option>Consumidor final</option>
             </select>
           </FormDiv>
-          <FormDiv>
+          <FormDivSpan>
             <label>Número de Indentificación:</label>
-            <input type="number" />
-          </FormDiv>
-          <ButtonNormal 
+            <input type="text" {...register("numeroId", { required: true })} />
+            {errors.numeroId && <span>* Es obligatorio un numero de identificiación</span>}
+          </FormDivSpan>
+          <ButtonSubmit 
           classIconId={"bi bi-search"} 
-           textButton={"Buscar"}
+           submitText={"Buscar"}
           />
           <br />
           <TableGeneral>

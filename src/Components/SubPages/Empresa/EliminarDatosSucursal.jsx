@@ -1,3 +1,4 @@
+import { useForm } from "react-hook-form";
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   PageBody,
@@ -6,6 +7,7 @@ import {
   FormComplete,
   FormDiv,
   TableGeneral,
+  FormDivSpan,
 } from "../../../styles/Subpages/subpagesStyles";
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
@@ -16,6 +18,16 @@ const IconName = "bi bi-building-fill";
 const SubPageTitle = "Eliminar datos de sucursal";
 
 const EliminarDatosSucursal = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const dataSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
+
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -27,10 +39,10 @@ const EliminarDatosSucursal = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={dataSubmit}>
           <FormDiv>
             <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador">
+            <select id="identificador" {...register("identificador")}>
               <option>R.U.C</option>
               <option>Cédula</option>
               <option>Pasaporte</option>
@@ -38,21 +50,22 @@ const EliminarDatosSucursal = () => {
               <option>Consumidor final</option>
             </select>
           </FormDiv>
-          <FormDiv>
+          <FormDivSpan>
             <label>Número de Indentificación:</label>
-            <input type="number" />
-          </FormDiv>
-          <FormDiv>
+            <input type="text" {...register("numeroId", {required:true})} />
+            {errors.numeroId && <span>* El número de identificación es obligatorio</span>}
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Razón Social:</label>
             <input type="text"></input>
-          </FormDiv>
-          <FormDiv>
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Nombre comercial de la empresa:</label>
             <input type="text"></input>
-          </FormDiv>
-          <ButtonNormal 
-           classIconId={"bi bi-search"} 
-           textButton={"Busqueda Empresa"}
+          </FormDivSpan>
+          <ButtonNormal
+            classIconId={"bi bi-search"}
+            textButton={"Busqueda Empresa"}
           />
           <br />
           <hr />
@@ -107,7 +120,6 @@ const EliminarDatosSucursal = () => {
             classIconId={"bi bi-trash3"}
             submitText={"Eliminar Sucursal"}
           />
-
         </FormComplete>
       </div>
     </PageBody>

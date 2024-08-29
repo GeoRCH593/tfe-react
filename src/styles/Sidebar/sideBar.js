@@ -32,7 +32,7 @@ export const OrderList = styled.ul`
 export const NavLinks = styled(NavLink)`
   font-family: Open Sans;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 300;
   position: relative;
   color: #909090;
   padding: 10px 20px;
@@ -100,8 +100,8 @@ export const Subfooter = styled.div`
 /* Contenedor de links textos del menu sidebar */
 export const NavBtn = styled(Link)`
   position: relative;
-  color: #909090;
-  font-weight: 600;
+  color: #f4f4f4;
+  font-weight: 400;
   padding: 15px 20px;
   text-decoration: none;
   display: flex;
@@ -130,7 +130,7 @@ export const Newest = styled.div`
 /*Estilos de flecha para los menus */
 export const Arrow = styled.div`
   position: absolute;
-  color: #909090;
+  color: #fff;
   top: 50%;
   right: 20px;
   transition: all 0.3s ease-in-out;
@@ -155,14 +155,15 @@ export const SubMenu = styled.div`
   width: 100%;
   background: #00000029;
   overflow: hidden;
-  height: ${(props) => (props.opened === "true" ? props.tall * 30 * 20 : 0)}px;
+  height: ${(props) => (props.opened === "true" ? props.tall * 30 * 0 : 0)}px;
   transition: all 0.6s ease-in-out;
   padding: ${(props) => (props.opened === "true" ? "4px 0px" : "0px")};
   margin: 2px 0 2px;
 `;
+
 /*Estilos de la lista de elementos del submenu  */
 export const SubLinks = styled(NavLink)`
-  color: #909090;
+  color: #fff;
   font-size: 14px;
   height: 45px !important;
   padding: 0px 50px;

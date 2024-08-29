@@ -12,7 +12,7 @@ const EditButton = ({ onClick }) => {
 };
 
 EditButton.propTypes = {
-  onClick: PropTypes.string,
+  onClick: PropTypes.func,
 }
 
 export default EditButton;

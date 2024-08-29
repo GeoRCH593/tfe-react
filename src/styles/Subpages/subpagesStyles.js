@@ -56,8 +56,6 @@ export const FormTitle = styled.div`
 
 /*Contendedor de cada input, label, span 1 columna*/
 export const FormDiv = styled.div`
-  display: flex;
-  flex-direction: column;
   padding: 0.3em 2em;
   width: 100%;
   gap: 0.2em;
@@ -65,7 +63,8 @@ export const FormDiv = styled.div`
     color: #0c302e;
     width: 100%;
     font-size: 0.9rem;
-    font-weight: 700;
+    font-weight: 600;
+    
   }
   > input {
     width: 75%;
@@ -85,7 +84,13 @@ export const FormDiv = styled.div`
     font-size: 0.7em;
     color: #ff0000;
     font-style: italic;
+    padding-left: 1em;
   }
+`;
+
+export const FormDivSpan = styled(FormDiv)`
+display: flex;
+flex-direction: column;
 `;
 
 /* Checkbox */

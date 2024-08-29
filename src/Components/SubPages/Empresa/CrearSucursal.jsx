@@ -6,16 +6,27 @@ import {
   FormComplete,
   FormDiv,
   TableGeneral,
+  FormDivSpan,
 } from "../../../styles/Subpages/subpagesStyles";
-import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import EditButton from "../../Buttons/EditButton";
+import { useForm } from "react-hook-form";
 
 const Modul = "Empresa";
 const IconName = "bi bi-building";
 const SubPageTitle = "Crear Sucursal";
 
 const CrearSucursal = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const dataSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
+
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -27,10 +38,10 @@ const CrearSucursal = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={dataSubmit}>
           <FormDiv>
             <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador">
+            <select id="identificador" {...register("identificador")}>
               <option>R.U.C</option>
               <option>Cédula</option>
               <option>Pasaporte</option>
@@ -38,19 +49,28 @@ const CrearSucursal = () => {
               <option>Consumidor final</option>
             </select>
           </FormDiv>
-          <FormDiv>
+          <FormDivSpan>
             <label>Número de Indentificación:</label>
-            <input type="number" />
-          </FormDiv>
-          <FormDiv>
+            <input
+              type="text"
+              {...register("numeroId", { required: true })}
+            />
+            {errors.numeroId && <span>* El numero de Id es obligatoria</span>}
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Razón Social:</label>
-            <input type="text"></input>
-          </FormDiv>
-          <FormDiv>
+            <input type="text" {...register("razonSocial", {required: true})}/>
+            {errors.razonSocial && <span>* La razon social es obligatoria</span>}
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Nombre comercial de la empresa:</label>
-            <input type="text"></input>
-          </FormDiv>
-          <ButtonNormal classIconId={"bi bi-search"} textButton={"Busqueda Empresa"}/>
+            <input type="text" {...register("nombreComercial", {required: true})}/>
+            {errors.nombreComercial && <span>* El nombre comercial es obligatorio</span>}
+          </FormDivSpan>
+          <ButtonSubmit
+            classIconId={"bi bi-search"}
+            submitText={"Busqueda Empresa"}
+          />
           <br />
           <hr />
           <TableGeneral>
@@ -92,7 +112,7 @@ const CrearSucursal = () => {
                 <td>Nombre sucursal 1</td>
                 <td>Calle 1 y Calle 2</td>
                 <td>
-                  <EditButton onClick={()=> alert("Editar Empresa")}/>
+                  <EditButton onClick={() => alert("Editar Empresa")} />
                 </td>
               </tr>
             </tbody>
