@@ -1,16 +1,12 @@
 import { FormInput, FormContain } from "./inputStyle";
-import {PropTypes} from 'prop-types';
+import { PropTypes } from "prop-types";
 
-const InputContext = ({ nameLabel, name, type, placeholder }) => {
+const InputContext = ({ nameLabel, typeInput, textInput }) => {
   return (
     <FormContain>
       <label>
         {nameLabel}
-        <FormInput
-          name={name}
-          type={type}
-          placeholder={placeholder}
-        />
+        <FormInput type={typeInput} placeholder={textInput} />
       </label>
     </FormContain>
   );
@@ -18,9 +14,7 @@ const InputContext = ({ nameLabel, name, type, placeholder }) => {
 
 InputContext.propTypes = {
   nameLabel: PropTypes.string,
-  name: PropTypes.string,
-  type: PropTypes.string,
-  placeholder: PropTypes.string,
-
+  typeInput: PropTypes.string,
+  textInput: PropTypes.string,
 };
 export default InputContext;

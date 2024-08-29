@@ -19,10 +19,11 @@ export const FormInput = styled.input`
   border: 1px solid #ddd;
   font-family: Roboto;
   font-size: 1rem;
-  padding: 0.3rem;
-  margin-bottom: 1rem;
+  padding: 0.1rem;
+  margin-bottom: 0.5em;
   border-radius: 5px;
   transition: all 0.4s ease-in-out;
+
   &:focus {
     color: #0C302E;
     font-weight: 400;

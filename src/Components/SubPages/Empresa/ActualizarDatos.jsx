@@ -12,8 +12,6 @@ const SubPageTitle = "Actualizar Datos";
 const ActualizarDatos = () => {
   const [identificacion, setIdentificacion] =useState("0123456789");
 
-
-
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>

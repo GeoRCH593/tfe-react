@@ -7,16 +7,14 @@ import {
   ForgotPass,
   NewUser,
   FormSignIn,
+  FormSignDiv,
 } from "../styles/ContextStyles/userSignIn";
 import { GlobalStyle } from "../styles/globalStyles";
 import BillieIcon from "../assets/billie-icon-white-green.svg";
-import InputContext from "../Components/Context/InputContext";
 import ButtonContext from "../Components/Context/ButtonContext";
 import { useForm } from "react-hook-form";
 
-
 const UserSignIn = () => {
-
   const {
     register,
     handleSubmit,
@@ -36,28 +34,21 @@ const UserSignIn = () => {
           <TitleForm>Ingrese sus datos:</TitleForm>
         </TitleContainer>
         <FormSignIn onSubmit={dataSubmit}>
-          <InputContext
-            nameLabel={"Usuario"}
-            user={"Usuario"}
-            name="user"
-            type={"text"}
-            placeholder={"Ingrese usuario o correo"}
-            {...register("nombre", {required:true})}
-          />
-          {errors.nombre && <span>* El nombre es requerido</span>}
-          <InputContext
-            nameLabel={"Contraseña"}
-            user={"Contraseña"}
-            name="pass"
-            type={"password"}
-            placeholder={"Ingrese contraseña"}
-            {...register("contrasena", {required:true})}
-          />
-          {errors.contrasena && <span>* La contraseña es requerida</span>}
+          <FormSignDiv>
+            <label>Usuario:</label>
+            <input type="text" {...register("usuario", { required: true })} />
+            {errors.usuario && <span>* La identificación es obligatoria</span>}
+          </FormSignDiv>
+          <FormSignDiv>
+            <label>Contraseña:</label>
+            <input
+              type="password"
+              {...register("password", { required: true })}
+            />
+            {errors.password && <span>* La identificación es obligatoria</span>}
+          </FormSignDiv>
           <ForgotPass>¿Olvidaste tu contraseña?</ForgotPass>
-          <ButtonContext
-            title={"ACCEDER"}
-          ></ButtonContext>
+          <ButtonContext titleText={"ACCEDER"}></ButtonContext>
         </FormSignIn>
         <NewUser>
           <p>¿No tienes una cuenta?</p>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FormDiv } from "../Subpages/subpagesStyles";
 
 /*Container de formulario global */
 export const SignInBody = styled.div`
@@ -10,7 +11,7 @@ export const SignInBody = styled.div`
   font-family: Open Sans;
 `;
 
-/*Container de formulario completo*/
+/*Container de FORMULARIO completo*/
 export const FormContainer = styled.div`
   background-color: #0c302e;
   width: 350px;
@@ -20,6 +21,10 @@ export const FormContainer = styled.div`
   border-radius: 5px;
   align-items: center;
   justify-content: center;
+  span {
+    color:#FF0000;
+    font-size: 0.8em;
+  }
 `;
 
 /*Contenedor del titulo h2*/
@@ -29,8 +34,26 @@ export const TitleContainer = styled.div`
   align-items: center;
 `;
 
+/*Formulario de Ingreso*/
 export const FormSignIn = styled.form`
 
+`;
+
+/*Contenedor de Input y label para SIGN IN */
+export const FormSignDiv = styled(FormDiv)`
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding: 0.3em 0;
+label {
+  width: 100%;
+  font-size: 0.8em;
+  color:#fff;
+  font-weight: 200;
+}
+input {
+  width: 100%;
+}
 `;
 
 /*Estilos del Logotipo Aplicativo */
@@ -56,6 +79,7 @@ export const ForgotPass = styled.p`
   font-family: Open Sans;
   font-size: 0.8rem;
   font-weight: 100;
+  padding-top: 2em;
   cursor: pointer;
 `;
 /*Contenedor boton nuevo usuario */

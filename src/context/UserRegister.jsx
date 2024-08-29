@@ -26,34 +26,29 @@ const UserRegister = () => {
         <form>
           <InputContext
             nameLabel={"Nombres :"}
-            name="names"
-            type={"text"}
-            placeholder={"Ingrese sus nombres completos"}
+            typeInput={"text"}
+            textInput={"Ingrese sus nombres completos"}
           />
           <InputContext
             nameLabel={"Apellidos :"}
-            name="apellido"
-            type={"text"}
-            placeholder={"Ingrese sus Apellidos"}
+            typeInput={"text"}
+            textInput={"Ingrese sus Apellidos"}
           />
           <InputContext
             nameLabel={"Correo Electrónico :"}
-            name="email"
-            type={"email"}
-            placeholder={"Ingrese su correo electrónico"}
+            typeInput={"email"}
+            textInput={"Ingrese su correo electrónico"}
           />
           <PassContain>
             <InputContext
               nameLabel={"Contraseña :"}
-              name="pass"
-              type={"password"}
-              placeholder={"Ingrese su contraseña"}
+              typeInput={"password"}
+              textInput={"Ingrese su contraseña"}
             />
             <InputContext
               nameLabel={"Confirmar :"}
-              name="confirmPass"
-              type={"password"}
-              placeholder={"Confirmar contraseña"}
+              typeInput={"password"}
+              textInput={"Confirmar contraseña"}
             />
           </PassContain>
           <LabelInputPolitics>
