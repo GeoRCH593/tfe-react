@@ -6,6 +6,7 @@ import {
   FormTitle,
   PageBody,
   TitlePage,
+  CheckboxDiv,
 } from "../../../styles/Subpages/subpagesStyles";
 import { useForm } from "react-hook-form";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
@@ -15,7 +16,6 @@ const IconName = "bi bi-building";
 const SubPageTitle = "Crear una empresa";
 
 const CrearEmpresa = () => {
-
   const {
     register,
     handleSubmit,
@@ -23,7 +23,7 @@ const CrearEmpresa = () => {
   } = useForm();
 
   const dataSubmit = handleSubmit((data) => {
-    console.log(data)
+    console.log(data);
   });
 
   return (
@@ -40,8 +40,7 @@ const CrearEmpresa = () => {
         <FormComplete onSubmit={dataSubmit}>
           <FormDiv>
             <label>Ingrese tipo de identificación:</label>
-            <select
-              id="identificador"{...register("identificador")}>
+            <select id="identificador" {...register("identificador")}>
               <option value={"RUC"}>R.U.C</option>
               <option value={"cedula"}>Cédula</option>
               <option value={"pasaporte"}>Pasaporte</option>
@@ -58,56 +57,60 @@ const CrearEmpresa = () => {
             <label>Razón Social:</label>
             <input
               type="text"
-              {...register("razonSocial", { required: true })} />
-            {errors.razonSocial && <span>* La razón social es obligatoria</span>}
+              {...register("razonSocial", { required: true })}
+            />
+            {errors.razonSocial && (
+              <span>* La razón social es obligatoria</span>
+            )}
           </FormDivSpan>
           <FormDivSpan>
             <label>Nombre comercial de la empresa:</label>
-            <input type="text" {...register("nombreComercial",  {required: true })} />
-            {errors.nombreComercial && <span>* El nombre comercial es obligatorio</span>}
+            <input
+              type="text"
+              {...register("nombreComercial", { required: true })}
+            />
+            {errors.nombreComercial && (
+              <span>* El nombre comercial es obligatorio</span>
+            )}
           </FormDivSpan>
           <FormDivSpan>
             <label>Dirección de la empresa:</label>
-            <input type="text" {...register("direccion", {required: true })} />
+            <input type="text" {...register("direccion", { required: true })} />
             {errors.direccion && <span>* La dirección es obligatoria</span>}
           </FormDivSpan>
           <FormDivSpan>
             <label>Provincia:</label>
-            <input type="text" {...register("provincia", {required: true})} />
+            <input type="text" {...register("provincia", { required: true })} />
             {errors.provincia && <span>* La provincia es obligatoria</span>}
           </FormDivSpan>
           <FormDivSpan>
             <label>Cantón:</label>
-            <input type="text" {...register("canton", {required: true })} />
+            <input type="text" {...register("canton", { required: true })} />
             {errors.canton && <span>* El cantón es obligatorio</span>}
           </FormDivSpan>
-          <FormDivSpan>
-            <label>
-              <input type="checkbox" {...register("extranjero")} />
-              Extranjero
-            </label>
-          </FormDivSpan>
+          <CheckboxDiv>
+            <input type="checkbox" {...register("extranjero")} />
+            <label>Extranjero</label>
+          </CheckboxDiv>
           <FormDivSpan>
             <label>Teléfono:</label>
-            <input type="tel" {...register("telefono", {required: true })} />
+            <input type="tel" {...register("telefono", { required: true })} />
             {errors.telefono && <span>* El teléfono es obligatorio</span>}
           </FormDivSpan>
-          <FormDivSpan>
-            <label>
-              <input
-                type="checkbox"
-                {...register("obligado llevar contabilidad")}
-              />
-              Obligado a llevar contabilidad:
-            </label>
-          </FormDivSpan>
+          <CheckboxDiv>
+            <input type="checkbox" {...register("llevar contabilidad")} />
+            <label>Obligado a llevar contabilidad</label>
+          </CheckboxDiv>
           <FormDivSpan>
             <label>Subir imagen de logotipo:</label>
             <input type="file" {...register("logotipo")} />
           </FormDivSpan>
           <FormDivSpan>
             <label>Correo electrónico:</label>
-            <input type="email" {...register("correo", {required: true } )}></input>
+            <input
+              type="email"
+              {...register("correo", { required: true })}
+            ></input>
             {errors.correo && <span>* El correo es obligatorio</span>}
           </FormDivSpan>
           <ButtonSubmit
@@ -116,7 +119,6 @@ const CrearEmpresa = () => {
           />
         </FormComplete>
       </div>
-
     </PageBody>
   );
 };

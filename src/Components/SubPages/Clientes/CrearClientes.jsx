@@ -1,18 +1,30 @@
+import { useForm } from "react-hook-form";
 import { GlobalStyle } from "../../../styles/globalStyles";
 import {
   FormComplete,
   FormDiv,
+  FormDivSpan,
   FormTitle,
   PageBody,
   TitlePage,
 } from "../../../styles/Subpages/subpagesStyles";
-import ButtonSubmit from '../../Buttons/ButtonSubmit';
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Clientes";
 const IconName = "bi bi-person-lines-fill";
 const SubPageTitle = "Ingresar Cliente nuevo";
 
 const CrearClientes = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const dataSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
+
   return (
     <PageBody>
       <GlobalStyle />
@@ -24,10 +36,10 @@ const CrearClientes = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={dataSubmit}>
           <FormDiv>
             <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador">
+            <select id="identificador" {...register("identificador")}>
               <option>R.U.C</option>
               <option>Cédula</option>
               <option>Pasaporte</option>
@@ -35,31 +47,40 @@ const CrearClientes = () => {
               <option>Consumidor final</option>
             </select>
           </FormDiv>
-          <FormDiv>
+          <FormDivSpan>
             <label>Número de Indentificación:</label>
-            <input type="number" />
-          </FormDiv>
-          <FormDiv>
+            <input type="text" {...register("numeroId", {required:true})}/>
+            {errors.numeroId && <span>* El número de identificación es obligatorio</span>}
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Tipo de cliente:</label>
-            <input type="text"></input>
-          </FormDiv>
-          <FormDiv>
+            <input type="text" {...register("cliente", {required:true})}/>
+            {errors.cliente && <span>* El tipo de cliente es obligatorio</span>}
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Razón Social:</label>
-            <input type="text"></input>
-          </FormDiv>
-          <FormDiv>
+            <input type="text" {...register("razonSocial", {required:true})} />
+            {errors.razonSocial && <span>* La razón social es obligatoria</span>}
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Dirección:</label>
-            <input type="text"></input>
-          </FormDiv>
-          <FormDiv>
+            <input type="text" {...register("direccion", {required:true})}/>
+            {errors.direccion && <span>* La dirección es obligatoria</span>}
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Teléfono:</label>
-            <input type="tel"></input>
-          </FormDiv>
-          <FormDiv>
+            <input type="tel" {...register("telefono", {required:true})}/>
+            {errors.telefono && <span>* El número de teléfono es obligatorio</span>}
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Correo electrónico:</label>
-            <input type="email"></input>
-          </FormDiv>
-          <ButtonSubmit classIconId={"bi bi-person-add"} submitText={"Crear nuevo liente"}/>
+            <input type="email" {...register("correo", {required:true})}/>
+            {errors.correo && <span>* El correo electrónico es obligatorio</span>}
+          </FormDivSpan>
+          <ButtonSubmit
+            classIconId={"bi bi-person-add"}
+            submitText={"Crear nuevo liente"}
+          />
         </FormComplete>
       </div>
     </PageBody>

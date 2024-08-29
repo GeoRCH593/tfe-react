@@ -152,5 +152,9 @@ export const SubTitleList = styled.div`
 export const CheckboxDiv = styled.div`
   display: flex;
   gap: 1em;
-  padding: 1em 3em 0;
+  padding: 1em 3em;
+  label {
+    font-size: 0.8em;
+    font-weight: 600;
+  }
 `;
