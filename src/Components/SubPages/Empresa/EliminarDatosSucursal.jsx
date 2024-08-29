@@ -9,8 +9,8 @@ import {
   TableGeneral,
   FormDivSpan,
 } from "../../../styles/Subpages/subpagesStyles";
-import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
+import ButtonNormal from "../../Buttons/ButtonNormal"
 import { SubTitleList } from "./eliminarDatosSucursalStyles";
 
 const Modul = "Empresa";
@@ -57,15 +57,17 @@ const EliminarDatosSucursal = () => {
           </FormDivSpan>
           <FormDivSpan>
             <label>Razón Social:</label>
-            <input type="text"></input>
+            <input type="text" {...register("razonSocial", {required:true})}/>
+            {errors.razonSocial && <span>* La razón social es obligatoria</span>}
           </FormDivSpan>
           <FormDivSpan>
             <label>Nombre comercial de la empresa:</label>
-            <input type="text"></input>
+            <input type="text" {...register("nombreComercial", {required:true})}/>
+            {errors.nombreComercial && <span>* El nombre comercial es obligatorio</span>}
           </FormDivSpan>
-          <ButtonNormal
+          <ButtonSubmit
             classIconId={"bi bi-search"}
-            textButton={"Busqueda Empresa"}
+            submitText={"Busqueda Empresa"}
           />
           <br />
           <hr />
@@ -116,9 +118,9 @@ const EliminarDatosSucursal = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <ButtonSubmit
+          <ButtonNormal
             classIconId={"bi bi-trash3"}
-            submitText={"Eliminar Sucursal"}
+            textButton={"Eliminar Sucursal"}
           />
         </FormComplete>
       </div>

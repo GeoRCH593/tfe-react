@@ -8,6 +8,7 @@ import {
   TableGeneral,
   FormDivSpan,
 } from "../../../styles/Subpages/subpagesStyles";
+import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import EditButton from "../../Buttons/EditButton";
 import { useForm } from "react-hook-form";
@@ -17,6 +18,7 @@ const IconName = "bi bi-building";
 const SubPageTitle = "Crear Sucursal";
 
 const CrearSucursal = () => {
+
   const {
     register,
     handleSubmit,
@@ -117,9 +119,9 @@ const CrearSucursal = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <ButtonSubmit
+          <ButtonNormal
             classIconId={"bi bi-shop-window"}
-            submitText={"Crear Sucursal"}
+            textButton={"Crear Sucursal"}
           />
         </FormComplete>
       </div>
