@@ -7,14 +7,28 @@ import {
   RegisterBody,
   PassContain,
   InputPolitics,
+  FormRegister,
 } from "../styles/ContextStyles/userRegister.js";
 import { GlobalStyle } from "../styles/globalStyles";
 import BillieIcon from "../assets/billie-icon-white-green.svg";
-import InputContext from "../Components/Context/InputContext";
 import ButtonContext from "../Components/Context/ButtonContext";
 import { LabelInputPolitics } from "../styles/ContextStyles/userRegister";
+import { FormSignDiv } from "../styles/ContextStyles/userSignIn";
+import { useForm } from "react-hook-form";
 
 const UserRegister = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    watch
+  } = useForm();
+
+  const dataSubmit = handleSubmit((data) => {
+    console.log(data);
+    alert("Formulario enviado")
+  });
+
   return (
     <RegisterBody>
       <GlobalStyle />
@@ -23,50 +37,85 @@ const UserRegister = () => {
           <IconLogo src={BillieIcon}></IconLogo>
           <TitleForm>Ingrese sus datos:</TitleForm>
         </TitleContainer>
-        <form>
-          <InputContext
-            nameLabel={"Nombres :"}
-            typeInput={"text"}
-            textInput={"Ingrese sus nombres completos"}
-          />
-          <InputContext
-            nameLabel={"Apellidos :"}
-            typeInput={"text"}
-            textInput={"Ingrese sus Apellidos"}
-          />
-          <InputContext
-            nameLabel={"Correo Electrónico :"}
-            typeInput={"email"}
-            textInput={"Ingrese su correo electrónico"}
-          />
+        <FormRegister onSubmit={dataSubmit}>
+          <FormSignDiv>
+            <label>Nombres:</label>
+            <input
+              type="text"
+              placeholder="Ingrese sus Nombres"
+              {...register("nombres", { required: true })}
+            />
+            {errors.nombres && <span>* Los nombres son obligatorios</span>}
+          </FormSignDiv>
+          <FormSignDiv>
+            <label>Apellidos:</label>
+            <input
+              type="text"
+              placeholder="Ingrese sus Apellidos"
+              {...register("apellidos", { required: true })}
+            />
+            {errors.apellidos && <span>* Los apellidos son obligatorios</span>}
+          </FormSignDiv>
+          <FormSignDiv>
+            <label>Correo electrónico:</label>
+            <input
+              type="email"
+              placeholder="Ingrese su correo electrónico"
+              {...register("correo", { required: true })}
+            />
+            {errors.correo && <span>* Correo obligatorio</span>}
+          </FormSignDiv>
           <PassContain>
-            <InputContext
-              nameLabel={"Contraseña :"}
-              typeInput={"password"}
-              textInput={"Ingrese su contraseña"}
-            />
-            <InputContext
-              nameLabel={"Confirmar :"}
-              typeInput={"password"}
-              textInput={"Confirmar contraseña"}
-            />
+            <FormSignDiv>
+              <label>Contraseña:</label>
+              <input
+                type="password"
+                placeholder="contraseña"
+                {...register("password", {
+                  required: { value: true, message: "* Necesario password" },
+                })}
+              />
+              {errors.password && <span>{errors.password.message}</span>}
+            </FormSignDiv>
+            <FormSignDiv>
+              <label>Confirmar:</label>
+              <input
+                type="password"
+                placeholder="confirmar contraseña"
+                {...register("confirmarPassword", {
+                  required: {
+                    value: true,
+                    message:"* Necesario confirmar"
+                    },
+                    validate:(value) => {
+                      if (value === watch('password')) {
+                        return true
+                      } else {
+                        return "los passwords no coinciden"
+                      }
+                    }
+                })}
+              />
+              {errors.confirmarPassword && <span>{errors.confirmarPassword.message}</span>}
+            </FormSignDiv>
           </PassContain>
-          <LabelInputPolitics>
-            <InputPolitics type="checkbox" name="Usepolitics" value="" />
-            Aceptar todos los términos y condiciones de envío de información
-            acorde a nuestras Políticas de uso.
-          </LabelInputPolitics>
-        </form>
-        <ButtonContain>
-          <ButtonContext
-            onClick={() => alert("Realizaste un registro")}
-            title={"REGISTRAR"}
-          ></ButtonContext>
-          <ButtonContext
-            onCLick={() => alert("Cancelaste el evento")}
-            title={"CANCELAR"}
-          ></ButtonContext>
-        </ButtonContain>
+          <div>
+            <LabelInputPolitics>
+              <InputPolitics
+                type="checkbox"
+                name="Usepolitics"
+                {...register("terminos", { required: true })}
+              />
+              Aceptar todos los términos y condiciones de envío de información
+              acorde a nuestras Políticas de uso.
+            </LabelInputPolitics>
+            {errors.terminos && <span>* Revisar los términos y condiciones</span>}
+          </div>
+          <ButtonContain>
+            <ButtonContext titleText={"REGISTRAR"}></ButtonContext>
+            <ButtonContext titleText={"CANCELAR"}></ButtonContext>
+          </ButtonContain>
+        </FormRegister>
       </FormContainer>
     </RegisterBody>
   );

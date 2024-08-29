@@ -14,7 +14,7 @@ font-family: Open Sans;
 export const FormContainer = styled.div`
 background-color: #0C302E;
 width: 400px;
-height: 590px;
+min-height: 620px;
 padding: 1rem 4rem;
 box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.5);
 border-radius: 5px;
@@ -43,6 +43,17 @@ color: #ffffff;
 padding-bottom: 1rem;
 text-align: center;
 `;
+
+/*Formulario de Ingreso*/
+export const FormRegister = styled.form`
+span {
+    font-size: 0.7em;
+    color: #FFA903;
+    font-style: italic;
+    padding-left: 1em;
+  }
+`;
+
 
 /*Olvidaste la contraseña */
 export const CheckUserPolitics = styled.p`

@@ -5,7 +5,7 @@ import {PropTypes} from 'prop-types';
 const ButtonContext = ({titleText, actions}) => {
   return (
     <FormButton 
-    type='submit' 
+    type= "submit"
     onClick={actions}
     >
     {titleText}
@@ -15,7 +15,7 @@ const ButtonContext = ({titleText, actions}) => {
 
 ButtonContext.propTypes = {
   titleText: PropTypes.string,
-  actions: PropTypes.string,
+  actions: PropTypes.func,
 
 };
 export default ButtonContext;

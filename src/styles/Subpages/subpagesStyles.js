@@ -64,10 +64,10 @@ export const FormDiv = styled.div`
     width: 100%;
     font-size: 0.9rem;
     font-weight: 600;
-    
   }
   > input {
     width: 75%;
+    padding-left: 0.6em;
     background-color: #e8eaed;
     border: none;
     font-family: Open Sans;

@@ -44,15 +44,20 @@ export const FormSignDiv = styled(FormDiv)`
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding: 0.3em 0;
+padding: 0.2em 0;
 label {
   width: 100%;
-  font-size: 0.8em;
+  font-size: 0.7em;
   color:#fff;
   font-weight: 200;
 }
 input {
   width: 100%;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+span{
+  color:#FFA903;
 }
 `;
 
