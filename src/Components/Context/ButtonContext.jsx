@@ -4,7 +4,7 @@ import {PropTypes} from 'prop-types';
 
 const ButtonContext = ({title, onClick}) => {
   return (
-    <FormButton onClick={onClick}>{title}</FormButton>
+    <FormButton type='submit' onClick={onClick}>{title}</FormButton>
   );
 };
 

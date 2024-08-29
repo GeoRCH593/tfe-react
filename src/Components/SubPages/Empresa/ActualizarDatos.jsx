@@ -1,14 +1,6 @@
 import { useState } from "react";
 import { GlobalStyle } from "../../../styles/globalStyles";
-import {
-  PageBody,
-  TitlePage,
-  FormTitle,
-  FormComplete,
-  FormDiv,
-  SubTitleList,
-  TableGeneral,
-} from "../../../styles/Subpages/subpagesStyles";
+import {PageBody, TitlePage, FormTitle, FormComplete, FormDiv, SubTitleList, TableGeneral, CheckboxDiv} from '../../../styles/Subpages/subpagesStyles';
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
 import ModifyButton from "../../Buttons/ModifyButton";
@@ -107,23 +99,19 @@ const ActualizarDatos = () => {
             <input type="text"></input>
           <ModifyButton />  
           </FormDiv>
-          <FormDiv>
-            <label>
-              <input type="checkbox"></input>
-              Extranjero
-            </label>
-          </FormDiv>
+          <CheckboxDiv>
+            <input type="checkbox" />
+            <label>Extranjero</label>
+          </CheckboxDiv>
           <FormDiv>
             <label>Teléfono:</label>
             <input type="tel"></input>
           <ModifyButton />  
           </FormDiv>
-          <FormDiv>
-            <label>
-              <input type="checkbox"></input>
-              Obligado a llevar contabilidad:
-            </label>
-          </FormDiv>
+          <CheckboxDiv>
+            <input type="checkbox"/>
+            <label>Obligado a llevar contabilidad</label>
+          </CheckboxDiv>
           <FormDiv>
             <label>Subir imagen de logotipo:</label>
             <input type="file"></input>

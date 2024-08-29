@@ -7,7 +7,7 @@ import {
   FormDiv,
   TableGeneral,
 } from "../../../styles/Subpages/subpagesStyles.js";
-import ButtonNormal from "../../Buttons/ButtonNormal.jsx";
+import ButtonSubmit from "../../Buttons/ButtonSubmit.jsx";
 import { SubTitleList } from "./buscarPosStyles.js";
 
 const Modul = "Empresa";
@@ -35,7 +35,10 @@ const BuscarPos = () => {
               <option>Empresa 003</option>
             </select>
           </FormDiv>
-          <ButtonNormal classIconId={"bi bi-search"} textButton={"Buscar POS"} />
+          <ButtonSubmit
+            classIconId={"bi bi-search"}
+            submitText={"Buscar POS"}
+          />
           <hr />
           <SubTitleList>
             <h5>Lista de Puntos de venta:</h5>

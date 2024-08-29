@@ -14,7 +14,7 @@ export const SignInBody = styled.div`
 export const FormContainer = styled.div`
   background-color: #0c302e;
   width: 350px;
-  height: 450px;
+  min-height: 450px;
   padding: 1rem 4rem;
   box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
@@ -27,6 +27,10 @@ export const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+export const FormSignIn = styled.form`
+
 `;
 
 /*Estilos del Logotipo Aplicativo */

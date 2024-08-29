@@ -4,17 +4,28 @@ import {
   TitlePage,
   FormTitle,
   FormComplete,
-  FormDiv,
   SubTitleList,
   TableGeneral,
+  FormDivSpan,
 } from "../../../styles/Subpages/subpagesStyles";
-import ButtonNormal from "../../Buttons/ButtonNormal";
+import { useForm } from "react-hook-form";
+import ButtonSubmit from "../../Buttons/ButtonSubmit";
 
 const Modul = "Proveedores";
 const IconName = "bi bi-person-rolodex";
 const SubPageTitle = "Buscar proveedor";
 
 const BuscarProveedor = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const dataSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
+
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -26,18 +37,18 @@ const BuscarProveedor = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={dataSubmit}>
           <SubTitleList>
             <h5>Introduzca el proveedor: </h5>
           </SubTitleList>
-          <FormDiv>
+          <FormDivSpan>
             <label>Número de Indentificación:</label>
-            <input type="text" />
-          </FormDiv>
-          <ButtonNormal 
-           classIconId={"bi bi-search"} 
-           textButton={"Cliente"}
-          />
+            <input type="text" {...register("numeroId", {required:true})}/>
+            {errors.numeroId && <span>* El número de identificación es obligatorio</span>}
+          </FormDivSpan>
+          <ButtonSubmit 
+          classIconId={"bi bi-search"} 
+          submitText={"Cliente"} />
           <br />
           <hr />
           <SubTitleList>

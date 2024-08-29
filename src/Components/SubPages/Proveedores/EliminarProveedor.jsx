@@ -7,15 +7,28 @@ import {
   FormDiv,
   SubTitleList,
   TableGeneral,
+  FormDivSpan,
 } from "../../../styles/Subpages/subpagesStyles";
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
+import {useForm} from 'react-hook-form';
 
 const Modul = "Proveedores";
 const IconName = "bi bi-person-rolodex";
 const SubPageTitle = "Eliminar Nuevo proveedor";
 
 const EliminarProveedor = () => {
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const dataSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
+
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -27,10 +40,10 @@ const EliminarProveedor = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={dataSubmit}>
           <FormDiv>
             <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador">
+            <select id="identificador" {...register("identificador")}>
               <option>R.U.C</option>
               <option>Cédula</option>
               <option>Pasaporte</option>
@@ -38,13 +51,14 @@ const EliminarProveedor = () => {
               <option>Consumidor final</option>
             </select>
           </FormDiv>
-          <FormDiv>
+          <FormDivSpan>
             <label>Número de Indentificación:</label>
-            <input type="number" />
-          </FormDiv>
-          <ButtonNormal 
+            <input type="text" {...register("numeroId", {required:true})} />
+            {errors.numeroId && <span>* El número de identificación es obligatorio</span>}
+          </FormDivSpan>
+          <ButtonSubmit
            classIconId={"bi bi-search"} 
-           textButton={"Buscar Proveedor"}
+           submitText={"Buscar Proveedor"}
           />
           <br />
           <hr />
@@ -75,9 +89,9 @@ const EliminarProveedor = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <ButtonSubmit
+          <ButtonNormal
             classIconId={"bi bi-trash3"}
-            submitText={"Eliminar"}
+            textButton={"Eliminar"}
           />
         </FormComplete>
       </div>
