@@ -14,8 +14,7 @@ font-family: Open Sans;
 export const FormContainer = styled.div`
 background-color: #0C302E;
 width: 400px;
-min-height: 620px;
-padding: 1rem 4rem;
+padding: 1rem 4rem 3em;
 box-shadow: 0px 10px 20px 2px rgba(0,0,0,0.5);
 border-radius: 5px;
 `;

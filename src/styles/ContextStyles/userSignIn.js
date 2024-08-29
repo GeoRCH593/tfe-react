@@ -15,8 +15,7 @@ export const SignInBody = styled.div`
 export const FormContainer = styled.div`
   background-color: #0c302e;
   width: 350px;
-  min-height: 450px;
-  padding: 1rem 4rem;
+  padding: 1rem 4rem 2em;
   box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   align-items: center;
@@ -58,6 +57,7 @@ input {
 }
 span{
   color:#FFA903;
+  font-size: 0.7em;
 }
 `;
 
