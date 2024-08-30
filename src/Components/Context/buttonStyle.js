@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { Darkest, Light, Primary } from '../../styles/common/colorStyles';
+import { Light, Primary, Secondary } from '../../styles/common/colorStyles';
 
 /*Botones de formulario */
 export const FormButton = styled.button`
 width: 100%;
 background: ${Primary};
-color: ${Darkest};
+color: ${Secondary};
 outline: none;
 border: none;
 font-family: Open Sans;

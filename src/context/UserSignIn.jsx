@@ -37,16 +37,26 @@ const UserSignIn = () => {
         <FormSignIn onSubmit={dataSubmit}>
           <FormSignDiv>
             <label>Usuario:</label>
-            <input type="text" {...register("usuario", { required: true })} />
-            {errors.usuario && <span>* Introduzca el usuario</span>}
+            <input type="text" {...register("usuario", { 
+              required: {
+                value: true, 
+                message: "* Introduzca el usuario"
+                },
+                })} />
+            {errors.usuario && <span>{errors.usuario.message}</span>}
           </FormSignDiv>
           <FormSignDiv>
             <label>Contraseña:</label>
             <input
               type="password"
-              {...register("password", { required: true })}
+              {...register("contrasena", { 
+                required: {
+                  value: true, 
+                  message: "* Introduzca una contraseña",
+                  },  
+                })}
             />
-            {errors.password && <span>* Introduzca password</span>}
+            {errors.contrasena && <span>{errors.contrasena.message}</span>}
           </FormSignDiv>
           <ForgotPass>¿Olvidaste tu contraseña?</ForgotPass>
           <ButtonContext titleText={"ACCEDER"}></ButtonContext>

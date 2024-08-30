@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Light, Primary, Secondary } from "../../styles/common/colorStyles"
+import {Light, Primary, Secondary } from "../../styles/common/colorStyles"
 
 /*Contenedor boton enviar */
 export const BtnContain = styled.div`

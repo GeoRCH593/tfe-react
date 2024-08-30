@@ -44,7 +44,7 @@ export const FormSignDiv = styled(FormDiv)`
 display: flex;
 flex-direction: column;
 justify-content: center;
-padding: 0.2em 0;
+padding: 0.6em 0;
 label {
   width: 100%;
   font-size: 0.7em;

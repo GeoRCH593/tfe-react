@@ -40,51 +40,51 @@ import ModificarFinalizarFactura from '../Components/SubPages/Facturacion/Modifi
 
 const Router = () => (
   <BrowserRouter>
-  <SideBar>
-    <Routes>
-      <Route path="/" element={<Home/>} />
-      <Route path="/home" element={<Home/>} />
-      <Route path="/clientes" element={<Clientes/>} />
-      <Route path="/configuracion" element={<Configuracion/>} />
-      <Route path="/empresa" element={<Empresa/>} />
-      <Route path="/facturacion" element={<Facturacion/>} />
-      <Route path="/proveedores" element={<Proveedores/>} />
-      <Route path="/puntos-de-venta" element={<Pos/>} />
-      <Route path="/usuario-acceso" element={<UserSignIn/>} />
-      <Route path="/usuario-registro" element={<UserRegister/>} />
-      <Route path="*" element={<div>404</div>} />
-      <Route path="/empresa/crearempresa" element={<CrearEmpresa/>} />
-      <Route path="/empresa/actualizardatos" element={<ActualizarDatos/>} />
-      <Route path="/empresa/eliminardatos" element={<EliminarDatos/>} />
-      <Route path="/empresa/busquedadeempresas" element={<BusquedaEmpresa/>} />
-      <Route path='/empresa/crearsucursal' element={<CrearSucursal />} />
-      <Route path='/empresa/actualizardatossucursal' element={<ActualizarSucursal/>} />
-      <Route path='/empresa/eliminardatossucursal' element={<EliminarDatosSucursal />} />\
-      <Route path='/empresa/buscarsucursal' element={<BuscarSucursal />} />
-      <Route path='/puntos-de-venta/crearpos' element={<CrearPos />}/>
-      <Route path='/puntos-de-venta/generarsecuencial' element={<GenerarSecuencial />} />
-      <Route path='puntos-de-venta/actualizarpos' element={<ActualizarPos/>} />
-      <Route path='puntos-de-venta/eliminarpos' element={<EliminarPos />}/>
-      <Route path='puntos-de-venta/buscarpos' element={<BuscarPos />}/>
-      <Route path='clientes/crearclientes' element={<CrearClientes />}/>
-      <Route path='clientes/actualizarclientes' element={<ActualizarClientes />}/>
-      <Route path='clientes/eliminarclientes' element={<EliminarClientes />} />
-      <Route path='clientes/buscarclientes' element={<BuscarClientes />}/>
-      <Route path='proveedores/crearproveedor' element={<CrearProveedor />} />
-      <Route path='proveedores/actualizarproveedor' element={<ActualizarProveedor />}/>
-      <Route path='proveedores/eliminarproveedor' element={<EliminarProveedor />}/>
-      <Route path='proveedores/buscarproveedor' element={<BuscarProveedor />}/>
-      <Route path='configuracion/configurardatosparafacturar' element={<ConfigurarDatos/>}/>
-      <Route path='configuracion/ingresarsecuencialdefactura' element={<IngresarSecuencial />}/>
-      <Route path='facturacion/crearnuevafactura' element={<CrearNuevaFactura />} />
-      <Route path='facturacion/modificarenborrador' element={<ModificarFinalizarFactura/>}/>
-      <Route path='facturacion/finalizarfacturaenborrador' element={<ModificarFinalizarFactura/>}/>
-      <Route path='facturacion/eliminarfacturadeborrador' element={<EliminarFacturaBorrador/>}/>
-      <Route path='facturacion/buscarfactura' element={<BuscarFacturas />}/>
-      <Route path='facturacion/enviarfacturaporemail' element={<EnviarFacturaEmail />} />
-    </Routes>
+    <SideBar>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/home" element={<Home/>} />
+        <Route path="/clientes" element={<Clientes/>} />
+        <Route path="/configuracion" element={<Configuracion/>} />
+        <Route path="/empresa" element={<Empresa/>} />
+        <Route path="/facturacion" element={<Facturacion/>} />
+        <Route path="/proveedores" element={<Proveedores/>} />
+        <Route path="/puntos-de-venta" element={<Pos/>} />
+        <Route path="/login" element={<UserSignIn/>} />
+        <Route path="/register" element={<UserRegister/>} />
+        <Route path="*" element={<div>404</div>} />
+        <Route path="/empresa/crearempresa" element={<CrearEmpresa/>} />
+        <Route path="/empresa/actualizardatos" element={<ActualizarDatos/>} />
+        <Route path="/empresa/eliminardatos" element={<EliminarDatos/>} />
+        <Route path="/empresa/busquedadeempresas" element={<BusquedaEmpresa/>} />
+        <Route path='/empresa/crearsucursal' element={<CrearSucursal />} />
+        <Route path='/empresa/actualizardatossucursal' element={<ActualizarSucursal/>} />
+        <Route path='/empresa/eliminardatossucursal' element={<EliminarDatosSucursal />} />\
+        <Route path='/empresa/buscarsucursal' element={<BuscarSucursal />} />
+        <Route path='/puntos-de-venta/crearpos' element={<CrearPos />}/>
+        <Route path='/puntos-de-venta/generarsecuencial' element={<GenerarSecuencial />} />
+        <Route path='puntos-de-venta/actualizarpos' element={<ActualizarPos/>} />
+        <Route path='puntos-de-venta/eliminarpos' element={<EliminarPos />}/>
+        <Route path='puntos-de-venta/buscarpos' element={<BuscarPos />}/>
+        <Route path='clientes/crearclientes' element={<CrearClientes />}/>
+        <Route path='clientes/actualizarclientes' element={<ActualizarClientes />}/>
+        <Route path='clientes/eliminarclientes' element={<EliminarClientes />} />
+        <Route path='clientes/buscarclientes' element={<BuscarClientes />}/>
+        <Route path='proveedores/crearproveedor' element={<CrearProveedor />} />
+        <Route path='proveedores/actualizarproveedor' element={<ActualizarProveedor />}/>
+        <Route path='proveedores/eliminarproveedor' element={<EliminarProveedor />}/>
+        <Route path='proveedores/buscarproveedor' element={<BuscarProveedor />}/>
+        <Route path='configuracion/configurardatosparafacturar' element={<ConfigurarDatos/>}/>
+        <Route path='configuracion/ingresarsecuencialdefactura' element={<IngresarSecuencial />}/>
+        <Route path='facturacion/crearnuevafactura' element={<CrearNuevaFactura />} />
+        <Route path='facturacion/modificarenborrador' element={<ModificarFinalizarFactura/>}/>
+        <Route path='facturacion/finalizarfacturaenborrador' element={<ModificarFinalizarFactura/>}/>
+        <Route path='facturacion/eliminarfacturadeborrador' element={<EliminarFacturaBorrador/>}/>
+        <Route path='facturacion/buscarfactura' element={<BuscarFacturas />}/>
+        <Route path='facturacion/enviarfacturaporemail' element={<EnviarFacturaEmail />} />
+      </Routes>
     </SideBar>
-</BrowserRouter>
+  </BrowserRouter>
 );
 
 export default Router;
