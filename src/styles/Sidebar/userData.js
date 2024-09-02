@@ -28,6 +28,8 @@ export const UserDataContent = styled.div`
     color: ${Light};
   }
   a {
+    color: ${GrayDark};
+    text-decoration: none;
     margin: 0;
     padding: 0;
     transition: all 0.4s ease-in;

@@ -3,6 +3,7 @@ import {
   UserDataStyle,
 } from "../../styles/Sidebar/userData.js";
 import UserImg from "../../assets/images/user-img.jpg";
+import { Link } from "react-router-dom";
 
 const User = "Geovanny Rodríguez";
 const Admin = "Administrador";
@@ -16,7 +17,7 @@ const UserData = () => {
       <UserDataContent>
         <h6>{User}</h6>
         <a>{Admin}</a>
-        <a>{UpdateData}</a>
+        <Link to="/editarusuario">{UpdateData}</Link>
         <a>{CLoseSession}</a>
       </UserDataContent>
     </UserDataStyle>

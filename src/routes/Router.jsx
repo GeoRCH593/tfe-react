@@ -7,8 +7,6 @@ import Facturacion from '../Components/Pages/Facturacion/Facturacion';
 import Proveedores from '../Components/Pages/Proveedores/Proveedores';
 import Pos from '../Components/Pages/Puntos de venta/Pos';
 import SideBar from '../Components/SideBar/SideBar';
-import UserSignIn from '../context/UserSignIn';
-import UserRegister from '../context/UserRegister'
 import CrearEmpresa from '../Components/SubPages/Empresa/CrearEmpresa';
 import ActualizarDatos from '../Components/SubPages/Empresa/ActualizarDatos';
 import EliminarDatos from '../Components/SubPages/Empresa/EliminarDatos';
@@ -37,6 +35,7 @@ import EliminarFacturaBorrador from '../Components/SubPages/Facturacion/Eliminar
 import BuscarFacturas from '../Components/SubPages/Facturacion/BuscarFacturas';
 import EnviarFacturaEmail from '../Components/SubPages/Facturacion/EnviarFacturaEmail';
 import ModificarFinalizarFactura from '../Components/SubPages/Facturacion/ModificarFinalizarFactura';
+import EditarUsuario from '../Components/Pages/EditarUsuario/EditarUsuario';
 
 const Router = () => (
   <BrowserRouter>
@@ -50,8 +49,7 @@ const Router = () => (
         <Route path="/facturacion" element={<Facturacion/>} />
         <Route path="/proveedores" element={<Proveedores/>} />
         <Route path="/puntos-de-venta" element={<Pos/>} />
-        <Route path="/login" element={<UserSignIn/>} />
-        <Route path="/register" element={<UserRegister/>} />
+        <Route path="/editarusuario" element={<EditarUsuario />}/>
         <Route path="*" element={<div>404</div>} />
         <Route path="/empresa/crearempresa" element={<CrearEmpresa/>} />
         <Route path="/empresa/actualizardatos" element={<ActualizarDatos/>} />
