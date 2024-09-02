@@ -1,16 +1,21 @@
-import { useState } from "react";
 import { GlobalStyle } from "../../../styles/common/globalStyles";
 import {PageBody, TitlePage, FormTitle, FormComplete, FormDiv, SubTitleList, TableGeneral, CheckboxDiv} from '../../../styles/Subpages/subpagesStyles';
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
 import ModifyButton from "../../Buttons/ModifyButton";
+import {useForm} from 'react-hook-form';
 
 const Modul = "Empresa";
 const IconName = "bi bi-person-lines-fill";
 const SubPageTitle = "Actualizar Datos";
 
 const ActualizarDatos = () => {
-  const [identificacion, setIdentificacion] =useState("0123456789");
+
+  const { register, handleSubmit } = useForm();
+
+  const dataSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
 
   return (
     <PageBody>
@@ -23,7 +28,7 @@ const ActualizarDatos = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={dataSubmit}>
         <SubTitleList>
             <h5>Busqueda de empresa:</h5>
           </SubTitleList>
@@ -58,7 +63,7 @@ const ActualizarDatos = () => {
           <br />
           <FormDiv>
             <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador">
+            <select id="identificador" {...register("identificador")}>
               <option>R.U.C</option>
               <option>Cédula</option>
               <option>Pasaporte</option>
@@ -69,27 +74,36 @@ const ActualizarDatos = () => {
           </FormDiv>
           <FormDiv>
             <label>Número de Indentificación:</label>
-            <input type="text" value={identificacion}  />
-          <ModifyButton  onClick={setIdentificacion} />  
+            <input type="text" {...register("numeroId")}
+              defaultValue={"0123456789"}
+            />
+          <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Razón Social:</label>
-            <input type="text"></input>
+            <input type="text" {...register("razonsocial")}
+              defaultValue={"Geovanny Rodríguez"}
+            />
           <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Nombre comercial de la empresa:</label>
-            <input type="text"></input>
+            <input type="text" {...register("nombrecomercial")}
+              defaultValue={"Empresa 1"}
+            />
           <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Dirección de la empresa:</label>
-            <input type="text"></input>
+            <input type="text" {...register("direccion")}
+              defaultValue={"Calle 1 y Calle 2"}
+            />
           <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Provincia:</label>
-            <input type="text"></input>
+            <input type="text" {...register("provincia")}
+            />
           <ModifyButton />  
           </FormDiv>
           <FormDiv>
@@ -103,7 +117,9 @@ const ActualizarDatos = () => {
           </CheckboxDiv>
           <FormDiv>
             <label>Teléfono:</label>
-            <input type="tel"></input>
+            <input type="tel" {...register("telefono")}
+              defaultValue={"+593 0987654321"}
+            />
           <ModifyButton />  
           </FormDiv>
           <CheckboxDiv>
@@ -112,12 +128,14 @@ const ActualizarDatos = () => {
           </CheckboxDiv>
           <FormDiv>
             <label>Subir imagen de logotipo:</label>
-            <input type="file"></input>
+            <input type="file"/>
           <ModifyButton />  
           </FormDiv>
           <FormDiv>
             <label>Correo electrónico:</label>
-            <input type="email"></input>
+            <input type="email" {...register("correo")}
+              defaultValue={"empresa@gmail.com"}
+            />
           <ModifyButton />  
           </FormDiv>
           <ButtonSubmit

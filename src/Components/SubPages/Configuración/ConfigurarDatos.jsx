@@ -9,12 +9,20 @@ import {
 } from "../../../styles/Subpages/subpagesStyles";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import ModifyButton from "../../Buttons/ModifyButton";
+import {useForm} from 'react-hook-form';
 
 const Modul = "Configuración";
 const IconName = "bi bi-gear-fill";
 const SubPageTitle = "Actualizar datos del proveedor";
 
 const ConfigurarDatos = () => {
+
+  const { register, handleSubmit } = useForm();
+
+  const dataSubmit = handleSubmit((data) => {
+    console.log(data);
+  });
+
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -26,10 +34,10 @@ const ConfigurarDatos = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={dataSubmit}>
           <FormDiv>
             <label>Tipo de identificación:</label>
-            <select id="identificador" name="tipo identificador">
+            <select id="identificador" {...register("identificador")}>
               <option>R.U.C</option>
               <option>Cédula</option>
               <option>Pasaporte</option>
@@ -40,12 +48,14 @@ const ConfigurarDatos = () => {
           </FormDiv>
           <FormDiv>
             <label>Número de Indentificación:</label>
-            <input type="number" />
+            <input type="text" {...register("numeroId")}
+              defaultValue={"0987654321"}
+            />
             <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Tipo de cliente:</label>
-            <select id="identificador" name="tipo identificador">
+            <select id="cliente" {...register("cliente")}>
               <option>Persona natural</option>
               <option>Empresa</option>
             </select>
@@ -53,47 +63,55 @@ const ConfigurarDatos = () => {
           </FormDiv>
           <FormDiv>
             <label>Razón Social:</label>
-            <input type="text"></input>
+            <input type="text" {...register("razonsocial")}
+            defaultValue={"Geovanny Rodriguez"}
+            />
             <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Dirección del emisor:</label>
-            <input type="text"></input>
+            <input type="text" {...register("direccion")}
+            defaultValue={"Calle 1 y calle 2"}
+            />
             <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Provincia:</label>
-            <input type="text"></input>
+            <input type="text" {...register("provincia")}/>
             <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Cantón:</label>
-            <input type="text"></input>
+            <input type="text" {...register("canton")}/>
             <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Teléfono:</label>
-            <input type="tel"></input>
+            <input type="tel" {...register("telefono")}
+              defaultValue={"+593 98 765 4321"}
+            />
             <ModifyButton />
           </FormDiv>
           <FormDiv>
             <label>Correo electrónico:</label>
-            <input type="email"></input>
+            <input type="email" {...register("correo")}
+              defaultValue={"giovanirod@gmail.com"}
+            />
             <ModifyButton />
             <CheckboxDiv>
-              <input type="checkbox"></input>
+              <input type="checkbox" {...register("extranjero")} />
               <label>Extranjero</label>
             </CheckboxDiv>
             <CheckboxDiv>
-              <input type="checkbox"></input>
+              <input type="checkbox" {...register("contribuyente")}/>
               <label>Contribuyente especial</label>
             </CheckboxDiv>
             <CheckboxDiv>
-              <input type="checkbox"></input>
+              <input type="checkbox" {...register("rimpe")}/>
               <label>Régimen Rimpe</label>
             </CheckboxDiv>
             <CheckboxDiv>
-              <input type="checkbox"></input>
+              <input type="checkbox" {...register("contabilidad")}/>
               <label>Obligado a llevar contabilidad</label>
             </CheckboxDiv>
           </FormDiv>
