@@ -14,6 +14,7 @@ import ModifyButton from "../../Buttons/ModifyButton";
 const SubPageTitle = "Editar datos de la cuenta";
 
 const EditarUsuario = () => {
+  
   const { register, handleSubmit } = useForm();
 
   const dataSubmit = handleSubmit((data) => {

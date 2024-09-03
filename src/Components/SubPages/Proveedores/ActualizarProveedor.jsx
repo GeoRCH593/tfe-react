@@ -1,15 +1,10 @@
 import { GlobalStyle } from "../../../styles/common/globalStyles";
-import {
-  CheckboxDiv,
-  FormComplete,
-  FormDiv,
-  FormTitle,
-  PageBody,
-  TitlePage,
-} from "../../../styles/Subpages/subpagesStyles";
+import {CheckboxDiv, FormComplete, FormDiv, FormTitle, PageBody, TitlePage, FormDivSpan} from '../../../styles/Subpages/subpagesStyles';
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import ModifyButton from "../../Buttons/ModifyButton";
 import {useForm} from 'react-hook-form';
+import provincias from '../../services/provincias.js';
+import {useEffect, useState} from 'react';
 
 const Modul = "Proveedores";
 const IconName = "bi bi-person-rolodex";
@@ -17,11 +12,21 @@ const SubPageTitle = "Actualizar datos del proveedor";
 
 const ActualizarProveedor = () => {
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, watch } = useForm();
 
   const dataSubmit = handleSubmit((data) => {
     console.log(data);
   });
+
+  const [datos, setDatos] = useState([]);
+
+  useEffect(() => {
+    console.log(provincias);
+    setDatos(provincias.provincias);
+  }, []);
+
+  const categoriaSeleccionada = watch("provincia");
+  const cantonSeleccionado = watch("canton");
 
   return (
     <PageBody>
@@ -73,16 +78,38 @@ const ActualizarProveedor = () => {
             />
             <ModifyButton />
           </FormDiv>
-          <FormDiv>
+          <FormDivSpan>
             <label>Provincia:</label>
-            <input type="text" {...register("provincia")}/>
-            <ModifyButton />
-          </FormDiv>
-          <FormDiv>
-            <label>Canton:</label>
-            <input type="text" {...register("canton")}/>
-            <ModifyButton />
-          </FormDiv>
+            <select
+              id="provincia"
+              value={categoriaSeleccionada}
+              {...register("provincia", { required: true })}
+            >
+              <option value={""}>Selecciona una provincia</option>
+              {datos.map((item) => (
+                <option key={item.nombre} value={item.nombre}>
+                  {item.nombre}
+                </option>
+              ))}
+            </select>
+          </FormDivSpan>
+          <FormDivSpan>
+            <label>Cantón:</label>
+            <select
+              id="canton"
+              value={cantonSeleccionado}
+              {...register("canton", { required: true })}
+            >
+              <option value={""}>Selecciona un cantón</option>
+              {datos
+                .find((item) => item.nombre === categoriaSeleccionada)
+                ?.cantones.map((canton) => (
+                  <option key={canton} value={canton}>
+                    {canton}
+                  </option>
+                ))}
+            </select>
+          </FormDivSpan>
           <FormDiv>
             <label>Teléfono:</label>
             <input type="tel" {...register("telefono")}

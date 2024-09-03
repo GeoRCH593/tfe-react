@@ -70,7 +70,9 @@ export const FactPartThree = styled.div`
 export const NumFactDiv = styled.div`
 display: flex;
 justify-content: end;
- > p {
+
+ > input {
+  width: 80%;
   color: #39B54A;
   font-weight: bold;
  }
@@ -161,11 +163,12 @@ export const TableValues = styled.table`
 export const SearchFactDiv = styled.div`
   display: flex;
   flex-direction: row;
+  gap: 0;
 `;
 
 /*Campos de seleccion para facturacion */
 export const SelectDiv = styled.div`
-  padding: 0.3em 2em;
+  padding: 0.3em 0.5em;
   width: 100%;
   gap: 2em;
   > label {

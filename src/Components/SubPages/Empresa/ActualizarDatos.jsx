@@ -1,9 +1,11 @@
 import { GlobalStyle } from "../../../styles/common/globalStyles";
-import {PageBody, TitlePage, FormTitle, FormComplete, FormDiv, SubTitleList, TableGeneral, CheckboxDiv} from '../../../styles/Subpages/subpagesStyles';
+import {PageBody, TitlePage, FormTitle, FormComplete, FormDiv, SubTitleList, TableGeneral, CheckboxDiv, FormDivSpan} from '../../../styles/Subpages/subpagesStyles';
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
 import ModifyButton from "../../Buttons/ModifyButton";
 import {useForm} from 'react-hook-form';
+import provincias from '../../services/provincias.js';
+import {useEffect, useState} from 'react';
 
 const Modul = "Empresa";
 const IconName = "bi bi-person-lines-fill";
@@ -11,11 +13,23 @@ const SubPageTitle = "Actualizar Datos";
 
 const ActualizarDatos = () => {
 
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, watch, } = useForm();
 
   const dataSubmit = handleSubmit((data) => {
     console.log(data);
   });
+
+
+  const [datos, setDatos] = useState([]);
+
+  useEffect(() => {
+    console.log(provincias);
+    setDatos(provincias.provincias);
+  }, []);
+
+
+  const categoriaSeleccionada = watch("provincia");
+  const cantonSeleccionado = watch("canton");
 
   return (
     <PageBody>
@@ -74,7 +88,7 @@ const ActualizarDatos = () => {
           </FormDiv>
           <FormDiv>
             <label>Número de Indentificación:</label>
-            <input type="text" {...register("numeroId")}
+            <input type="text" {...register("numeroId", {required:true})}
               defaultValue={"0123456789"}
             />
           <ModifyButton />  
@@ -100,17 +114,38 @@ const ActualizarDatos = () => {
             />
           <ModifyButton />  
           </FormDiv>
-          <FormDiv>
+          <FormDivSpan>
             <label>Provincia:</label>
-            <input type="text" {...register("provincia")}
-            />
-          <ModifyButton />  
-          </FormDiv>
-          <FormDiv>
+            <select
+              id="provincia"
+              value={categoriaSeleccionada}
+              {...register("provincia")}
+            >
+              <option value={""}>Selecciona una provincia</option>
+              {datos.map((item) => (
+                <option key={item.nombre} value={item.nombre}>
+                  {item.nombre}
+                </option>
+              ))}
+            </select>
+          </FormDivSpan>
+          <FormDivSpan>
             <label>Cantón:</label>
-            <input type="text"></input>
-          <ModifyButton />  
-          </FormDiv>
+            <select
+              id="canton"
+              value={cantonSeleccionado}
+              {...register("canton")}
+            >
+              <option value={""}>Selecciona un cantón</option>
+              {datos
+                .find((item) => item.nombre === categoriaSeleccionada)
+                ?.cantones.map((canton) => (
+                  <option key={canton} value={canton}>
+                    {canton}
+                  </option>
+                ))}
+            </select>
+          </FormDivSpan>
           <CheckboxDiv>
             <input type="checkbox" />
             <label>Extranjero</label>

@@ -8,6 +8,7 @@ import {
 } from "../../../styles/Subpages/subpagesStyles";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import { SubTitleList } from "../Empresa/eliminarDatosSucursalStyles";
+import {FormDiv} from '../../../styles/Subpages/subpagesStyles.js';
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
@@ -29,6 +30,19 @@ const EliminarPos = () => {
           <SubTitleList>
             <h5>Seleccionar de Puntos de venta:</h5>
           </SubTitleList>
+          <FormDiv>
+            <label>Seleccione la Empresa:</label>
+            <select id="identificador" name="tipo identificador">
+              <option>Empresa 001</option>
+              <option>Empresa 002</option>
+              <option>Empresa 003</option>
+            </select>
+          </FormDiv>
+          <ButtonSubmit
+            classIconId={"bi bi-search"}
+            submitText={"Buscar POS"}
+          />
+          <hr />
           <TableGeneral>
             <thead>
               <tr>
