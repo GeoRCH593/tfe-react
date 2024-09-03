@@ -1,4 +1,8 @@
-import { OrderList, SideBarBody, SideBarWrapper } from "../../styles/Sidebar/sideBar";
+import {
+  OrderList,
+  SideBarBody,
+  SideBarWrapper,
+} from "../../styles/Sidebar/sideBar";
 import SideBarBtns from "./SideBarBtns";
 import Logo from "./Logo";
 import SideBarFooter from "./SideBarFooter";
@@ -61,6 +65,7 @@ const makeButtons = [
     title: "Configuración",
     subBtn: [
       "Configurar datos para facturar",
+      "Editar datos del usuario",
       "Ingresar Secuencial de factura",
     ],
   },
@@ -85,7 +90,7 @@ const SideBar = ({ children }) => {
       <SideBarWrapper>
         <SideBarBody>
           <Logo />
-          <UserData/>
+          <UserData />
           <OrderList>
             {makeButtons.map((btn, i) => (
               <SideBarBtns

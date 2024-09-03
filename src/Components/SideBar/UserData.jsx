@@ -17,7 +17,7 @@ const UserData = () => {
       <UserDataContent>
         <h6>{User}</h6>
         <a>{Admin}</a>
-        <Link to="/editarusuario">{UpdateData}</Link>
+        <Link to="configuracion/editardatosdelusuario">{UpdateData}</Link>
         <a>{CLoseSession}</a>
       </UserDataContent>
     </UserDataStyle>

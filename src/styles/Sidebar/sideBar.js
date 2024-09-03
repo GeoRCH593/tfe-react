@@ -66,7 +66,7 @@ export const FooterWrapper = styled.div`
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 80px;
+  height: 6em;
   box-shadow: 0px -10px 14px -10px rgba(0, 0, 0, 0.22);
   z-index: 6;
   `;
@@ -74,7 +74,7 @@ export const FooterWrapper = styled.div`
 export const Footer = styled.ul`
   list-style: none;
   margin: 0;
-  padding: 10px 0 0;
+  padding: 0.5em 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +89,7 @@ export const Footer = styled.ul`
 /*FOOTER 3 contenedor todos los derechos reservado*/
 export const Subfooter = styled.div`
   position: absolute;
-  bottom: 10px;
+  bottom: 2em;
   width: 100%;
   display: flex;
   justify-content: center;

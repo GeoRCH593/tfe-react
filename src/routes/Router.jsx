@@ -49,7 +49,6 @@ const Router = () => (
         <Route path="/facturacion" element={<Facturacion/>} />
         <Route path="/proveedores" element={<Proveedores/>} />
         <Route path="/puntos-de-venta" element={<Pos/>} />
-        <Route path="/editarusuario" element={<EditarUsuario />}/>
         <Route path="*" element={<div>404</div>} />
         <Route path="/empresa/crearempresa" element={<CrearEmpresa/>} />
         <Route path="/empresa/actualizardatos" element={<ActualizarDatos/>} />
@@ -73,6 +72,7 @@ const Router = () => (
         <Route path='proveedores/eliminarproveedor' element={<EliminarProveedor />}/>
         <Route path='proveedores/buscarproveedor' element={<BuscarProveedor />}/>
         <Route path='configuracion/configurardatosparafacturar' element={<ConfigurarDatos/>}/>
+        <Route path="configuracion/editardatosdelusuario" element={<EditarUsuario />}/>
         <Route path='configuracion/ingresarsecuencialdefactura' element={<IngresarSecuencial />}/>
         <Route path='facturacion/crearnuevafactura' element={<CrearNuevaFactura />} />
         <Route path='facturacion/modificarenborrador' element={<ModificarFinalizarFactura/>}/>

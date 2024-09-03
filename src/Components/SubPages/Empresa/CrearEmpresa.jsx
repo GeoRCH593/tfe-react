@@ -18,6 +18,7 @@ const IconName = "bi bi-building";
 const SubPageTitle = "Crear una empresa";
 
 const CrearEmpresa = () => {
+  
   const {
     register,
     handleSubmit,
