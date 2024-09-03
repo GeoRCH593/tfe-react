@@ -10,22 +10,37 @@ import {
 } from "../../../styles/Subpages/subpagesStyles";
 import { useForm } from "react-hook-form";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
+import provincias from "../../services/provincias.js";
+import { useEffect, useState } from "react";
 
 const Modul = "Empresa";
 const IconName = "bi bi-building";
 const SubPageTitle = "Crear una empresa";
 
 const CrearEmpresa = () => {
-  
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
 
   const dataSubmit = handleSubmit((data) => {
     console.log(data);
   });
+
+  const [datos, setDatos] = useState([]);
+
+  useEffect(() => {
+    console.log(provincias);
+    setDatos(provincias.provincias);
+  }, []);
+
+
+  const categoriaSeleccionada = watch("provincia");
+
+  const cantonSeleccionado = watch("canton");
+
 
   return (
     <PageBody>
@@ -81,12 +96,36 @@ const CrearEmpresa = () => {
           </FormDivSpan>
           <FormDivSpan>
             <label>Provincia:</label>
-            <input type="text" {...register("provincia", { required: true })} />
+            <select
+              id="provincia"
+              value={categoriaSeleccionada}
+              {...register("provincia", { required: true })}
+            >
+              <option value={""}>Selecciona una provincia</option>
+              {datos.map((item) => (
+                <option key={item.nombre} value={item.nombre}>
+                  {item.nombre}
+                </option>
+              ))}
+            </select>
             {errors.provincia && <span>* La provincia es obligatoria</span>}
           </FormDivSpan>
           <FormDivSpan>
             <label>Cantón:</label>
-            <input type="text" {...register("canton", { required: true })} />
+            <select
+              id="canton"
+              value={cantonSeleccionado}
+              {...register("canton", { required: true })}
+            >
+              <option value={""}>Selecciona un cantón</option>
+              {datos
+                .find((item) => item.nombre === categoriaSeleccionada)
+                ?.cantones.map((canton) => (
+                  <option key={canton} value={canton}>
+                    {canton}
+                  </option>
+                ))}
+            </select>
             {errors.canton && <span>* El cantón es obligatorio</span>}
           </FormDivSpan>
           <CheckboxDiv>
