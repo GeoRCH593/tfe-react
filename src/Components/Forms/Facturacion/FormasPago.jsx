@@ -43,7 +43,7 @@ const FormasPago = () => {
         cambiarEstado={setModalState}
       >
         <ContentModal>
-          <form>
+          <div>
             <ModalFormDiv>
               <label>Formas de pago:</label>
               <select id="pago" name="Formas de pago">
@@ -66,7 +66,7 @@ const FormasPago = () => {
               <label>Tiempo:</label>
               <input type="text" />
             </ModalFormDiv>
-          </form>
+          </div>
         </ContentModal>
       </Modals>
     </div>

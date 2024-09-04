@@ -12,7 +12,7 @@ export const GrayLight = "#E8EAED"
 export const GrayMedium = '#DDD'
 export const GrayDark = "#909090"
 export const GrayDarker = "#6D6C6C"
-export const GrayBlueDeep = "##000C49"
+export const GrayBlueDeep = "#000C49"
 
 /*ESTILOS PARA MODALES Y ALERTAS*/
 export const SuccessColor = "#39B54A";

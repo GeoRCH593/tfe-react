@@ -15,8 +15,8 @@ export const Overlay = styled.div`
   padding: 2.5em;
   z-index: 120;
 `;
-/*Medida del Modal exterior */
-export const ContainerModal = styled.div`
+/*Contenedor exterior para MODAL normal */
+export const ContainerModal = styled.form`
   width: 500px;
   background: ${GrayLighter};
   position: relative;
@@ -65,6 +65,7 @@ export const ContentModal = styled.div`
   align-items: center;
   padding-bottom: 2em;
 `;
+
 
 /*Contenedor de 2 botones aceptar y cancelar */
 export const ModalButtonContainer = styled.div`

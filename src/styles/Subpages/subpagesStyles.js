@@ -64,7 +64,7 @@ export const FormDiv = styled.div`
     color: ${Secondary};
     width: 100%;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
   }
   > input {
     width: 75%;

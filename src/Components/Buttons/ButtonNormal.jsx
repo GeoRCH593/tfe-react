@@ -15,7 +15,7 @@ const ButtonNormal = ({ classIconId, textButton, onClick}) => {
 ButtonNormal.propTypes = {
   classIconId: PropTypes.string,
   textButton: PropTypes.string,
-  onClick: PropTypes.string
+  onClick: PropTypes.func,
 };
 
 export default ButtonNormal;

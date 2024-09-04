@@ -9,16 +9,15 @@ import {
 } from "./modalStyle";
 import PropTypes from "prop-types";
 
-const Modals = ({ children, title, estado, cambiarEstado}) => {
+const Modals = ({ children, title, funcioncerrar }) => {
   return (
     <>
-      {estado &&
         <Overlay>
           <GlobalStyle />
           <ContainerModal>
             <HeaderModal>
               <h3>{title}</h3>
-              <CloseButton onClick={()=> cambiarEstado(!estado)}>
+              <CloseButton onClick={funcioncerrar}>
                 <i className="bi bi-x-lg"></i>
               </CloseButton>
             </HeaderModal>
@@ -29,19 +28,14 @@ const Modals = ({ children, title, estado, cambiarEstado}) => {
             </ModalButtonContainer>
           </ContainerModal>
         </Overlay>
-      }
     </>
   );
 };
 
 Modals.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.object,
   title: PropTypes.string,
-  estado: PropTypes.string,
-  cambiarEstado: PropTypes.func,
-  aceptar: PropTypes.func,
-  cancelar: PropTypes.func,
-  cerrar: PropTypes.func,
+  funcioncerrar: PropTypes.func,
 };
 
 export default Modals;
