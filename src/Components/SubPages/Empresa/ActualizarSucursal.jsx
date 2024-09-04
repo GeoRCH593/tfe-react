@@ -17,7 +17,7 @@ const ActualizarSucursal = () => {
     register,
     handleSubmit,
     watch,
-    formState: { errors },
+    formState: { errors }, reset
   } = useForm();
 
   const dataSubmit = handleSubmit((data) => {
@@ -56,21 +56,21 @@ const ActualizarSucursal = () => {
             <input type="text" {...register("codigoSRI")}
               defaultValue={"SRI001"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({codigoSRI:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Nombre de la Sucursal:</label>
             <input type="text" {...register("sucursal")}
               defaultValue={"sucursal 001"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({sucursal:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Dirección de la sucursal:</label>
             <input type="text" {...register("direccionsucursal")}
             defaultValue={"Calle 1 y Calle 2"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({direccionsucursal:""})}/>
           </FormDiv>
           <FormDivSpan>
             <label>Provincia de la sucursal:</label>
@@ -110,7 +110,7 @@ const ActualizarSucursal = () => {
             <input type="text" {...register("direccionempresa")}
               defaultValue={"Calle 3 y Calle 4"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({direccionempresa:""})}/>
           </FormDiv>
           <FormDivSpan>
             <label>Provincia de la empresa:</label>
@@ -150,14 +150,14 @@ const ActualizarSucursal = () => {
             <input type="tel" {...register("telefono")}
               defaultValue={"+593 987654321"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({telefono:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Correo electrónico:</label>
             <input type="email" {...register("correo")}
               defaultValue={"giovanirod@gmail.com"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({correo:""})}/>
           </FormDiv>
           <ButtonSubmit
             classIconId={"bi bi-pencil-square"}

@@ -40,6 +40,7 @@ const CrearSucursal = () => {
   const dataSubmit = (data) => {
     console.log(data);
   };
+  
   const dataSubmit2 = (data) => {
     console.log(data);
   };

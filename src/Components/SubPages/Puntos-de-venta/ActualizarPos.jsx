@@ -19,7 +19,7 @@ const SubPageTitle = "Actualizar Punto de venta";
 
 const ActualizarPos = () => {
   
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const dataSubmit = handleSubmit((data) => {
     console.log(data);
@@ -77,7 +77,7 @@ const ActualizarPos = () => {
               {...register("codigo")}
               defaultValue={"001"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({codigo:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Empresa:</label>
@@ -102,21 +102,21 @@ const ActualizarPos = () => {
               {...register("direccionempresa")}
               defaultValue={"Calle 1 y Calle 2"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({direccionempresa:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Direccion de la sucursal </label>
             <input type="text" {...register("direccionsucursal")} 
               defaultValue={"Calle 3 y Calle 4"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({direccionsucursal:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Secuencial del Punto de venta:</label>
             <input type="text" {...register("secuencial")}
               defaultValue={"172"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({secuencial:""})}/>
           </FormDiv>
           <ButtonSubmit
             classIconId={"bi bi-arrow-left-right"}

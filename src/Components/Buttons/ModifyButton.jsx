@@ -4,16 +4,16 @@ import { ButtonModify, IconEditStyled } from './modifyButtonStyle';
 
 const IconEdit = "bi bi-pencil-fill";
 
-const ModifyButton = ({onClick}) => {
+const ModifyButton = ({botonFuncion}) => {
   return (
-    <ButtonModify type='button' onClick={onClick}>
+    <ButtonModify type='button' onClick={botonFuncion}>
       <IconEditStyled className={IconEdit}></IconEditStyled>
     </ButtonModify>
   );
 };
 
 ModifyButton.propTypes = {
-  onClick: PropTypes.func,
+  botonFuncion: PropTypes.func,
 }
 
 

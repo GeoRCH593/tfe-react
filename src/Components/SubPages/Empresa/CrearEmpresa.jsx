@@ -41,7 +41,6 @@ const CrearEmpresa = () => {
   const categoriaSeleccionada = watch("provincia");
   const cantonSeleccionado = watch("canton");
 
-
   return (
     <PageBody>
       <GlobalStyle />

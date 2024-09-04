@@ -13,7 +13,7 @@ const SubPageTitle = "Actualizar Datos";
 
 const ActualizarDatos = () => {
 
-  const { register, handleSubmit, watch, } = useForm();
+  const { register, handleSubmit, watch, reset} = useForm();
 
   const dataSubmit = handleSubmit((data) => {
     console.log(data);
@@ -84,35 +84,35 @@ const ActualizarDatos = () => {
               <option>Identificador del exterior</option>
               <option>Consumidor final</option>
             </select>
-          <ModifyButton/>  
+            <ModifyButton botonFuncion={()=> reset({identificador:""})}/> 
           </FormDiv>
           <FormDiv>
             <label>Número de Indentificación:</label>
             <input type="text" {...register("numeroId", {required:true})}
               defaultValue={"0123456789"}
             />
-          <ModifyButton />  
+          <ModifyButton botonFuncion={()=> reset({numeroId:""})}/>  
           </FormDiv>
           <FormDiv>
             <label>Razón Social:</label>
             <input type="text" {...register("razonsocial")}
               defaultValue={"Geovanny Rodríguez"}
             />
-          <ModifyButton />  
+          <ModifyButton botonFuncion={()=> reset({razonsocial:""})}/>  
           </FormDiv>
           <FormDiv>
             <label>Nombre comercial de la empresa:</label>
             <input type="text" {...register("nombrecomercial")}
               defaultValue={"Empresa 1"}
             />
-          <ModifyButton />  
+          <ModifyButton botonFuncion={()=> reset({nombrecomercial:""})}/>  
           </FormDiv>
           <FormDiv>
             <label>Dirección de la empresa:</label>
             <input type="text" {...register("direccion")}
               defaultValue={"Calle 1 y Calle 2"}
             />
-          <ModifyButton />  
+          <ModifyButton botonFuncion={()=> reset({direccion:""})}/>  
           </FormDiv>
           <FormDivSpan>
             <label>Provincia:</label>
@@ -155,7 +155,7 @@ const ActualizarDatos = () => {
             <input type="tel" {...register("telefono")}
               defaultValue={"+593 0987654321"}
             />
-          <ModifyButton />  
+          <ModifyButton botonFuncion={()=> reset({telefono:""})}/>  
           </FormDiv>
           <CheckboxDiv>
             <input type="checkbox"/>
@@ -171,7 +171,7 @@ const ActualizarDatos = () => {
             <input type="email" {...register("correo")}
               defaultValue={"empresa@gmail.com"}
             />
-          <ModifyButton />  
+          <ModifyButton botonFuncion={()=> reset({correo:""})}/>  
           </FormDiv>
           <ButtonSubmit
             classIconId={"bi bi-pencil-square"}

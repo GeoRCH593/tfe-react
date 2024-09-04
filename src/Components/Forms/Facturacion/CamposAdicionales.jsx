@@ -8,6 +8,7 @@ import { ModalFormDiv2 } from "./camposAdicionalesStyle";
 
 const CamposAdicionales = () => {
   const [modalState, setModalState]=useState(false);
+
   return (
     <div>
       <TableGeneral>
@@ -34,9 +35,10 @@ const CamposAdicionales = () => {
         onClick={()=> setModalState(!modalState)}
       />
       {/*Modal de Campos adicionales */}
+      {modalState && (
       <Modals 
       title={"Campos adicionales:"}
-      estado={modalState}
+      funcioncerrar={() => setModalState(!modalState)}
       cambiarEstado={setModalState}
       >
         <ContentModal>
@@ -52,6 +54,7 @@ const CamposAdicionales = () => {
           </form>
         </ContentModal>
       </Modals>
+    )}
     </div>
   );
 };

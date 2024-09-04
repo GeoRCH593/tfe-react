@@ -2,7 +2,11 @@ import { GlobalStyle } from "../../styles/globalStyles";
 import { ButtonContainer } from "./modalSuccessStyle";
 import { CloseButton, Overlay } from "./modalStyle";
 import PropTypes from "prop-types";
-import { ContainModalError, IconModalError, ModalButtonError } from "./modalErrorStyle";
+import {
+  ContainModalError,
+  IconModalError,
+  ModalButtonError,
+} from "./modalErrorStyle";
 
 const ModalError = ({ estado, cambiarEstado, titulo, subtitulo }) => {
   return (

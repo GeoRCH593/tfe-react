@@ -37,10 +37,12 @@ const FormasPago = () => {
         onClick={()=> setModalState(!modalState)}
       />
       {/* Modal forma de pago*/}
+      {modalState && (
       <Modals
         title={"Formas de pago:"}
         estado={modalState}
         cambiarEstado={setModalState}
+        funcioncerrar={() => {setModalState(!modalState)}}
       >
         <ContentModal>
           <div>
@@ -69,6 +71,7 @@ const FormasPago = () => {
           </div>
         </ContentModal>
       </Modals>
+    )}
     </div>
   );
 };

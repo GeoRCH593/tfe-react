@@ -157,7 +157,7 @@ export const SubMenu = styled.div`
   width: 100%;
   background: ${SmenuColor};
   overflow: hidden;
-  height: ${(props) => (props.opened === "true" ? props.tall * 30 * 0 : 0)}px;
+  height: ${(props) => (props.opened === "true" ? props.tall * 30 * 10 : 0)}px;
   transition: all 0.6s ease-in-out;
   padding: ${(props) => (props.opened === "true" ? "4px 0px" : "0px")};
   margin: 2px 0 2px;
