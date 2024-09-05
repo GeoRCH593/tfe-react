@@ -46,8 +46,8 @@ const SideBarBtns = ({ to, icon, title, span, subBtn, handleclick}) => {
         </NavBtn>
       )}
       <SubMenu
-        tall={`${subBtn !== undefined}`}
-        opened={openSubMenu ? "true" : "false"}
+        $tall={`${subBtn !== undefined}`}
+        $opened={openSubMenu ? "true" : "false"}
       >
         {subBtn !== undefined &&
           subBtn.map((btn, i) => (

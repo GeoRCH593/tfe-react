@@ -194,7 +194,6 @@ export const SelectDiv = styled.div`
 `;
 
 /*Contenedor para icono de busqueda e input  */
-
 export const SearchTableDiv = styled.div`
 display: flex;
 padding: 3em 0 0;
@@ -227,5 +226,4 @@ align-items: center;
 justify-content: center;
 gap: 2em;
 padding: 2em 0;
-;
 `;

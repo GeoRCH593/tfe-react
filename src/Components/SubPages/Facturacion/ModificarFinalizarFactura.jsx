@@ -32,7 +32,7 @@ const IconName = "bi bi-receipt";
 const SubPageTitle = "Modificar y finalizar factura en borrador";
 
 const ModificarFinalizarFactura = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   return (
     <FactComplete>
@@ -100,7 +100,7 @@ const ModificarFinalizarFactura = () => {
                   <option>Identificador del exterior</option>
                   <option>Consumidor final</option>
                 </select>
-                <ModifyButton />
+                <ModifyButton botonFuncion={()=> reset({tipopdeidentificador:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Número de identificación:</label>
@@ -109,7 +109,7 @@ const ModificarFinalizarFactura = () => {
                   {...register("numeroId")}
                   defaultValue={"0123456789"}
                 />
-                <ModifyButton />
+                <ModifyButton botonFuncion={()=> reset({numeroId:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Razón social:</label>
@@ -118,7 +118,7 @@ const ModificarFinalizarFactura = () => {
                   {...register("razonsocial")}
                   defaultValue={"Geovanny Rodriguez"}
                 />
-                <ModifyButton />
+                <ModifyButton botonFuncion={()=> reset({razonsocial:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Dirección:</label>
@@ -127,7 +127,7 @@ const ModificarFinalizarFactura = () => {
                   {...register("direccion")}
                   defaultValue={"Calle 1 y calle 2"}
                 />
-                <ModifyButton />
+                <ModifyButton botonFuncion={()=> reset({direccion:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Teléfono:</label>
@@ -136,7 +136,7 @@ const ModificarFinalizarFactura = () => {
                   {...register("telefono")}
                   defaultValue={"+593 987654321"}
                 />
-                <ModifyButton />
+                <ModifyButton botonFuncion={()=> reset({telefono:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Correo:</label>
@@ -145,7 +145,7 @@ const ModificarFinalizarFactura = () => {
                   {...register("correo")}
                   defaultValue={"geovarod@gmail.com"}
                 />
-                <ModifyButton />
+                <ModifyButton botonFuncion={()=> reset({correo:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Extranjero:</label>
@@ -160,7 +160,7 @@ const ModificarFinalizarFactura = () => {
               <FactDiv>
                 <label>Fecha de emisión:</label>
                 <input type="date" {...register("fechaemision")} />
-                <ModifyButton />
+                <ModifyButton botonFuncion={()=> reset({fechaemision:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Nombre comercial:</label>
@@ -169,21 +169,21 @@ const ModificarFinalizarFactura = () => {
                   {...register("nombrecomercial")}
                   defaultValue={"Comercial 1"}
                 />
-                <ModifyButton />
+                <ModifyButton botonFuncion={()=> reset({nombrecomercial:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Punto de emisión:</label>
-                <input type="date" {...register("punto de emision")} />
-                <ModifyButton />
+                <input type="date" {...register("puntodeemision")} />
+                <ModifyButton botonFuncion={()=> reset({puntodeemision:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Guia de emisión:</label>
                 <input
                   type="text"
-                  {...register("giadeemision")}
+                  {...register("guiadeemision")}
                   defaultValue={"ejemplo 1"}
                 />
-                <ModifyButton />
+                <ModifyButton botonFuncion={()=> reset({guiadeemision:""})}/>
               </FactDiv>
               <FactDiv>
                 <label>Factura comercial negociable:</label>

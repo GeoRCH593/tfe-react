@@ -15,7 +15,7 @@ const SubPageTitle = "Editar datos de la cuenta";
 
 const EditarUsuario = () => {
   
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const dataSubmit = handleSubmit((data) => {
     console.log(data);
@@ -38,42 +38,42 @@ const EditarUsuario = () => {
               defaultValue={"Geovanny Xavier"}
             />
 
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({nombres:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Apellidos:</label>
             <input type="text" {...register("apellidos")} 
               defaultValue={"Rodríguez Chiriboga"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({apellidos:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Nombre del usuario:</label>
             <input type="text" {...register("usuario")} 
               defaultValue={"Geova593"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({usuario:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Correo electrónico:</label>
             <input type="email" {...register("correo")} 
               defaultValue={"giovanirod@gmail.com"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({correo:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Contraseña:</label>
             <input type="password" {...register("pass")} 
               defaultValue={"123456"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({pass:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Confirmar contraseña:</label>
             <input type="password" {...register("confirmarpass")} 
               defaultValue={"123456"}
             />
-            <ModifyButton />
+            <ModifyButton botonFuncion={()=> reset({confirmarpass:""})}/>
           </FormDiv>
           <FormDiv>
             <label>Subir imagen de logotipo:</label>
