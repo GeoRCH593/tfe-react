@@ -17,7 +17,7 @@ const makeCards = [
   {
     classDiv: "bi bi-person-fill-gear",
     title: "Editar datos del usuario",
-    to: "editarusuario"
+    to: "editardatosdelusuario"
   },
   {
     classDiv: "bi bi-sort-numeric-down",
