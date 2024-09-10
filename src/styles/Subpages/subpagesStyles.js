@@ -67,7 +67,7 @@ export const FormDiv = styled.div`
     font-weight: 700;
   }
   > input {
-    width: 75%;
+    width: 100%;
     padding-left: 0.6em;
     background-color: ${GrayLight};
     border: none;
