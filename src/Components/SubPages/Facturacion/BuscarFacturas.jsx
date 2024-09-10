@@ -41,8 +41,8 @@ const BuscarFacturas = () => {
             <SelectDiv>
               <label>Ambiente</label>
               <select id="factura" name="tipo identificador">
-                <option>Prueba</option>
-                <option>Produccion</option>
+                <option>Pruebas</option>
+                <option>Producción</option>
               </select>
             </SelectDiv>
             <SelectDiv>

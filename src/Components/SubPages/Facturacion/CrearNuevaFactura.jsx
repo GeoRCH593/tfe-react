@@ -54,6 +54,7 @@ const CrearNuevaFactura = () => {
                   <option>Pasaporte</option>
                   <option>Identificador del exterior</option>
                   <option>Consumidor final</option>
+                  <option>PLACA</option>
                 </select>
               </FactDiv>
               <FactDiv>

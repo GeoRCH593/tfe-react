@@ -6,6 +6,7 @@ import Modals from '../../Modals/Modals';
 import {ContentModal} from '../../Modals/modalStyle';
 import {useForm} from 'react-hook-form';
 import {useState} from 'react';
+import ButtonNormal from "../../Buttons/ButtonNormal.jsx";
 
 const Modul = "Facturación";
 const IconName = "bi bi-receipt";
@@ -112,9 +113,9 @@ const EnviarFacturaEmail = () => {
               </tr>
             </tbody>
           </TableGeneral>
-          <ButtonSubmit
+          <ButtonNormal
             classIconId={"bi bi-envelope-paper"}
-            submitText={"Enviar a correo"}
+            textButton={"Enviar a correo"}
             onClick={() => setEstado(!estado)}
           />
         </FormComplete>
