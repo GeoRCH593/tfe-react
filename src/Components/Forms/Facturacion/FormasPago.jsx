@@ -3,7 +3,7 @@ import { TableGeneral } from "../../../styles/Subpages/subpagesStyles";
 import ButtonNormal from "../../Buttons/ButtonNormal";
 import EditButton from "../../Buttons/EditButton";
 import Modals from "../../Modals/Modals";
-import { ContentModal, ModalFormDiv } from "../../Modals/modalStyle";
+import { ContentModal, ModalFormDiv, ModalFormDivComplete } from "../../Modals/modalStyle";
 import {useForm} from 'react-hook-form';
 
 const FormasPago = () => {
@@ -17,6 +17,7 @@ const FormasPago = () => {
 
   const dataSubmitmodal = handleSubmitmodal((data) => {
     console.log(data);
+    setModalState(!modalState)
   });
 
   return (
@@ -57,8 +58,8 @@ const FormasPago = () => {
         cambiarEstado={setModalState}
         funcioncerrar={() => {setModalState(!modalState)}}
       >
-        <ContentModal onSubmit={dataSubmitmodal} >
-          <div>
+        <ContentModal >
+          <ModalFormDivComplete onSubmit={dataSubmitmodal}>
             <ModalFormDiv>
               <label>Formas de pago:</label>
               <select id="pago" {...registermodal("pago", {required:true})}>
@@ -89,7 +90,7 @@ const FormasPago = () => {
               <input type="text" {...registermodal("tiempo", {required:true})}/>
               {errorsmodal.tiempo && <span>*</span>}
             </ModalFormDiv>
-          </div>
+          </ModalFormDivComplete>
         </ContentModal>
       </Modals>
     )}

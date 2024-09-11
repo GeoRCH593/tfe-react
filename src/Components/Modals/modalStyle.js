@@ -59,12 +59,12 @@ export const CloseButton = styled.button`
 `;
 
 /*Contenido para formulario en modal */
-export const ModalFormDivComplete = styled.form`
+export const ModalFormDivComplete = styled.div`
 
 `;
 
 /*Contenido dentro del modal children*/
-export const ContentModal = styled.form`
+export const ContentModal = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
