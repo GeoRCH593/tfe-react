@@ -5,16 +5,24 @@ import {
   FormTitle,
   TablesContain,
   TableGeneral,
+  FormDivSpan,
 } from "../../../styles/Subpages/subpagesStyles";
 import ButtonSubmit from "../../Buttons/ButtonSubmit";
 import { SubTitleList } from "../Empresa/eliminarDatosSucursalStyles";
-import {FormDiv} from '../../../styles/Subpages/subpagesStyles.js';
+import {useForm} from 'react-hook-form';
 
 const Modul = "Empresa";
 const IconClass = "bi bi-building";
 const SubPageTitle = "Eliminar Punto de venta";
 
 const EliminarPos = () => {
+
+  const {register, handleSubmit, formState:{errors}} = useForm();
+
+  const dataSubmit = handleSubmit((data)=>{
+    console.log(data)
+  })
+
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -26,18 +34,20 @@ const EliminarPos = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <TablesContain>
+        <TablesContain onSubmit={dataSubmit}>
           <SubTitleList>
             <h5>Seleccionar de Puntos de venta:</h5>
           </SubTitleList>
-          <FormDiv>
+          <FormDivSpan>
             <label>Seleccione la Empresa:</label>
-            <select id="identificador" name="tipo identificador">
+            <select id="identificador" {...register("identificador", {required:true})}>
+              <option value={""}>Seleccionar empresa</option>
               <option>Empresa 001</option>
               <option>Empresa 002</option>
               <option>Empresa 003</option>
             </select>
-          </FormDiv>
+            {errors.identificador && <span>* Obligatorio seleccionar opción</span>}
+          </FormDivSpan>
           <ButtonSubmit
             classIconId={"bi bi-search"}
             submitText={"Buscar POS"}

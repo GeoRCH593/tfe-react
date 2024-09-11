@@ -13,6 +13,7 @@ const IconName = "bi bi-receipt";
 const SubPageTitle = "Enviar Factura por email";
 
 const EnviarFacturaEmail = () => {
+
   const {
     register: registerForm1,
     handleSubmit: handleSubmitForm1,
@@ -53,7 +54,8 @@ const EnviarFacturaEmail = () => {
           <SearchFactDiv>
             <SelectDiv>
               <label>Tipo de factura</label>
-              <select id="tipofactura" {...registerForm1("tipofactura")}>
+              <select id="tipofactura" {...registerForm1("tipofactura", {required:true})}>
+                <option value={""}>Selecciona</option>
                 <option>Emitido</option>
                 <option>Borrador</option>
               </select>
@@ -61,18 +63,22 @@ const EnviarFacturaEmail = () => {
             </SelectDiv>
             <SelectDiv>
               <label>Ambiente</label>
-              <select id="ambientefactura" {...registerForm1("ambientefacture")}>
+              <select id="ambientefactura" {...registerForm1("ambientefactura",{required:true})}>
+                <option value={""}>Selecciona</option>
                 <option>Prueba</option>
                 <option>Produccion</option>
               </select>
+              {errorsForm1.ambientefactura && <span>* Obligatorio</span>}
             </SelectDiv>
             <SelectDiv>
               <label>Fecha desde:</label>
-              <input type="date" {...registerForm1("fechadesde")}/>
+              <input type="date" {...registerForm1("fechadesde", {required:true})}/>
+              {errorsForm1.fechadesde && <span>* Obligatorio</span>}
             </SelectDiv>
             <SelectDiv>
               <label>Fecha hasta:</label>
-              <input type="date" {...registerForm1("fechahasta")}/>
+              <input type="date" {...registerForm1("fechahasta", {required:true})}/>
+              {errorsForm1.fechahasta && <span>* Obligatorio</span>}
             </SelectDiv>
           </SearchFactDiv>
           <ButtonSubmit

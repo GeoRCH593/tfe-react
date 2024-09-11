@@ -11,12 +11,20 @@ import EditButton from "../../Buttons/EditButton.jsx";
 import { SearchFactDiv } from "../Facturacion/facturacionStyles.js";
 import { ConfDiv } from "./configuracionStyles.js";
 import ButtonSubmit from '../../Buttons/ButtonSubmit';
+import {useForm} from 'react-hook-form';
 
 const Modul = "Configuración";
 const IconName = "bi bi-gear-fill";
-const SubPageTitle = "Actualizar secuencial de la factura";
+const SubPageTitle = "Ingresar secuencial de la factura";
 
 const IngresarSecuencial = () => {
+
+  const {register, handleSubmit, formState:{errors}} = useForm();
+
+  const dataSubmit = handleSubmit((data)=>{
+    console.log(data)
+  })
+
   return (
     <PageBody>
       <GlobalStyle></GlobalStyle>
@@ -28,32 +36,38 @@ const IngresarSecuencial = () => {
         <FormTitle>
           <h5>{SubPageTitle}</h5>
         </FormTitle>
-        <FormComplete>
+        <FormComplete onSubmit={dataSubmit}>
           <SubTitleList>
             <h5>Seleccionar campos: </h5>
           </SubTitleList>
           <SearchFactDiv>
             <ConfDiv>
               <label>Tipo de factura</label>
-              <select id="factura" name="tipo identificador">
+              <select id="tipofactura" {...register("tipofactura", {required:true})}>
+                <option value={''}>Seleccionar...</option>
                 <option>Emitido</option>
                 <option>Borrador</option>
               </select>
+              {errors.tipofactura && <span>* Obligatorio</span>}
             </ConfDiv>
             <ConfDiv>
               <label>Ambiente</label>
-              <select id="factura" name="tipo identificador">
+              <select id="ambientefactura" {...register("ambientefactura", {required:true})}>
+                <option value={""}>Seleccionar...</option>
                 <option>Prueba</option>
                 <option>Produccion</option>
               </select>
+              {errors.ambientefactura && <span>* Obligatorio</span>}
             </ConfDiv>
             <ConfDiv>
               <label>Fecha desde:</label>
-              <input type="date" />
+              <input type="date" {...register("fechadesde", {required:true })}/>
+              {errors.fechadesde && <span>* Obligatorio</span>}
             </ConfDiv>
             <ConfDiv>
               <label>Fecha hasta:</label>
-              <input type="date" />
+              <input type="date" {...register("fechahasta", {required:true})}/>
+              {errors.fechahasta && <span>* Obligatorio</span>}
             </ConfDiv>
           </SearchFactDiv>
           <ButtonSubmit

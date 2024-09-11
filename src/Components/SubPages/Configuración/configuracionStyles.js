@@ -1,10 +1,12 @@
 import styled from "styled-components";
-import { GrayLight, Secondary } from "../../../styles/common/colorStyles";
+import {GrayLight, Secondary, DangerColor} from '../../../styles/common/colorStyles';
 
 export const ConfDiv = styled.div`
+display: flex;
+flex-direction: column;
   padding: 0.3em 2em;
   width: 100%;
-  gap: 2em;
+  gap: 0 2em;
   > label {
     color: ${Secondary};
     width: 100%;
@@ -24,5 +26,11 @@ export const ConfDiv = styled.div`
     background-color: ${GrayLight};
     border: none;
     font-size: 14px;
+  }
+  > span {
+    font-size: 0.7em;
+    color: ${DangerColor};
+    font-style: italic;
+    padding-left: 1em;
   }
 `;

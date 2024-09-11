@@ -58,8 +58,13 @@ export const CloseButton = styled.button`
   }
 `;
 
+/*Contenido para formulario en modal */
+export const ModalFormDivComplete = styled.form`
+
+`;
+
 /*Contenido dentro del modal children*/
-export const ContentModal = styled.div`
+export const ContentModal = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;

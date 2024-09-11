@@ -9,7 +9,7 @@ import {
 } from "./modalStyle";
 import PropTypes from "prop-types";
 
-const Modals = ({ children, title, funcioncerrar }) => {
+const Modals = ({ children, title, funcioncerrar, accion }) => {
   return (
     <>
         <Overlay>
@@ -23,7 +23,7 @@ const Modals = ({ children, title, funcioncerrar }) => {
             </HeaderModal>
             {children}
             <ModalButtonContainer>
-              <ModalButton type="submit">Aceptar</ModalButton>
+              <ModalButton type="submit" onClick={accion}>Aceptar</ModalButton>
               <ModalButton type="button">Cancelar</ModalButton>
             </ModalButtonContainer>
           </ContainerModal>
@@ -35,6 +35,7 @@ const Modals = ({ children, title, funcioncerrar }) => {
 Modals.propTypes = {
   children: PropTypes.object,
   title: PropTypes.string,
+  accion:PropTypes.func,
   funcioncerrar: PropTypes.func,
 };
 

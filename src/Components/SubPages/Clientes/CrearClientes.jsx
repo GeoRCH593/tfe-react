@@ -2,7 +2,6 @@ import { useForm } from "react-hook-form";
 import { GlobalStyle } from "../../../styles/common/globalStyles";
 import {
   FormComplete,
-  FormDiv,
   FormDivSpan,
   FormTitle,
   PageBody,
@@ -38,16 +37,18 @@ const CrearClientes = () => {
           <h5>{SubPageTitle}</h5>
         </FormTitle>
         <FormComplete onSubmit={dataSubmit}>
-          <FormDiv>
+          <FormDivSpan>
             <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" {...register("identificador")}>
+            <select id="identificador" {...register("identificador", {required:true})}>
+              <option value={""}>Seleccionar una opción</option>
               <option>R.U.C</option>
               <option>Cédula</option>
               <option>Pasaporte</option>
               <option>Identificador del exterior</option>
               <option>Consumidor final</option>
             </select>
-          </FormDiv>
+            {errors.identificador && <span>* Obligatorio seleccionar opción</span>}
+          </FormDivSpan>
           <FormDivSpan>
             <label>Número de Indentificación:</label>
             <input type="text" {...register("numeroId", {required:true})}/>

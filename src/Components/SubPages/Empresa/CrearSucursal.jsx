@@ -4,7 +4,6 @@ import {
   TitlePage,
   FormTitle,
   FormComplete,
-  FormDiv,
   TableGeneral,
   FormDivSpan,
 } from "../../../styles/Subpages/subpagesStyles";
@@ -68,16 +67,18 @@ const CrearSucursal = () => {
           <h5>{SubPageTitle}</h5>
         </FormTitle>
         <FormComplete name="formulariobusqueda" onSubmit={handleSubmitForm1(dataSubmit)}>
-          <FormDiv>
+          <FormDivSpan>
             <label>Ingrese tipo de identificación:</label>
-            <select id="identificador" {...registerForm1("identificador")}>
+            <select id="identificador" {...registerForm1("identificador", {required:true})}>
+              <option value={""}>Seleccionar opción</option>
               <option>R.U.C</option>
               <option>Cédula</option>
               <option>Pasaporte</option>
               <option>Identificador del exterior</option>
               <option>Consumidor final</option>
             </select>
-          </FormDiv>
+            {errorsForm1.identificador && <span>* Obligatorio seleccionar una opción</span>}
+          </FormDivSpan>
           <FormDivSpan>
             <label>Número de Indentificación:</label>
             <input type="text" {...registerForm1("numeroId", { required: true })} />

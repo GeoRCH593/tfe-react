@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Primary } from "../../../styles/common/colorStyles";
+import {Primary, DangerColor} from '../../../styles/common/colorStyles';
 
 /*Contenedor completo para facturación */
 export const FactComplete = styled.div`
@@ -103,7 +103,11 @@ export const FactDiv = styled.div`
     border: none;
     font-size: 14px;
   }
-
+  > span {
+    font-size: 1em;
+    color: ${DangerColor};
+    font-style: italic;
+  }
 `;
 
 /*Contendor de titulo formulario */
@@ -168,9 +172,11 @@ export const SearchFactDiv = styled.div`
 
 /*Campos de seleccion para facturacion */
 export const SelectDiv = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 0.3em 0.5em;
   width: 100%;
-  gap: 2em;
+  gap: 0 2em;
   > label {
     color: #0c302e;
     width: 100%;
@@ -190,6 +196,12 @@ export const SelectDiv = styled.div`
     background-color: #e8eaed;
     border: none;
     font-size: 14px;
+  }
+  > span{
+    font-size: 0.7em;
+    color: ${DangerColor};
+    font-style: italic;
+    padding-left: 1em;
   }
 `;
 
